@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/iwasakiyouko.github.io/",
+  base: "/",
   title: "HarukiBot 帮助文档",
   description: "本文档将引导您使用 HarukiBot",
   themeConfig: {
