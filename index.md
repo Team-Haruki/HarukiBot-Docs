@@ -12,7 +12,7 @@ hero:
       link: /usage/index
     - theme: alt
       text: HarukiBot开发者相关
-      link: /develop/
+      link: /usage/index
 
 features:
   - title: 资料展示
