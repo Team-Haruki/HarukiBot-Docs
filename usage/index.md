@@ -4,7 +4,7 @@
 > 
 - UniBot是一款功能型机器人, 主要提供《世界计划 多彩舞台》相关查询服务。
 - 该Bot不提供私聊服务
-- 使用该Bot，即意味着你同意[使用条款](/licence/)及[隐私条款](/privacy/)
+- 使用该Bot，即意味着你同意使用条款及隐私条款
 - 如果你有任何意见，可以加入交流群：
   - QQ 群: `883721511`
   - QQ 频道：[交流 QQ 频道](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=7Pe26&appChannel=share&businessType=9&from=181074&biz=ka&shareSource=5)
@@ -34,7 +34,7 @@
 - `charainfo昵称` 查看该角色群内和全群昵称
 
 ::: warning 注意
-所有歌曲昵称设置，角色昵称设置的日志内容将会在[实时日志](/dailylog/)页面按日公示
+所有歌曲昵称设置，角色昵称设置的日志内容将会在实时日志页面按日公示
 :::
 
 
