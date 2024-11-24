@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "HarukiBot 帮助文档"
-  text: "本文档将引导您使用 UniBot"
-  tagline: UniBot是一款功能型机器人, 主要提供《世界计划 多彩舞台》相关查询服务。
+  text: "本文档将引导您使用 HarukiBot"
+  tagline: HarukiBot是一款功能型机器人, 主要提供《世界计划 多彩舞台》相关查询服务。
   actions:
     - theme: brand
       text: HarukiBot帮助文档

@@ -1,8 +1,8 @@
 # 功能列表
 
->  本文档将引导您使用 UniBot
+>  本文档将引导您使用 HarukiBot
 > 
-- UniBot是一款功能型机器人, 主要提供《世界计划 多彩舞台》相关查询服务。
+- HarukiBot是一款功能型机器人, 主要提供《世界计划 多彩舞台》相关查询服务。
 - 该Bot不提供私聊服务
 - 使用该Bot，即意味着你同意使用条款及隐私条款
 - 如果你有任何意见，可以加入交流群：
@@ -156,7 +156,7 @@
 - 开发者: [綿菓子ウニ](https://space.bilibili.com/622551112)
 - 联系我: `1103479519[at]qq.com`（`[at]`更改为`@`）
 - 交流群: `883721511`
-- Unibot频道: [点击进入](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=7Pe26&appChannel=share&businessType=9&from=181074&biz=ka&shareSource=5)
+- HarukiBot频道: [点击进入](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=7Pe26&appChannel=share&businessType=9&from=181074&biz=ka&shareSource=5)
 ### 使用框架
 - QQbot框架: [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp)
 - SDK: [nonebot/aiocqhttp](https://github.com/nonebot/aiocqhttp)
