@@ -6,15 +6,13 @@
 - 该Bot不提供私聊服务
 - 使用该Bot，即意味着你同意使用条款及隐私条款
 - 如果你有任何意见，可以加入交流群：
-  - QQ 群: `883721511`
-  - QQ 频道：[交流 QQ 频道](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=7Pe26&appChannel=share&businessType=9&from=181074&biz=ka&shareSource=5)
-  - Discord 反馈服务器：[https://discord.gg/yvwBaDc7x8](https://discord.gg/yvwBaDc7x8)
+  - QQ 群: `959939201`
 
 ## 查询pjsk歌曲信息
 
 ### pjskinfo
-- `pjskinfo+曲名` 查看当前歌曲详细信息
-- `pjskbpm+曲名` 查看当前歌曲的bpm（频道可直接使用`bpm+曲名`）
+- `pjskinfo+曲名`, `song+曲名` 查看当前歌曲详细信息
+- `pjskbpm+曲名` 查看当前歌曲的bpm
 - `查bpm+数字` 查询对应bpm所有歌曲
 
 ### 谱面预览
@@ -24,9 +22,9 @@
 
 ### 昵称设置
 
-- `pjskset昵称to歌名`
-- `pjskdel昵称` 删除对应昵称
-- `pjskalias昵称` 查看所有昵称
+- `musicset昵称to歌名`
+- `musicdel昵称` 删除对应昵称
+- `charalias昵称` 查看所有昵称
 - `charaset昵称to角色名(可以是现有昵称)` 设置角色所有群通用昵称,如`charasetkndto宵崎奏`
 - `charadel昵称` 删除角色所有群通用昵称
 - `grcharaset新昵称to已有昵称` 设置仅当前群可用角色昵称
@@ -34,7 +32,8 @@
 - `charainfo昵称` 查看该角色群内和全群昵称
 
 ::: warning 注意
-所有歌曲昵称设置，角色昵称设置的日志内容将会在实时日志页面按日公示
+所有歌曲昵称设置，角色昵称设置的日志内容将会在实时日志页面按日公示。
+若违反相关条例将会视情况采取删除对应昵称至禁止使用Bot不等的措施。
 :::
 
 
@@ -52,13 +51,10 @@
 - `sk+排名` 查询对应排名分数（仅支持前100，日服另外支持查询特定榜线）
 - `sk线` 查询榜线分数
 - `sk预测` 查看预测线，预测信息来自[3-3.dev](https://3-3.dev/)（仅日服）
-- `查房+id`,`查房+排名` 可查询前100周回情况，时速，平均pt等（日服，台服）
-- `查水表+id`,`查水表+排名` 可查询前100停车情况（日服，台服）
-- `分数线+id`,`分数线+排名` 可绘制前100活动分数随时间增长的折线图（日服，台服）
 ### 打歌情况查询
 - `逮捕@[xxx]` 如果此人绑定过id，就可以看TA的ex与master难度fc，ap数，排位信息
 - `逮捕+id` 查看对应id的ex与master难度fc，ap数，排位信息
-- `pjskprofile` 生成绑定id的profile图片（可使用`个人信息`）
+- `pjskprofile` 生成绑定id的profile图片（可使用命令`个人信息`）
 ### 隐私相关
 - `不给看` 不允许他人逮捕自己，但自己还是可以逮捕自己，使用sk查分和逮捕自己时不会显示id
 - `给看`
@@ -87,80 +83,19 @@
     - 查活动 knd ick：返回出卡同时包括knd、ick混活的活动概要
 - `活动图鉴/活动列表/活动总览/findevent all`: 返回当前所有活动的概要，该功能由于图片过大无法在频道bot使用
 
-
-## pjsk竞猜
-::: warning 注意
-由于风控问题，猜曲，猜卡面，看卡图，模拟抽卡功能已开启白名单模式。如你所在的群未开启以上功能，请使用官方平台的频道bot游玩
-:::
-
-::: warning 关于频道版猜曲
-请在规定时间内回答，由于主动消息限制，bot不会自动结束猜曲，如果回答超时会自动结束并提示超时
-
-设置猜曲234指令旨在频道内方便通过斜杠指令+数字方便触发功能，无需每次输入完整指令
-:::
-
-- pjsk猜曲（截彩色曲绘）：`pjsk猜曲`
-- pjsk阴间猜曲（截黑白曲绘）：`pjsk阴间猜曲` 或 `/pjsk猜曲 2`
-- pjsk非人类猜曲（截30*30）：`pjsk非人类猜曲`
-- pjsk猜谱面：`pjsk猜谱面` 或 `/pjsk猜曲 3`
-- pjsk猜卡面：`pjsk猜卡面` 或 `/pjsk猜曲 4`
-- pjsk歌词猜曲：`pjsk歌词猜曲` 或 `/pjsk猜曲 5`
-- pjsk听歌猜曲（频道不可用）：`pjsk听歌猜曲`
-- pjsk倒放猜曲（频道不可用）：`pjsk倒放猜曲`
-
-查看排行榜：猜曲命令+`排行榜`。如`pjsk猜曲排行榜`、`pjsk猜谱面排行榜`
-
-## pjsk模拟抽卡
-> 十连抽卡模拟会生成图片
-- `sekai抽卡` 模拟十连
-- `sekaiXX连` 模拟`XX`抽（只显示四星）,`XX`接受的输入为`1-200`（频道内`1-400`）
-- `sekai反抽卡` 反转2星4星概率
-- `sekai抽卡+卡池id` 对应卡池模拟十连
-- `sekai100连+卡池id` 对应卡池模拟100抽（只显示四星）
-- `sekai200连+卡池id` 对应卡池模拟200抽（只显示四星）
-- `sekai反抽卡+卡池id` 对应卡池反转2星4星概率
-
-::: tip 关于卡池id
-卡池id可去<https://sekai.best/gacha> 进入对应卡池页面查看网址最后的数字，如网址是<https://sekai.best/gacha/159>，卡池id就是159
-:::
-
-## 随机卡图
-- `看[角色昵称]` 或 `来点[角色昵称]`
-
-
-## 其他游戏
-### CHUNITHM
-- `chusearch 原曲名` 搜索匹配的曲名，给出对应歌曲id
-- `chuinfo 歌曲id/原曲名` 查看歌曲信息
-- `chuchart 歌曲id/原曲名` 查看谱面预览
-- `chuset昵称to歌名`
-- `chudel 昵称` 删除对应昵称
-- `chualias 昵称` 查看所有昵称
-
-- `[服务器] 绑定[20位卡号]`：绑定卡号
-- `[服务器] b30`：查询绑定卡号的b30歌曲（SUN PLUS定数），如`aqua b30`
-- `[服务器] b30 lmn`：查询绑定卡号的b30歌曲（Luminous定数），如`aqua b30 lmn`
-- `chulevel [定数]`: 查询定数表，如`chulevel 14+`
-- `chulevel [定数] [服务器]`: 查询带你绑定账号分数的定数表，如`chulevel 14+ aqua`
-
-[服务器]支持`aqua`（Sam aqua）, `rin`, `na`。不支持官服查询。
-
-### WDS
-- `wdsinfo 曲名` 查看歌曲信息
-- `wdschart 曲名` 查看谱面预览
-- `wdsset昵称to歌名`
-- `wdsdel 昵称` 删除对应昵称
-- `wdsalias 昵称` 查看所有昵称
-
 ## 关于
-- 开发者: [綿菓子ウニ](https://space.bilibili.com/622551112)
-- 联系我: `1103479519[at]qq.com`（`[at]`更改为`@`）
-- 交流群: `883721511`
-- HarukiBot频道: [点击进入](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=7Pe26&appChannel=share&businessType=9&from=181074&biz=ka&shareSource=5)
+- 开发者: [星云希凪](https://github.com/MejiroRina)
+- 联系我: [haruki@seiunx.com](haruki@seiunx.com)
+
+- 原Wiki编者：[綿菓子ウニ](https://space.bilibili.com/622551112)
+- 使用授权：[点击查看](https://docs.shiromiku.moe/usage/uni发表讲话.jpg)
+
+- 本wiki编者：[岩崎阳子](https://github.com/IwasakiYouko)
+- 联系我：[admin@shiromiku.moe](admin@shiromiku.moe) 或QQ：`57892198`
+
 ### 使用框架
 - QQbot框架: [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp)
 - SDK: [nonebot/aiocqhttp](https://github.com/nonebot/aiocqhttp)
-- QQ官方版bot框架：[Hoshinonyaruko/Gensokyo](https://github.com/Hoshinonyaruko/Gensokyo)
 ### 数据来源
 - 预测线: [33Kit](https://3-3.dev/)
 - 谱面预览: [ぷろせかもえ！](https://pjsekai.moe/), [プロセカ譜面保管所](https://sdvx.in/prsk.html)
