@@ -88,7 +88,7 @@
 - 联系我: <haruki@seiunx.com>
 
 - 原Wiki编者：[綿菓子ウニ](https://space.bilibili.com/622551112)
-- 使用授权：[点击查看](./uni发表讲话.jpg)
+- 使用授权：[点击查看](https://images.shiromiku.moe/images/4f956d51aaa3d1b2f407d1922e397a42.jpg)
 
 - 本wiki编者：[岩崎阳子](https://github.com/IwasakiYouko)
 - 联系我：<admin@shiromiku.moe>或QQ：`57892198`
