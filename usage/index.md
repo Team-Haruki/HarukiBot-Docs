@@ -85,13 +85,13 @@
 
 ## 关于
 - 开发者: [星云希凪](https://github.com/MejiroRina)
-- 联系我: [haruki@seiunx.com](haruki@seiunx.com)
+- 联系我: <haruki@seiunx.com>
 
 - 原Wiki编者：[綿菓子ウニ](https://space.bilibili.com/622551112)
 - 使用授权：[点击查看](https://docs.shiromiku.moe/usage/uni发表讲话.jpg)
 
 - 本wiki编者：[岩崎阳子](https://github.com/IwasakiYouko)
-- 联系我：[admin@shiromiku.moe](admin@shiromiku.moe) 或QQ：`57892198`
+- 联系我：<admin@shiromiku.moe>或QQ：`57892198`
 
 ### 使用框架
 - QQbot框架: [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp)
