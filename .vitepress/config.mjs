@@ -4,11 +4,11 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'zh',
   base: "/",
-  head: [["link", { rel: "icon", href: "/assets/images/icon.ico" }]],
+  head: [["link", { rel: "icon", href: "https://images.shiromiku.moe/images/f42445fcc982c5fecc7471f94fff637d.png" }]],
   title: "HarukiBot 帮助文档",
   description: "本文档将引导您使用 HarukiBot",
   themeConfig: {
-    logo: '/assets/images/navicon.ico',
+    logo: 'https://images.shiromiku.moe/images/9b8abaa21f4baf7498b16c4ac8f08cc9.png',
      // 设置搜索框的样式
      search: {
       provider: "local",

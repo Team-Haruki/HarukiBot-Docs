@@ -7,7 +7,7 @@ hero:
   text: "本文档将引导您使用 HarukiBot"
   tagline: HarukiBot是一款功能型机器人, 主要提供《世界计划 多彩舞台》相关查询服务。
   image:
-    src: /assets/haruka.webp
+    src: https://images.shiromiku.moe/images/37baa23757a020fdd07fdcb75a70bf06.webp
     alt: 看板娘
   actions:
     - theme: brand
