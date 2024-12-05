@@ -4,7 +4,7 @@
 > 
 - HarukiBot是一款功能型机器人, 主要提供《世界计划 多彩舞台》相关查询服务。
 - 该Bot不提供私聊服务
-- 使用该Bot，即意味着你同意使用条款及隐私条款
+- 使用该Bot，即意味着你同意[使用条款](/licence/)及[隐私条款](/privacy/)
 - 如果你有任何意见，可以加入交流群：
   - QQ 群: `959939201`
 
@@ -49,7 +49,7 @@
 ### 活动查询
 - `sk+id` 如果你在前100，可以用该命令查询排名和分数
 - `sk+排名` 查询对应排名分数（仅支持前100，日服另外支持查询特定榜线）
-- `sk线` 查询榜线分数
+- `sk线`, `WIP` 查询榜线分数
 - `sk预测` 查看预测线，预测信息来自[3-3.dev](https://3-3.dev/)（仅日服）
 ### 打歌情况查询
 - `逮捕@[xxx]` 如果此人绑定过id，就可以看TA的ex与master难度fc，ap数，排位信息
@@ -98,5 +98,5 @@
 - SDK: [nonebot/aiocqhttp](https://github.com/nonebot/aiocqhttp)
 ### 数据来源
 - 预测线: [33Kit](https://3-3.dev/)
-- 谱面预览: [ぷろせかもえ！](https://pjsekai.moe/), [プロセカ譜面保管所](https://sdvx.in/prsk.html)
+- 谱面预览: [ぷろせかもえ！](https://pjsekai.moe/)
 - 台服国际服牌子图片：[Sekai Viewer](https://sekai.best/)

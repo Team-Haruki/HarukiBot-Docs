@@ -2,10 +2,13 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: 'zh',
   base: "/",
+  head: [["link", { rel: "icon", href: "/assets/images/icon.ico" }]],
   title: "HarukiBot 帮助文档",
   description: "本文档将引导您使用 HarukiBot",
   themeConfig: {
+    logo: '/assets/images/navicon.ico',
      // 设置搜索框的样式
      search: {
       provider: "local",
