@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh',
-  base: "/",
+  base: "/HarukiBot-Docs/",
   head: [["link", { rel: "icon", href: "https://images.shiromiku.moe/images/f42445fcc982c5fecc7471f94fff637d.png" }]],
   title: "HarukiBot 帮助文档",
   description: "本文档将引导您使用 HarukiBot",
