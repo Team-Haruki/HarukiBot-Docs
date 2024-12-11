@@ -53,7 +53,7 @@ export default defineConfig({
     //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     // ],
     footer: {
-      copyright: "Copyright©️ 2024 IwasakiYouko",
+      copyright: "Copyright©️ 2024 Team Haruki (IwasakiYouko and SeiunKinagi)",
     },
   }
 })
