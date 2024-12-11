@@ -1,18 +1,27 @@
-![](https://images.shiromiku.moe/images/37baa23757a020fdd07fdcb75a70bf06.webp)
+<div style="text-align: center;">
+    <img src="https://images.shiromiku.moe/images/37baa23757a020fdd07fdcb75a70bf06.webp" alt="logo" width="256" height="256" style="display: block; margin: 0 auto;">
+
+# HarukiBot
+
+一款多功能QQ群机器人  
+Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
+</div>
+
+
 
 # 功能列表
 >  本文档将引导您使用 HarukiBot
 >
 
-+ HarukiBot是一款功能型机器人, 主要提供《世界计划 多彩舞台》相关查询服务。
-+ 该Bot不提供私聊服务
-+ 使用该Bot，即意味着你同意[使用条款](/licence/)及[隐私条款](/privacy/)
-+ 如果你有任何意见，可以加入交流群：
-    - QQ 群: `959939201`
++ HarukiBot是一款功能型机器人, 目前主要提供《世界计划 多彩舞台》相关查询服务。
++ 该Bot不提供私聊服务。
++ 使用该Bot，即意味着你同意[使用条款](/licence/)及[隐私条款](/privacy/)。
++ 如果你在使用过程中遇到任何问题，你可以在该页面最下方的``关于``下面联系``开发者``进行反馈。
++ 目前HarukiBot仍然处于开发状态，有多种功能仍在开发中，如果没有你需要的功能请不要着急，请耐心等待开发者开发完善
 
 ## 查询pjsk歌曲信息
 ### pjskinfo
-+ `pjskinfo+曲名`, `song+曲名` 查看当前歌曲详细信息
++ `pjskinfo+曲名`, `song+曲名`, `musicinfo+曲名` 查看当前歌曲详细信息
 + `pjskbpm+曲名` 查看当前歌曲的bpm
 + `查bpm+数字` 查询对应bpm所有歌曲
 
@@ -22,14 +31,14 @@
     - 如果查询`master`可省略难度
 
 ### 昵称设置
-+ `musicset昵称to歌名`
-+ `musicdel昵称` 删除对应昵称
-+ `charalias昵称` 查看所有昵称
-+ `charaset昵称to角色名(可以是现有昵称)` 设置角色所有群通用昵称,如`charasetkndto宵崎奏`
-+ `charadel昵称` 删除角色所有群通用昵称
++ `musicset昵称to歌名` 设置歌曲昵称
++ `musicdel昵称` 删除歌曲昵称
++ `charalias昵称` 查看特定角色所有昵称
++ `charaset昵称to角色名(可以是现有昵称)` 设置角色群通用昵称,如`charasetkndto宵崎奏`
++ `charadel昵称` 删除角色群通用昵称
 + `grcharaset新昵称to已有昵称` 设置仅当前群可用角色昵称
 + `grcharadel已有昵称` 删除仅当前群可用角色昵称
-+ `charainfo昵称` 查看该角色群内和全群昵称
++ [后续将会添加]`charainfo昵称` 查看该角色的个人资料
 
 :::info
 所有歌曲昵称设置，角色昵称设置的日志内容将会在实时日志页面按日公示。  
@@ -47,22 +56,25 @@
 > 在命令前加`kr`即可查询韩服信息，如`kr绑定`, `krsk`, `kr逮捕`, `krpjskprofile`
 >
 
-+ `绑定+id` 绑定id
+> 在命令前加`tcn`即可查询国服测试服信息，如`tcn绑定`, `tcnsk`, `tcn逮捕`, `tcnpjskprofile`  
+> **注意: 国服测试服支持处于实验性支持阶段，有可能因为各种不可抗力因素而被迫下线**
+
++ `绑定+id` 通过游戏uid绑定你的游戏账号
 
 ### 活动查询
 + `sk+id` 如果你在前100，可以用该命令查询排名和分数
-+ `sk+排名` 查询对应排名分数（仅支持前100，日服另外支持查询特定榜线）
-+ `sk线`, `WIP` 查询榜线分数
-+ `sk预测` 查看预测线，预测信息来自[3-3.dev](https://3-3.dev/)（仅日服）
++ `sk+排名` 查询对应排名分数（仅支持前100，非国际服另外支持查询特定榜线）
++ [后续将会添加]`sk线`, 查询榜线分数
++ [后续将会添加]`sk预测` 查看预测线，预测信息来自[3-3.dev](https://3-3.dev/)（仅日服）
 
 ### 打歌情况查询
-+ `逮捕@[xxx]` 如果此人绑定过id，就可以看TA的ex与master难度fc，ap数，排位信息
-+ `逮捕+id` 查看对应id的ex与master难度fc，ap数，排位信息
-+ `pjskprofile` 生成绑定id的profile图片（可使用命令`个人信息`）
++ `逮捕@[xxx]` 如果此人绑定过id，就可以看TA的ex与master难度fc、ap数，排位信息(后续将会添加)
++ `逮捕+id` 查看对应id的expert难度、master难度、append难度的fc、ap数，排位信息(后续将会添加)
++ `pjskprofile`, `个人信息` 生成绑定id的profile图片
 
 ### 隐私相关
-+ `不给看` 不允许他人逮捕自己，但自己还是可以逮捕自己，使用sk查分和逮捕自己时不会显示id
-+ `给看`
++ `不给看` 不允许他人逮捕自己，但自己还是可以逮捕自己，使用sk查分和逮捕自己时不会显示游戏uid
++ `给看` 允许他人逮捕自己
 
 
 
@@ -98,7 +110,7 @@
 + 使用授权：[点击查看](https://images.shiromiku.moe/images/4f956d51aaa3d1b2f407d1922e397a42.jpg)
 + wiki适配与编辑：[岩崎阳子](https://space.bilibili.com/11048929)
 + 联系我：<admin@shiromiku.moe>或QQ：`57892198`
-+ 画师：[小沢翼](https://space.bilibili.com/3493133455198556)
++ Logo画师：[小沢翼](https://space.bilibili.com/3493133455198556)
 
 ### 使用框架
 + QQbot框架: [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp)
