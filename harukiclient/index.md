@@ -2,7 +2,7 @@
 使用此客户端, 您可以用自己的QQ号搭建一个HarukiBot
 
 ## 准备工作
-::: **warning 注意**
+::: warning
 
 部署本项目需要一定的电脑基础，会读文档
 
@@ -78,7 +78,7 @@ Please enter your Instant Messenger User ID (QQ is your qq number):
 当你看到群内Bot回复`Successfully verified.`时即完成注册流程  
 完成注册之后，请按**回车键**继续
 
-::: warning 注意
+::: warning
 
 不要关闭客户端，必须启动客户端才能使用 bot
 
