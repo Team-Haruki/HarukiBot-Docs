@@ -13,12 +13,15 @@ hero:
     - theme: alt
       text: HarukiBot更新日志
       link: /changelog/index
+    - theme: alt
+      text: 搭建自己的HarukiBot
+      link: /harukiclient/index
 
 features:
   - title: 资料展示
     details: HarukiBot支持个人资料展示。
   - title: 多服支持
-    details: HarukiBot支持港澳台、日、韩、美服。
+    details: HarukiBot支持港澳台、日、韩、国际服、国服测试服。
   - title: 高清大图
     details: HarukiBot支持展示卡面高清大图
 ---
