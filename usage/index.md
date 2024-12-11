@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-    <img src="https://images.shiromiku.moe/images/37baa23757a020fdd07fdcb75a70bf06.webp" alt="描述" width="256" height="256">
+    <img src="https://images.shiromiku.moe/images/37baa23757a020fdd07fdcb75a70bf06.webp" alt="logo" width="256" height="256" style="display: block; margin: 0 auto;">
 
 # HarukiBot
 
