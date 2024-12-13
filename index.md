@@ -23,6 +23,8 @@ features:
   - title: 多服支持
     details: HarukiBot支持港澳台、日、韩、国际服、国服测试服。
   - title: 高清大图
-    details: HarukiBot支持展示卡面高清大图
+    details: HarukiBot支持展示卡面高清大图。
+  - title: 榜线支持
+    details: HarukiBot以1分钟采集精度提供活动榜线查询、时速查询、排名趋势查询。
 ---
 
