@@ -15,8 +15,8 @@
 ### 获取一台服务器
 你需要一台24h不关机的电脑，否则关机这段时间HarukiBot将无法工作
 
-Windows 电脑需要运行大于等于 Windows 8 或 Windows server 2012 版本的系统（更低版本实测无法运行）
-Linux 系统提供了从Python 3.8到3.12的打包文件，推荐使用 ``Ubuntu 22.04``, ``Debian 12`` 或以上的Linux发行版系统
+Windows 电脑需要运行大于等于 Windows 8 或 Windows server 2012 版本的系统（更低版本实测无法运行）  
+Linux 系统提供了从Python 3.8到3.12的打包文件，推荐使用 ``Ubuntu 22.04``, ``Debian 12`` 或以上的Linux发行版系统  
 macOS仅提供Apple Silicon (即arm64)的打包文件，x86的macOS不提供支持
 
 在较低版本 Ubuntu 和其他较低版本 linux 中可能提示缺少 GLIBC 对应版本，安装非常麻烦，不推荐使用。

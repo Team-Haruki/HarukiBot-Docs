@@ -8,13 +8,16 @@ hero:
   tagline: HarukiBot是一款功能型机器人, 主要提供《世界计划 多彩舞台》相关查询服务。
   actions:
     - theme: brand
-      text: HarukiBot帮助文档
+      text: HarukiBot 帮助文档
       link: /usage/index
     - theme: alt
-      text: HarukiBot更新日志
-      link: /changelog/index
+      text: Haruki Cloud 更新日志
+      link: /changelog/cloud
     - theme: alt
-      text: 搭建自己的HarukiBot
+      text: Haruki Client 更新日志
+      link: /changelog/client
+    - theme: alt
+      text: 部署属于自己的HarukiBot
       link: /harukiclient/index
 
 features:
