@@ -58,6 +58,17 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 + `绑定+id` 通过游戏uid绑定你的游戏账号
 
+
+### MySekai相关查询
+::: info
+该功能仍然处于公测阶段，并且有如下准入门槛:
++ 是iOS/iPadOS设备
++ 拥有代理工具 ( 如 Shadowrocket / Quantumult X / Surge / Loon / Stash )
++ 有需要请加群**1026390204**咨询群友
+:::
+
++ `mysekai_analyze`、`mysekai分析`、`ms分析`、`msa` 根据用户上传至Haruki数据库的数据分析MySekai现存材料
+
 ### 活动排名相关查询
 + `sk+id` 如果你在前100，可以用该命令查询排名和分数
 + `sk+排名` 查询对应排名分数（仅支持前100，非国际服另外支持查询特定榜线）
