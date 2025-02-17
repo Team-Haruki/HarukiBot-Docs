@@ -61,9 +61,9 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 ### MySekai相关查询
 ::: info
-该功能仍然处于公测阶段
-Android 用户建议使用 [Haruki工具箱-上传MySekai数据](https://haruki.seiunx.com/upload_mysekai) 的`引继信息上传模式`
-iOS / iPadOS 用户 建议使用代理工具MitM模块更新，要求如下：
+该功能仍然处于公测阶段  
+Android 用户建议使用 [Haruki工具箱-上传MySekai数据](https://haruki.seiunx.com/upload_mysekai) 的`引继信息上传模式`  
+iOS / iPadOS 用户 建议使用代理工具MitM模块更新，要求如下:  
 + 拥有代理工具 ( 如 Shadowrocket / Quantumult X / Surge / Loon / Stash )
 + 有需要请加群**1026390204**咨询群友
 :::
