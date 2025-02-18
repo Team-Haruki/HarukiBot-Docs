@@ -61,7 +61,6 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 ## MySekai相关查询
 ::: info
-该功能仍然处于公测阶段  
 Android 用户建议使用 [Haruki工具箱-上传MySekai数据](https://haruki.seiunx.com/upload_mysekai) 的`引继信息上传模式`  
 iOS / iPadOS 用户 建议使用代理工具MitM模块更新，要求如下:  
 + 拥有代理工具 ( 如 Shadowrocket / Quantumult X / Surge / Loon / Stash )
@@ -69,6 +68,8 @@ iOS / iPadOS 用户 建议使用代理工具MitM模块更新，要求如下:
 :::
 
 + `mysekai_analyze`、`mysekai分析`、`ms分析`、`msa` 根据用户上传至Haruki数据库的数据分析MySekai现存材料
++ `mysekai_analyze2`、`mysekai分析2`、`ms分析2`、`msa2` 根据用户上传至Haruki数据库的数据分析MySekai现存材料 (新版UI设计，感谢Foglio的设计)
++ `mysekai_maps`、`msm`、`mysekai地图`、`ms地图` 根据用户上传至Haruki数据库的数据生成资源分布图 ( 感谢原作者[中红(MiddleRed)](https://github.com/MiddleRed) 以及移植作者[ルナ茶(NeuraXmy)](https://github.com/NeuraXmy)的贡献 )
 + `mysekai照片 + 序号`、`ms照片 + 序号`、`msp + 序号` 根据用户上传到Haruki数据库的数据下载用户在MySekai里面拍摄的照片 (按拍摄顺序)
 
 ## 活动排名相关查询
