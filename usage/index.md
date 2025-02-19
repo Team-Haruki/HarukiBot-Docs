@@ -70,6 +70,13 @@ iOS / iPadOS 用户 建议使用代理工具MitM模块更新，要求如下:
 + `mysekai_analyze`、`mysekai分析`、`ms分析`、`msa` 根据用户上传至Haruki数据库的数据分析MySekai现存材料
 + `mysekai_analyze2`、`mysekai分析2`、`ms分析2`、`msa2` 根据用户上传至Haruki数据库的数据分析MySekai现存材料 (新版UI设计，感谢Foglio的设计)
 + `mysekai_maps`、`msm`、`mysekai地图`、`ms地图` 根据用户上传至Haruki数据库的数据生成资源分布图 ( 感谢原作者[中红(MiddleRed)](https://github.com/MiddleRed) 以及移植作者[ルナ茶(NeuraXmy)](https://github.com/NeuraXmy)的贡献 )
+::: info
+mysekai_maps指令后面添加数字可以查询单图地图
++ 数字1: 草原
++ 数字2: 花田
++ 数字3: 沙滩
++ 数字4: 废墟
+:::
 + `mysekai照片 + 序号`、`ms照片 + 序号`、`msp + 序号` 根据用户上传到Haruki数据库的数据下载用户在MySekai里面拍摄的照片 (按拍摄顺序)
 
 ## 活动排名相关查询
