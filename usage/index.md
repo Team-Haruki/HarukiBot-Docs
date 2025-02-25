@@ -159,5 +159,5 @@ mysekai_maps指令后面添加数字可以查询单图地图
 ### 数据来源
 + 预测线: [33Kit](https://3-3.dev/)
 + 谱面预览: [ぷろせかもえ！](https://pjsekai.moe/)
-+ 台服国际服牌子图片：[Sekai Viewer](https://sekai.best/)
+
 
