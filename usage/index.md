@@ -56,6 +56,8 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 > 在命令前加`kr`即可查询韩服信息，如`kr绑定`, `krsk`, `kr逮捕`, `krpjskprofile`
 >
 
+> 在命令前加`cn`即可查询国服信息，如`cn绑定`, `cnsk`, `cn逮捕`, `cnpjskprofile`
+>
 + `绑定+id` 通过游戏uid绑定你的游戏账号
 
 
@@ -167,5 +169,3 @@ mysekai_maps指令后面添加数字可以查询单图地图
 ### 数据来源
 + 预测线: [33Kit](https://3-3.dev/)
 + 谱面预览: [ぷろせかもえ！](https://pjsekai.moe/)
-
-
