@@ -75,7 +75,7 @@ macOS仅提供Apple Silicon (即arm64)的打包文件，x86的macOS不提供支�
 `userBlacklists` 为用户黑名单，添加进此的用户会无法使用你的Haruki分布式  
 `enableGroupCOmmandLimit` 为是否启用全局消息限制  
 `globalCommandHourlyLimit` 为**每小时**限制回复的消息数量，达到此数量之后**该小时之内**不会再响应任何指令  
-`globalCommandDailyLimit` 为**每天**限制回复的消息数量，达到此数量之后**次日北京时间8点之前**不会再响应任何指令
+`globalCommandDailyLimit` 为**每天**限制回复的消息数量，达到此数量之后**次日北京时间8点之前**不会再响应任何指令  
 `enableCN` 为是否启用国服功能
 
 准备就绪后可尝试启动客户端，如果没有问题会显示如下日志:
