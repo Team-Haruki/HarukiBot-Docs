@@ -36,19 +36,26 @@ macOS仅提供Apple Silicon (即arm64)的打包文件，x86的macOS不提供支�
 你需要将客户端放在一个文件夹内，在这个文件夹下新建一个`configs.json`，用你喜欢的编辑器打开，填上以下的设置
 ```json
 {
-    "host": "127.0.0.1",
-    "port": 8000,
-    "botId": null,
-    "credential": null,
-    "enableHelp": true,
-    "helpContent": null,
-    "controlApiAccessToken": null,
-    "enableModules": ["all"],
-    "runMode": "blacklist",
-    "blacklists": {"all": []},
-    "whitelists": {"all": []},
-    "additionalFuncWhitelists": [],
-    "botAdmins": []
+  "host": "127.0.0.1",
+  "port": 8000,
+  "botId": null,
+  "credential": null,
+  "enableHelp": true,
+  "helpContent": "欢迎您使用HarukiBot\n使用帮助: https://docs.haruki.seiunx.com",
+  "controlApiAccessToken": null,
+  "enableModules": [
+    "all"
+  ],
+  "runMode": "blacklist",
+  "blacklists": {},
+  "whitelists": {},
+  "additionalFuncWhitelists": [],
+  "botAdmins": [],
+  "userBlacklists": [],
+  "enableGroupCommandLimit": false,
+  "globalCommandHourlyLimit": null,
+  "globalCommandDailyLimit": null,
+  "enableCN": true
 }
 ```
 其中各项配置的解释如下:  
@@ -64,7 +71,12 @@ macOS仅提供Apple Silicon (即arm64)的打包文件，x86的macOS不提供支�
 `blacklists` 为客户端黑名单，需按照`"module": [list]`格式填写，如`{"all": [114514]}`  
 `whitelists` 为客户端白名单，需按照`"module": [list]`格式填写，如`{"all": [114514]}`  
 `additionalFuncWhitelists` 为客户端娱乐功能白名单  
-`botAdmins`  为客户端的管理员
+`botAdmins`  为客户端的管理员  
+`userBlacklists` 为用户黑名单，添加进此的用户会无法使用你的Haruki分布式  
+`enableGroupCOmmandLimit` 为是否启用全局消息限制  
+`globalCommandHourlyLimit` 为**每小时**限制回复的消息数量，达到此数量之后**该小时之内**不会再响应任何指令  
+`globalCommandDailyLimit` 为**每天**限制回复的消息数量，达到此数量之后**次日北京时间8点之前**不会再响应任何指令
+`enableCN` 为是否启用国服功能
 
 准备就绪后可尝试启动客户端，如果没有问题会显示如下日志:
 
@@ -75,7 +87,7 @@ macOS仅提供Apple Silicon (即arm64)的打包文件，x86的macOS不提供支�
 ```text
 Please enter your Instant Messenger User ID (QQ is your qq number): 
 ```
-当你看到如下消息时，请在群内发送`/haruki_verify <6位数字验证码>`完成注册:
+当你看到如下消息时，请在群内发送`/haruki_verify <6位数字验证码>`完成注册，请注意不要将<>一起包括在内:
 ```text
 [xxxx-xx-xx xx:xx:xx] Your verification code is {verification_code}, verification code will be expired in 10 minutes.
 [xxxx-xx-xx xx:xx:xx] Please enter after finishing register verification.
@@ -100,9 +112,9 @@ Please enter your Instant Messenger User ID (QQ is your qq number):
 在有机器人的群里发送命令，比如`/haruki_info`，如果一切正常，ta 应该会回复如下消息:
 ```
 Haruki Cloud Env: production 
-Haruki Cloud v1.2.6
-Latest Client v1.1.1
-HClient Ver. 1.1.1
+Haruki Cloud v1.10.0
+Latest Client v1.1.6
+HClient Ver. 1.1.6
 Haruki Bot Id: <YourBotId>
 ```
 
