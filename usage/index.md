@@ -7,6 +7,10 @@
 Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 </div>
 
+# 阅读前提示
++ HarukiBot具有配套功能网站[Haruki工具箱](https://haruki.seiunx.com)。
++ 如果你不知道有什么群可以加，也可以访问[Haruki工具箱](https://haruki.seiunx.com)的[推荐群聊](https://haruki.seiunx.com/friend_groups)页面。
++ 推荐群聊页面仅接受熟人申请。
 
 
 # 功能列表
@@ -17,8 +21,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 + 该Bot不提供私聊服务。
 + 使用该Bot，即意味着你同意[使用条款](/licence/)及[隐私条款](/privacy/)。
 + 如果你在使用过程中遇到任何问题，你可以在该页面最下方的``关于``下面联系``开发者``进行反馈。
-+ 目前HarukiBot**仍然处于开发状态**，**有多种功能仍在开发中**，如果没有你需要的功能，请不要着急，请耐心等待开发者开发完善
-+ 友情代宣: 萌新车群1028648144
++ 目前HarukiBot**仍然处于开发状态**，**有多种功能仍在开发中**，如果没有你需要的功能，请不要着急，请耐心等待开发者开发完善。
 
 ## PJSK歌曲信息相关查询
 ### pjskinfo
