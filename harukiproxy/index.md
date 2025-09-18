@@ -11,7 +11,7 @@ HarukiProxy是由*Haruki Dev Team*开发的一款Android平台**半自动**抓�
 - 支持保存抓取的数据到本地
 - 支持保存抓取的suite数据到本地
 - 支持保存抓取的mysekai数据到本地
-- 支持自动为**MuMu模拟器**或其他可Root和可写系统盘到Android设备/模拟器安装MitM证书
+- 支持自动为**MuMu模拟器**或其他可Root和可写系统盘的Android设备/模拟器安装MitM证书
 - 支持自动为Android设备设置HarukiProxy为代理
 - 支持自定义上游HTTP代理
 
