@@ -24,7 +24,7 @@ HarukiProxy是由*Haruki Dev Team*开发的一款Android平台**半自动**抓�
 
 根据你的系统，选择并下载最新版的HarukiProxy
 
-- [HarukiProxy-Windows](/HarukiProxy/HarukiProxy-v1.4.0-windows-x64.zip)
+- [HarukiProxy-Windows-x64](/HarukiProxy/HarukiProxy-v1.4.0-windows-x64.zip)
 - [HarukiProxy-Linux-amd64](/HarukiProxy/HarukiProxy-v1.4.0-linux-amd64.tar.gz)
 - [HarukiProxy-Linux-arm64](/HarukiProxy/HarukiProxy-v1.4.0-linux-arm64.tar.gz)
 - [HarukiProxy-macOS-arm64](/HarukiProxy/HarukiProxy-v1.4.0-macos-arm64.tar.gz)
