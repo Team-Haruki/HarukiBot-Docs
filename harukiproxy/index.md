@@ -41,12 +41,12 @@ HarukiProxy是由*Haruki Dev Team*开发的一款Android平台**半自动**抓�
 ![6386d73b97244af2d2cb002a219fca9a](./asset/6386d73b97244af2d2cb002a219fca9a.png)
 
 ```
-目录名：HarukiProxy-v1.1.1-windows-x64
+目录名：HarukiProxy-vx.x.x-windows-x64
 adb.exe
 AdbWinApi.dll
 AdbWinUsbApi.dll
 config.yaml
-harukiProxy-v1.1.1.exe
+harukiProxy-vx.x.x.exe
 如果没有开启查看后缀名，可能会看不到.后的内容
 ```
 
@@ -61,30 +61,36 @@ harukiProxy-v1.1.1.exe
 打开文件后，默认配置应该如下
 
 ```
-# 是否不公开你的数据在Haruki Suite API公开API上，如果是请保持为true，如果想公开则改为false
-private: true
+auto_upload: true # 是否自动上传数据到Haruki Toolbox，一般不需要改为false
 
-# MitM监听，一般情况下无需更改
-listen: "0.0.0.0:8888"
+private: true # 是否不公开你的数据在Haruki Suite API公开API上，如果是请保持为true，如果想公开则改为false
 
-# 是否启用 ADB
-adb: true
+upload_endpoint: "" # 自定义上传数据端点
 
-# 手动设置代理IP，如果自动获取IP并设置会导致模拟器/设备无法联网，请填写此项
-android_proxy_ip: ""
+save_data_locally: false # 是否自动保存数据到本地，如果你有需求可以改为true
 
-# 启用调试模式，如果有问题时请改为true，否则保持false即可
-goproxy_debug: false
+save_data_dir: "./data" # 自动保存的数据路径
 
-# 上游代理，如果连接状况不佳可以设置，否则留空即可
-goproxy_upstream_proxy: ""
+save_suite_locally: true # 是否自动保存suite数据到本地，如果save_data_locally未启用，则该选项不会生效
+
+save_mysekai_locally: true # 是否自动保存mysekai数据到本地，如果save_data_locally未启用，则该选项不会生效
+
+listen: "0.0.0.0:8888" # MitM监听，一般情况下无需更改
+
+adb: true # 是否启用 ADB
+
+auto_install_cert: true # 是否自动安装证书，如果使用的不是MuMu模拟器可以设置为false
+
+android_proxy_ip: "" # 手动设置代理IP，如果自动获取IP并设置会导致模拟器/设备无法联网，请填写此项
+
+goproxy_debug: false # 启用调试模式，如果有问题时请改为true，否则保持false即可
+
+goproxy_upstream_proxy: "" # 上游代理，如果连接状况不佳可以设置(如"http://127.0.0.1:6152")，否则留空即可
 
 # Android 设备列表
 devices:
-
-  # 无线设备（IP:端口）
-  - serial: ""
-    wireless: "127.0.0.1:16448"
+  - serial: "" # 有线连接的Android设备名
+    wireless: "127.0.0.1:16384" # 无线连接的Android设备名（IP:端口）
 
   # 可继续添加更多设备
   # - serial: "device_serial"
@@ -93,35 +99,15 @@ devices:
 
 我们所要做的主要改动有以下几点
 
-```
-# 手动设置代理IP，如果自动获取IP并设置会导致模拟器/设备无法联网，请填写此项
-
-android_proxy_ip: ""
-```
-
-1. **该步骤如果模拟器没有遇到网络问题则可以跳过到2.**
-
-请将你正在操作的这台电脑（抑或是其它设备，总之是你要运行MuMu模拟器和HarukiProxy的这台设备）的ip地址填入""中
-
-如果你不知道自己的ip地址的话，请按照以下流程
-
-- Windows：同时按下键盘上的WIN+R两个键，右下角会弹出“运行”窗口，在窗口中输入cmd并回车
-
-![c3a3a31b5274f9cd5dac44856f199d48](./asset/c3a3a31b5274f9cd5dac44856f199d48.png)
-
-接着，在弹出的界面中输入ipconfig，从出现的内容中找到以太网适配器 以太网 或 无线局域网适配器 WLAN，下方的IPV4/IPV6地址即为你的当前地址
-
-![f4f0917014e30f5eebc6dde4c67d57a8](./asset/f4f0917014e30f5eebc6dde4c67d57a8.png)
-
-2. 接着，在上述配置文件中找到**# 无线设备（IP:端口）**，并修改它下面
+在上述配置文件中找到**# Android 设备列表**，并修改它下面
 
 ```
- - serial: ""
-
-  wireless: "127.0.0.1:16448"
+devices:
+  - serial: "" # 有线连接的Android设备名
+    wireless: "127.0.0.1:16384" # 无线连接的Android设备名（IP:端口）
 ```
 
-中wireless后面的这串数字:后的16448改为**你模拟器**的adb端口
+中wireless后面的这串数字:后的16384改为**你模拟器**的adb端口
 
 ### 端口的获取方式
 
@@ -143,27 +129,27 @@ android_proxy_ip: ""
 结果为wireless: "127.0.0.1:你得到的模拟器的端口"
 ```
 
-**主要配置结束**
+**harukiproxy的主要配置到此结束**
 
-> [!tip]
->
-> 还有一个比较重要的选项
->
-> ```
-> # 是否不公开你的数据在Haruki Suite API公开API上，如果是请保持为true，如果想公开则改为false
-> 
-> private: true
-> ```
->
-> 如果你只想要haruki bot获取到你的数据，那么就保持原样
->
-> 如果你想要其它有权获取HARUKI API公开数据的bot也能接收数据，就修改为True
+## 其他配置
 
-### 上游代理设置
+- `save_data_locally: false` # 是否自动保存数据到本地，如果你有需求可以改为true
 
-如果你不知道这个板块是什么那就直接看下一个板块
+- `save_data_dir: "./data"` # 自动保存的数据路径
 
-在代理软件里找到端口号，填写http://127.0.0.1:端口号
+- `save_suite_locally: true` # 是否自动保存suite数据到本地，如果`save_data_locally`未启用，则该选项不会生效
+
+- `save_mysekai_locally: true `# 是否自动保存mysekai数据到本地，如果`save_data_locally`未启用，则该选项不会生效
+
+  这一部分控制你是否将抓取到的数据保存在本地，如果你想要查看自己的suite与mysekai数据，抑或是想要手动上传数据，那么就将`save_data_locally: false`改为 true，数据则会自动保存在你HarukiProxy目录下的data目录
+
+- `private: true` # 决定除了HarukiBot外的bot能否获取到你的数据，如果你只想使用haruki bot就不用更改，如果向同步到其它bot就改为 false
+
+- `goproxy_upstream_proxy: ""` # 上游代理，如果连接状况不佳可以设置(如"http://127.0.0.1:6152")，否则留空即可
+
+  如果你不是很清楚代理是什么意思，那么不用管了，否则和注释一样，将6152改为你代理软件中找到的端口号
+
+- `upload_endpoint: ""` # 自定义上传数据端点，不修改则默认上传至haruki toolbox的数据上传端点，你可以修改为想传到的其他端点地址
 
 > [!caution]
 >
@@ -193,7 +179,7 @@ android_proxy_ip: ""
 
 ## 安装证书
 
-现在回到解压HarukiProxy的目录，双击HarukiProxy-v1.1.1.exe来打开，随后回到MuMu模拟器，当弹出请求root权限时选择允许,之后等待HarukiProxy完成自己的工作，当HarukiProxy弹出请重启模拟器的提示时，重启模拟器来完成证书安装
+现在回到解压HarukiProxy的目录，双击HarukiProxy-vx.x.x.exe来打开，随后回到MuMu模拟器，当弹出请求root权限时选择允许,之后等待HarukiProxy完成自己的工作，当HarukiProxy弹出请重启模拟器的提示时，重启模拟器来完成证书安装
 
 ![a6dfc1ff482cdda16f9d2254386348ce](./asset/a6dfc1ff482cdda16f9d2254386348ce.png)
 
@@ -219,15 +205,33 @@ goproxy MITM 代理启动: 0.0.0.0:8888
 
 ## mysekai数据
 
-打开mysekai，等到你的豆腐人走出房门，那么Mysekai数据抓取就顺利完成了
+打开mysekai，等到你的豆腐人走出房门，看到如下提示，那么Mysekai数据抓取就顺利完成了
 
-使用HarukiProxy进行抓取时，在终端不会出现任何的成功提示
+![5405f8677d06907562e9763bda87a428_720](./asset/5405f8677d06907562e9763bda87a428_720.png)
 
-请使用msa或者msm进行测试是否抓包成功
+或者使用msa或者msm进行测试是否抓包成功
 
 > [!caution]
 >
 > 当你抓包结束后不需要抓包时请使用快捷键ctrl+c退出exe程序，直接关闭窗口将不保证能清除代理
+
+## 默认ip配置失效
+
+```
+android_proxy_ip: "" # 手动设置代理IP，如果自动获取IP并设置会导致模拟器/设备无法联网，请填写此项
+```
+
+请将你正在操作的这台电脑（抑或是其它设备，总之是你要运行MuMu模拟器和HarukiProxy的这台设备）的ip地址填入""中
+
+如果你不知道自己的ip地址的话，请按照以下流程
+
+- Windows：同时按下键盘上的WIN+R两个键，右下角会弹出“运行”窗口，在窗口中输入cmd并回车
+
+![c3a3a31b5274f9cd5dac44856f199d48](./asset/c3a3a31b5274f9cd5dac44856f199d48.png)
+
+接着，在弹出的界面中输入ipconfig，从出现的内容中找到以太网适配器 以太网 或 无线局域网适配器 WLAN，下方的IPV4/IPV6地址即为你的当前地址
+
+![f4f0917014e30f5eebc6dde4c67d57a8](./asset/f4f0917014e30f5eebc6dde4c67d57a8.png)
 
 ## 全局设置清理（恢复模拟器网络）
 
