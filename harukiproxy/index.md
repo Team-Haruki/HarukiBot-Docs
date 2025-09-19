@@ -182,7 +182,7 @@ devices:
 
 现在回到解压HarukiProxy的目录，双击HarukiProxy-vx.x.x.exe来打开，随后回到MuMu模拟器，当弹出请求root权限时选择允许,之后等待HarukiProxy完成自己的工作，当HarukiProxy弹出请重启模拟器的提示时，重启模拟器来完成证书安装
 
-![a6dfc1ff482cdda16f9d2254386348ce](./asset/a6dfc1ff482cdda16f9d2254386348ce.png)
+![9B99D590C8E96BE9BC0907378F1AF081](./asset/9B99D590C8E96BE9BC0907378F1AF081.png)
 
 > [!caution]
 >
