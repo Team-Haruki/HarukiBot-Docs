@@ -12,6 +12,7 @@ HarukiProxy是由*Haruki Dev Team*开发的一款Android平台**半自动**抓�
 - 支持保存抓取的suite数据到本地
 - 支持保存抓取的mysekai数据到本地
 - 支持自动为**MuMu模拟器**或其他可Root和可写系统盘的Android设备/模拟器安装MitM证书
+- 支持adb自动操作**多个**Android设备
 - 支持自动为Android设备设置HarukiProxy为代理
 - 支持自定义上游HTTP代理
 
@@ -56,7 +57,7 @@ harukiProxy-vx.x.x.exe
 
 ## 配置config.yaml
 
-推荐使用vscode等专业编辑器进行配置，记事本也可以使用，但有可能出错
+推荐使用`vscode`等专业编辑器进行配置，记事本也可以使用，但有可能出错
 
 打开文件后，默认配置应该如下
 
@@ -153,7 +154,7 @@ devices:
 
 > [!caution]
 >
-> 记得按下ctrl+s来保存你所做的更改
+> 记得按下Ctrl+S来保存你所做的更改
 
 ## 更改MuMu模拟器设置
 
@@ -203,7 +204,7 @@ goproxy MITM 代理启动: 0.0.0.0:8888
 
 在登录界面进行登录操作后可以抓取
 
-## mysekai数据
+### mysekai数据
 
 打开mysekai，等到你的豆腐人走出房门，看到如下提示，那么Mysekai数据抓取就顺利完成了
 
@@ -213,7 +214,7 @@ goproxy MITM 代理启动: 0.0.0.0:8888
 
 > [!caution]
 >
-> 当你抓包结束后不需要抓包时请使用快捷键ctrl+c退出exe程序，直接关闭窗口将不保证能清除代理
+> 当你抓包结束后不需要抓包时请使用快捷键Ctrl+C退出exe程序，直接关闭窗口将不保证能清除代理
 
 ## 默认ip配置失效
 
@@ -243,7 +244,6 @@ android_proxy_ip: "" # 手动设置代理IP，如果自动获取IP并设置会�
 adb -s 127.0.0.1:16384 shell settings put global http_proxy :0
 ```
 
-之后重启模拟器
 
 即可恢复网络
 
