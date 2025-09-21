@@ -4,7 +4,7 @@
 > 当前HarukiProxy的发布版本为`v1.5.0`，本文档的介绍以及教程均根据`v1.5.0`版本编写  
 > 如果你下载的版本不是`v1.5.0`，请务必更新之后再阅读本教程
 ::: info **特别鸣谢** 
-开发者: `星云希凪` from [*Haruki Dev Team*](https://github.com/Team-Haruki)  
+开发者: [*Haruki Dev Team*](https://github.com/Team-Haruki)  
 教程编写者: `storyxy3`、`Deseer`、 `Aposetles`和`Lemoe`
 
 :::
