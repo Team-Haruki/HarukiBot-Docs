@@ -135,7 +135,7 @@ mumu_manager_path: "C:\\Program Files\\Netease\\MuMuPlayer-12.0\\nx_main\\MuMuMa
 
    我们的目标是在它上面的`MuMuManager.exe`，接着左键上方的目录，然后按ctrl+c来复制目录
 
-   接下来，对于你复制的这个目录，我们有两种修改方法，同时我们要在结尾加入MuMuManager.exe
+   接下来，对于你复制的这个目录，我们有两种修改方法，同时我们要在结尾加入`MuMuManager.exe`
 
    例如在本例中，我复制到的地址为
 
