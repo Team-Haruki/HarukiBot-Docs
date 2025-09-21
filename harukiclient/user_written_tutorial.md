@@ -62,7 +62,7 @@ Windows版本并非单文件，请把所有文件**解压缩**出来,Linux无需
 
 ```
 (解压出的文件夹或纯英文目录的文件夹)
-├ config.json
+├ configs.json
 └ HarukiClient-xxx-v1.1.7.exe/.app
 ```
 
