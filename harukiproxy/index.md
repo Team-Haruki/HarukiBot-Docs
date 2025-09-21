@@ -1,9 +1,11 @@
 # HarukiProxy 介绍与教程
 
 ## 什么是HarukiProxy
+
 HarukiProxy是由*Haruki Dev Team*开发的一款Android平台**半自动**抓取游戏pjsk的数据的程序
 
 ## HarukiProxy的特点
+
 - 支持`日服`、`台服`、`韩服`、`国际服`数据抓取
 - 支持**自动上传数据**到Haruki工具箱
 - 支持选择是否公开自己自动上传到Haruki工具箱的数据在公开API访问
@@ -11,7 +13,7 @@ HarukiProxy是由*Haruki Dev Team*开发的一款Android平台**半自动**抓�
 - 支持保存抓取的数据到本地
 - 支持保存抓取的suite数据到本地
 - 支持保存抓取的mysekai数据到本地
-- 支持自动为**MuMu模拟器**或其他可Root和可写系统盘的Android设备/模拟器安装MitM证书
+- 支持自动配置**MuMu模拟器**或为其他可Root和可写系统盘的Android设备/模拟器安装MitM证书
 - 支持adb自动操作**多个**Android设备
 - 支持自动为Android设备设置HarukiProxy为代理
 - 支持自定义上游HTTP代理
@@ -20,7 +22,13 @@ HarukiProxy是由*Haruki Dev Team*开发的一款Android平台**半自动**抓�
 
 ***本程序自动化功能仅针对MuMu模拟器或其他可手动获取root可写系统盘的设备***
 
+***Windows的MuMu模拟器版本需要V4.0.0.3179及以上版本才可使用HarukiProxy自动配置MuMu功能。如果你的MuMu版本不符合要求，请先升级***
+
 ***如果你的Android手机正在使用Magisk/KernelSU等程序，请搜索“Always Trust User Certs”获取详细教程，并且手动设置代理服务器，本文不再赘述***
+
+> [!tip]
+>
+> 配置出现问题时请跳转至[问题自查](# 问题自查)先查找是否为常见问题，再借助搜素引擎和ai尝试解决问题，最后再在群聊里问群友，不会提问的请务必先阅读[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
 
 根据你的系统，选择并下载最新版的HarukiProxy
 
@@ -39,7 +47,7 @@ HarukiProxy是由*Haruki Dev Team*开发的一款Android平台**半自动**抓�
 
 解压后，目录应该有如下文件
 
-![6386d73b97244af2d2cb002a219fca9a](./asset/6386d73b97244af2d2cb002a219fca9a.png)
+![6386d73b97244af2d2cb002a219fca9a](C:\Users\Administrator\Downloads\6386d73b97244af2d2cb002a219fca9a.png)
 
 ```
 目录名：HarukiProxy-vx.x.x-windows-x64
@@ -55,7 +63,7 @@ harukiProxy-vx.x.x.exe
 >
 > 如果你的系统不是Windows，请自行准备adb工具，并且添加到环境变量里
 
-## 配置config.yaml
+### 配置config.yaml
 
 推荐使用`vscode`等专业编辑器进行配置，记事本也可以使用，但有可能出错
 
@@ -63,80 +71,120 @@ harukiProxy-vx.x.x.exe
 
 ```
 auto_upload: true # 是否自动上传数据到Haruki Toolbox，一般不需要改为false
-
 private: true # 是否不公开你的数据在Haruki Suite API公开API上，如果是请保持为true，如果想公开则改为false
-
 upload_endpoint: "" # 自定义上传数据端点
-
 save_data_locally: false # 是否自动保存数据到本地，如果你有需求可以改为true
-
 save_data_dir: "./data" # 自动保存的数据路径
-
 save_suite_locally: true # 是否自动保存suite数据到本地，如果save_data_locally未启用，则该选项不会生效
-
 save_mysekai_locally: true # 是否自动保存mysekai数据到本地，如果save_data_locally未启用，则该选项不会生效
-
 listen: "0.0.0.0:8888" # MitM监听，一般情况下无需更改
-
 adb: true # 是否启用 ADB
-
-auto_install_cert: true # 是否自动安装证书，如果使用的不是MuMu模拟器可以设置为false
-
+auto_install_cert: true # 是否自动通过adb安装证书，如果使用的不是MuMu模拟器可以设置为false
 android_proxy_ip: "" # 手动设置代理IP，如果自动获取IP并设置会导致模拟器/设备无法联网，请填写此项
-
 goproxy_debug: false # 启用调试模式，如果有问题时请改为true，否则保持false即可
-
 goproxy_upstream_proxy: "" # 上游代理，如果连接状况不佳可以设置(如"http://127.0.0.1:6152")，否则留空即可
 
-# Android 设备列表
+# 自动控制MuMu选项
+auto_mumu: true # 设置true为启动MuMu全自动操作
+mumu_manager_path: "C:\\Program Files\\Netease\\MuMuPlayer-12.0\\nx_main\\MuMuManager.exe" # MuMuManager的可执行文件地址，如果你的MuMu模拟器安装在C盘则不需要修改，否则需要修改
+auto_mumu_devices:
+  - "0" # 你需要自动操作的MuMu模拟器编号
+  # - "1" 可以添加
+  # - "2" 更多设备
+  # - "3" 支持批量操作
+  # - "4" MuMu
+
+# ADB 控制 Android 设备列表
 devices:
-  - serial: "" # 有线连接的Android设备名
-    wireless: "127.0.0.1:16384" # 无线连接的Android设备名（IP:端口）
+  # - serial: "" # 有线连接的Android设备名
+  #  wireless: "127.0.0.1:16384" # 无线连接的Android设备名（IP:端口）
 
   # 可继续添加更多设备
   # - serial: "device_serial"
   #   wireless: "ip:port"
 ```
 
-我们所要做的主要改动有以下几点
+#### 主要配置
 
-在上述配置文件中找到**# Android 设备列表**，并修改它下面
-
-```
-devices:
-  - serial: "" # 有线连接的Android设备名
-    wireless: "127.0.0.1:16384" # 无线连接的Android设备名（IP:端口）
-```
-
-中wireless后面的这串数字:后的16384改为**你模拟器**的adb端口
-
-### 端口的获取方式
-
-1. 在MuMu模拟器的模拟器管理界面，也就是打开之后的初始界面，点击右上角的三条杠
-
-![b94d779a6ea47cc99de9f29be2004f1c](./asset/b94d779a6ea47cc99de9f29be2004f1c.png)
-
-2. 之后选择设备中心
-
-![7bd99441bd5fab683f81c4ecbf623b9c](./asset/7bd99441bd5fab683f81c4ecbf623b9c.png)
-
-3. 向下滑找到ADB端口
-
-![c2299e9c2601c8457e8ab8686f628730](./asset/c2299e9c2601c8457e8ab8686f628730.png)
-
-4. 点开之后找到你准备进行抓包流程的那个模拟器，有右边的就是ADB端口（如果看到多个数字，都可以使用）
+修改
 
 ```
-结果为wireless: "127.0.0.1:你得到的模拟器的端口"
+mumu_manager_path: "C:\\Program Files\\Netease\\MuMuPlayer-12.0\\nx_main\\MuMuManager.exe"
 ```
 
-**harukiproxy的主要配置到此结束**
+请将这里设置为你的实际mumumanager.exe所在位置，如果你并不知道自己的程序所在位置，请执行以下流程
 
-## 其他配置
+1.按理来说，在安装时mumu模拟器会自动在你的桌面创建一个快捷方式,如果你删除了这个快捷方式，那么请查看结尾的处理方式
+
+![Screenshot 2025_9_21 22_29_22](C:\Users\Administrator\Videos\Captures\Screenshot 2025_9_21 22_29_22.png)
+
+2.接下来，右键这个快捷方式，并在接下来弹出的菜单中选择“打开文件所在的位置”
+
+![735ac4dcdc2d463bf7b85ea36843194e](E:\QQFile\3164679932\nt_qq\nt_data\Pic\2025-09\Ori\735ac4dcdc2d463bf7b85ea36843194e.png)
+
+接下来你就会跳转到mumu模拟器安装的目录,系统会用蓝色标识出快捷方式连接到的“MuMuNxMain.exe”
+
+![nx_main 2025_9_21 22_35_20](C:\Users\Administrator\Desktop\nx_main 2025_9_21 22_35_20.png)我们的目标是在它上面的MuMuManager.exe，接着左键上方的目录，然后按ctrl+c来复制目录
+
+接下来，对于你复制的这个目录，我们有两种修改方法，同时我们要在结尾加入MuMuManager.exe
+
+例如在本例中，我复制到的地址为
+
+```
+D:\MuMu Player 12\nx_main
+```
+
+你可以将里面的所有 \ 修改为 / ，然后加上MuMuManager.exe，也就是
+
+```
+D:/MuMu Player 12/nx_main/MuMuManager.exe
+```
+
+又或者将所有的 \ 变成  \ \，然后加上MuMuManager.exe，也就是
+
+```
+D:\\MuMu Player 12\\nx_main\\MuMuManager.exe
+```
+
+3,打开你的MuMu模拟器，在你的虚拟机左上角，应该会有一个#x的编号
+
+![MuMu模拟器 2025_9_21 22_48_38](C:\Users\Administrator\Desktop\MuMu模拟器 2025_9_21 22_48_38.png)
+
+将
+
+```
+auto_mumu_devices:
+
+ \- "0" # 你需要自动操作的MuMu模拟器编号
+```
+
+中的0改为实际编号（如果你也是0就不用改），同时如果你的MuMu中只有一台设备，那么请一定要确认为0
+
+#### 另一种找到目录的方式
+
+如果你真的把桌面上MuMu模拟器的快捷方式删掉了，又或者说你的桌面上真的没有出现过这个快捷方式，那么就用接下来的方法吧
+
+1.单击键盘上的windows键，这时候你的开始菜单应该弹出来了
+
+![屏幕截图 2025-09-21 233901](C:\Users\Administrator\Pictures\Saved Pictures\屏幕截图 2025-09-21 233901.jpg)
+
+接下来一路下滑这个菜单到“M”类(或者你点击最近添加，#或者ABCDE这堆字母的其中一个，会出现一个检索目录，直接点击里面的M)，应该会有一个MuMu模拟器文件夹，点进去，右键MuMu模拟器，接着在弹出的菜单中选择更多，再选择打开文件位置
+
+现在我们只是来到了一个中转站，你还要再右键那个叫做MuMu模拟器的快捷方式，点击打开文件所在的位置，才能进入安装目录
+
+![MuMu模拟器 2025_9_22 0_01_02](C:\Users\Administrator\Videos\Captures\MuMu模拟器 2025_9_22 0_01_02.png)
+
+2.如果你的操作系统宣称自己比较先进（是win11）那么你就只能使用搜索了(虽然这个win10也一样可以用），直接点击任务栏里那个神秘放大镜进入搜索菜单，搜索MuMu模拟器，然后直接点击打开文件位置，和之前一样操作
+
+![cea2565c1b3c760370e3c79838c7f097](E:\QQFile\3164679932\nt_qq\nt_data\Pic\2025-09\Ori\cea2565c1b3c760370e3c79838c7f097.png![e0912df36e19459421e61be8e5a9bf12](E:\QQFile\3164679932\nt_qq\nt_data\Pic\2025-09\Ori\e0912df36e19459421e61be8e5a9bf12.png)
+
+![cea2565c1b3c760370e3c79838c7f097](E:\QQFile\3164679932\nt_qq\nt_data\Pic\2025-09\Ori\cea2565c1b3c760370e3c79838c7f097.png)
+
+#### 其他配置
 
 - `save_data_locally: false` # 是否自动保存数据到本地，如果你有需求可以改为true
 
-- `save_data_dir: "./data"` # 自动保存的数据路径
+- `save_data_dir: "./data"` # 自动保存的数据路径，默认为在HarukiProxy安装目录下的data文件夹
 
 - `save_suite_locally: true` # 是否自动保存suite数据到本地，如果`save_data_locally`未启用，则该选项不会生效
 
@@ -156,65 +204,89 @@ devices:
 >
 > 记得按下Ctrl+S来保存你所做的更改
 
-## 更改MuMu模拟器设置
+#### 在MuMu上要干的事情
 
-1. 接着，打开你的MuMu模拟器，点击右上角的**. . .**  ，
-
-![ae95ba968c928689e7134e33f1ff6a7d_720](./asset/ae95ba968c928689e7134e33f1ff6a7d_720.png)
-
-2. 并在弹出的菜单里选择设备设置
-
-![2323c5e769a2cb2c067b9c928e890e9b](./asset/2323c5e769a2cb2c067b9c928e890e9b.png)
-
-3. 在设备设置中选择最下面的“其他”，找到root权限后点击右边的按钮开启
-
-![4f13cc47ed08f680f62a7f150988517b](./asset/4f13cc47ed08f680f62a7f150988517b.png)
-
-4. 之后，选择“磁盘”，点击其中的磁盘共享，然后将只读系统盘切换为可写系统盘，然后根据提示重启MuMu模拟器
-
-![bc6419f37533757775aab082cd760628](./asset/bc6419f37533757775aab082cd760628.png)
-
-5. 之后，在你的MuMu模拟器上下载你要抓包的服务器版本，随后和你之前做过的一样进入游戏下载数据，进入游戏，确认自己能够进入游戏主界面后我们便完成了准备工作
+在你的MuMu模拟器上下载你要抓包的服务器版本，随后和你之前做过的一样进入游戏下载数据，进入游戏，确认自己能够进入游戏主界面后我们便完成了准备工作
 
 ***请注意，如果你在这个阶段无法连接游戏服务器或者下载数据过慢，可以点击. . .选择游戏加速功能，里面有UU加速器可供使用***
 
-## 安装证书
+## 开始使用HarukiProxy
 
-现在回到解压HarukiProxy的目录，双击HarukiProxy-vx.x.x.exe来打开，随后回到MuMu模拟器，当弹出请求root权限时选择允许,之后等待HarukiProxy完成自己的工作，当HarukiProxy弹出请重启模拟器的提示时，重启模拟器来完成证书安装
+[!caution]
 
-![9B99D590C8E96BE9BC0907378F1AF081](./asset/9B99D590C8E96BE9BC0907378F1AF081.png)
+***如果你前面使用了MuMu模拟器自带的游戏加速功能，或是你自己在模拟器里使用了什么加速器，这时都该关掉了，不然接下来会抓取不到数据***
 
-> [!caution]
->
-> **弹出请重启模拟器的提示前请不要退出MuMu模拟器，否则证书会安装失败***
->
-> ***如果你前面使用了MuMu模拟器自带的游戏加速功能，或是你自己在模拟器里使用了什么加速器，这时都该关掉了，不然接下来会抓取不到数据***
+现在回到解压HarukiProxy的目录，双击HarukiProxy-vx.x.x.exe来打开
+
+还有另外一种更加建议的方式，使用CMD来打开
+
+在资源管理器的HarukiProxy安装目录中，点击上方的目录框，删除当前目录路径后，输入cmd,接着按回车
+
+![185dc324e9ac19c2ffbf2e0f0f5bf9bc](C:\Users\Administrator\Downloads\185dc324e9ac19c2ffbf2e0f0f5bf9bc.png)
+
+在随后弹出的CMD中，输入
+
+```
+HarukiProxy-vx.x.x.exe(可以在输入了前几个字符后按下Tab自动补全)
+```
+
+然后按回车来启动HarukiProxy
+
+过程中如果看到MuMu模拟器自动重启，属于完全正常现象，请不用管这些，只要看终端就好了
+
+如果提示WIndowsDefender提示已阻止harukiProxy-vx.x.x.exe的部分功能，请点击下方的允许
+
+如果遇到了
+
+```
+[WARNING][HarukiProxyMain] 批量设置MuMu模拟器代理错误: exit status 1
+```
+
+这是偶发性问题，请ctrl+c退出HarukiProxy后重新启动
+
+正常没有错误的初次启动大概为下图
+
+![e077e781205f160f6d15ad6768f689c3](E:\QQFile\3164679932\nt_qq\nt_data\Pic\2025-09\Ori\e077e781205f160f6d15ad6768f689c3.png)
 
 ## 抓取
 
-重启完模拟器后，HarukiProxy应该会弹出
+接着启动你的世界计划客户端
 
-```
-goproxy MITM 代理启动: 0.0.0.0:8888
-```
-
-随后出现一些开头为WARN的消息，如果格式为Cannot read TLS response那就是正常现象
+随后出现一些开头为WARN的消息，如果格式为Cannot read TLS response那就是正常现象，接着可以抓取了
 
 ### suite数据
 
-在登录界面进行登录操作后可以抓取
+在登录界面进行登录操作后可以抓取，下图为成功提示
+
+![屏幕截图 2025-09-21 231948](C:\Users\Administrator\Pictures\Saved Pictures\屏幕截图 2025-09-21 231948.jpg)
 
 ### mysekai数据
 
 打开mysekai，等到你的豆腐人走出房门，看到如下提示，那么Mysekai数据抓取就顺利完成了
 
-![5405f8677d06907562e9763bda87a428_720](./asset/5405f8677d06907562e9763bda87a428_720.png)
+![屏幕截图 2025-09-21 232052](C:\Users\Administrator\Pictures\Saved Pictures\屏幕截图 2025-09-21 232052.jpg)
 
 或者使用msa或者msm进行测试是否抓包成功
 
+> [!tip]
+>
+> 如果遇到bot“你上传的MySekai数据里没有正确的数据哦。”，请去编队随便交换个人再进入烤森抓包
+
 > [!caution]
 >
-> 当你抓包结束后不需要抓包时请使用快捷键Ctrl+C退出exe程序，直接关闭窗口将不保证能清除代理
+> 当你抓包结束后不需要抓包时请使用快捷键Ctrl+C退出exe程序，直接关闭窗口将不保证能清除代理，可能会导致模拟器无网络连接
+
+# 问题自查
+
+如果在执行文档中的教程时出现问题时，请先查阅此部分进行修复
+
+## 程序闪退
+
+1. 按下键盘上的`Win + R`键，会弹出一个“运行”对话框。在里面输入`cmd`，然后按回车。
+2. 在.exe 文件的文件夹上方的地址栏上单击地址栏，路径就会被完整选中，右键点击选中的路径，选择“复制”
+3. 在命令行中输入`cd`，然后加一个空格，再按`Ctrl+V`粘贴你刚刚复制的路径，最后按回车，可以看到命令行中的路径现在和你的程序所在路径一致
+4. 输入`HarukiProxy`后按tab可以发现会补全为你下载版本的harukiproxy.exe，回车即可以运行
+5. 你现在可以看到具体的报错，把它复制到浏览器查阅或者询问ai
 
 ## 默认ip配置失效
 
@@ -228,13 +300,13 @@ android_proxy_ip: "" # 手动设置代理IP，如果自动获取IP并设置会�
 
 - Windows：同时按下键盘上的WIN+R两个键，右下角会弹出“运行”窗口，在窗口中输入cmd并回车
 
-![c3a3a31b5274f9cd5dac44856f199d48](./asset/c3a3a31b5274f9cd5dac44856f199d48.png)
+![c3a3a31b5274f9cd5dac44856f199d48](C:\Users\Administrator\Downloads\c3a3a31b5274f9cd5dac44856f199d48.png)
 
 接着，在弹出的界面中输入ipconfig，从出现的内容中找到以太网适配器 以太网 或 无线局域网适配器 WLAN，下方的IPV4/IPV6地址即为你的当前地址
 
-![f4f0917014e30f5eebc6dde4c67d57a8](./asset/f4f0917014e30f5eebc6dde4c67d57a8.png)
+![f4f0917014e30f5eebc6dde4c67d57a8](C:\Users\Administrator\Downloads\f4f0917014e30f5eebc6dde4c67d57a8.png)
 
-## 全局设置清理（恢复模拟器网络）
+## 模拟器连不上网
 
 当你使用HarukiProxy完成抓包后，如果模拟器没能正常联网，则可以使用adb工具进行设置的全局代理
 
@@ -244,12 +316,39 @@ android_proxy_ip: "" # 手动设置代理IP，如果自动获取IP并设置会�
 adb -s 127.0.0.1:16384 shell settings put global http_proxy :0
 ```
 
+>    [!caution]
+>
+>    （这里的端口也请记得改成自己的）
 
 即可恢复网络
+
+## config.yaml配置相关
+
+### 配置了上游代理后闪退
+
+![a4aad736ea0ffb5b92d7e02778cafa4d](C:\Users\Administrator\Downloads\a4aad736ea0ffb5b92d7e02778cafa4d.png)
+
+请查找
+
+```
+goproxy_upstream_proxy: ""
+```
+
+
+中的配置是否为http://127.0.0.1:xxxx的形式，可能会遗漏http://
+
+### 配置文件发生错误
+
+![0a70e59e05b165336ec63e8689e45e20](C:\Users\Administrator\Downloads\0a70e59e05b165336ec63e8689e45e20.png)
+
+也许在你确认了全部的配置都没有问题保存后，可能还会遇到编码问题，我们的配置文件使用的是标准的UTF-8编码，因此使用其它方式(如使用记事本）编码后得到的配置文件会发生编码错误
+
+最好的处理办法就是重新拿一份配置文件，更改你的记事本编码方式或者使用专业编辑器（如VSCode）编辑，然后用正确的编码方式保存
 
 ## HarukiProxy 更新记录
 
 ### v1.4.0
+
 - 新增是否自动上传到Haruki Toolbox
 - 新增自定义上传数据端点
 - 新增是否保存数据到本地
@@ -258,14 +357,19 @@ adb -s 127.0.0.1:16384 shell settings put global http_proxy :0
 - 新增是否自动通过adb安装证书
 
 ### v1.2.0
+
 - 为生成Root CA时的CA名字添加随机参数
 - 退出程序时自动清理adb设备的代理
 
 ### v1.1.1
+
 - 添加Haruki声明
 
 ### v1.1.0
+
 - 改善获取内网IP的逻辑
 
 ### v1.0.0
+
 - 初版
+
