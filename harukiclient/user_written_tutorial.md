@@ -1,48 +1,72 @@
-# 快速上手
+# Haruki分布式部署文档
 
-#### 本文档将介绍如何快速部署Haruki分布式客户端，并对客户端进行配置。
+本教程包括部署与配置Haruki分布式客户端与Bot端的大部分内容
 
-#### 如果是用记事本打开本文档，推荐换用支持MD的阅读器，如：vscode等
+## 准备工作
 
-#### 警告：部署bot这一行为可能违反腾讯的用户协议，因此可能导致的 QQ 账号被**封禁或限制**等一切后果，开发者不予承担。
+::: warning
 
-#### 温馨提示：请合理使用本分布式客户端，恶意使用可能会被开发者收回使用权限、永久拉黑。
+部署本项目需要一定的电脑基础，会读文档，推荐使用vscode之类的阅读器查看文档
 
-#### *!!! 特别提醒：请勿使用bot账号加群 !!!请使用另一个账号进群验证!!!*
+部署bot这一行为可能违反腾讯的用户协议，因此可能导致的 QQ 账号被**封禁或限制**等一切后果，开发者不予承担。
 
-#### 客户端注册过程中要求你填写的QQ号为你本人的QQ号，也就是进群账号
+请合理使用本分布式客户端，恶意使用可能会被开发者收回使用权限、永久拉黑。
 
-#### **Haruki Dev群号：959939201 如遇任何问题请在群里询问!!!*
+*Haruki Dev群号：959939201 如遇任何问题请在自我排除后附上截图在群里询问!!!*
 
-#### 请勿将HarukiClient用于QQ官方机器人！这会导致Haruki Cloud的绑定数据异常！
++ 客户端注册过程中要求你填写的QQ号为**你本人的QQ号**，而非**你使用Bot的账号**
 
-## Haruki客户端部署
++ **请不要把Bot账号拉进来！**
 
-在群文件中下载对应系统的客户端与配置文件
++ **请勿将HarukiClient用于QQ官方机器人！这会导致Haruki Cloud的绑定数据异常！**
 
-windows将配置文件放在解压出的文件同目录文件目录，Linux应该无需解压.app文件
+:::
 
-windows下载zip压缩包后请不要使用系统自带默认解压，会解压失败
+### 获取一台服务器
+
+你需要一台24h不关机的电脑，否则关机这段时间HarukiBot将无法工作，此处推荐购买[雨云](https://www.rainyun.com/MzUzODA4_)运行
+
+Windows 电脑需要运行大于等于 Windows 8 或 Windows server 2012 版本的系统（更低版本实测无法运行）
+
+Linux 系统推荐使用 ``Ubuntu 22.04``, ``Debian 12`` 或以上的Linux发行版系统
+
+macOS仅提供Apple Silicon (即arm64)的打包文件，x86的macOS不提供支持
+
+在较低版本 Ubuntu 和其他较低版本 Linux 中可能提示缺少 GLIBC 对应版本，安装非常麻烦，不推荐使用。
+
+
+## 客户端安装与配置
+
+在群文件中下载对应系统的客户端(群文件客户端文件夹中)与配置文件(群文件主目录7月4日)
+
+```text
+Windows       HarukiClient-Windows-x64-v1.1.7.zip
+Linux       HarukiClient-Linux-amd64-v1.1.7-glibc.app
+```
+
+::: warning
+
+Windows版本并非单文件，请把所有文件**解压缩**出来,Linux无需解压.app文件
+
+请务必**不要使用**Windows自带的解压缩解压Windows客户端,否则解压的时候会报错从而解压失败
 
 推荐使用7zip解压：https://www.7-zip.org/
 
-如果官网下载失败可以在群文件里找到win-x64安装包:7z2501-x64.exe
+如果官网下载失败可以在群文件主目录9月4日找到win-x64安装包:7z2501-x64.exe
+
+:::
+
+将配置文件放在解压出的文件同目录文件目录的位置，否则客户端会闪退
 
 文件结构应与下列一致
+
 ```
-(最好是纯英文字符的新建文件夹)
+(解压出的文件夹或纯英文目录的文件夹)
 ├ config.json
 └ HarukiClient-xxx-v1.1.7.exe/.app
 ```
 
-最新的对应系统客户端包名
-
-```text
-Windows       HarukiClient-Windows-x64-v1.1.7.exe
-Linux       HarukiClient-Linux-amd64-v1.1.7-glibc.app
-```
-
-### 配置文件
+### 配置文件configs.json
 
 ```json
 {
@@ -76,17 +100,13 @@ Linux       HarukiClient-Linux-amd64-v1.1.7-glibc.app
 
 **客户端的配置告一段落，接下来进入Bot端部署**
 
-# Bot端部署
+## Bot端部署以及几种推荐使用的方案
 
-### 请使用支持 **OneBot V11** 协议的 QQ 客户端
-
-## 以下是2种推荐使用的方案
+#### 请使用支持 **OneBot V11** 协议的 QQ 客户端
 
 ## 1.Lagrange.OneBot
 
 首先，需要有一台服务器或者24小时开机联网的电脑，以保证您部署的bot能一直运行。
-
-推荐购买[雨云](https://www.rainyun.com/MzUzODA4)，助力群主多续点服务器。
 
 其次，请在该设备上下载 **Lagrange.OneBot**。
 
@@ -104,6 +124,7 @@ Linux       HarukiClient-Linux-amd64-v1.1.7-glibc.app
 然后运行，第一次运行后先退出，**修改生成的appsettings.json文件**
 
 ### 需要修改的地方:
+
 (版本号无法公开传播请询问群友或者通过lgr官方群或者readme获取)
 
 "SignServerUrl": "https://sign.lagrangecore.org/api/sign/版本号"
@@ -136,8 +157,6 @@ Linux       HarukiClient-Linux-amd64-v1.1.7-glibc.app
 
 首先，需要有一台服务器或者24小时开机联网的电脑，以保证您部署的bot能一直运行。
 
-推荐购买[雨云](https://www.rainyun.com/MzUzODA4)，助力群主多续点服务器。
-
 其次，请在该设备上下载 **Napcat**。
 
 ##### 下载安装启动方式：
@@ -152,7 +171,25 @@ Linux       HarukiClient-Linux-amd64-v1.1.7-glibc.app
 
   * 进入 NapCat.XXXX.Shell 文件夹，启动napcat.bat扫码登录（如果提示QQ损坏就把所有文件删了重新安装一次）
 
-  * 登录后退出，进入NapCat.XXXX.Shell\versions\9.9.19-34740\resources\app\napcat\config文件夹
+  * 登陆后，使用客户端或者webui，点击左侧**网络配置**选项，右侧左上角新建选择**websocket客户端**，url填入
+    ws://127.0.0.1:8000/ws
+
+  * 名称随意，记得点击**左上角启动**并保存(如需添加其他bot地址，请重复上述操作并填入对应url)
+
+  * 现版本webui默认随机密码token，请在webui.json文件下查看，如无需公网访问webui请将host改为127.0.0.1,port改为0，若需公网使用请临时开启使用后关闭，并使用非默认端口。
+
+  * webui启用时，启动后可在启动日志中看到形如 [WebUI] WebUI Local Panel Url: http://127.0.0.1:6099/webui?token=xxxx 的 token 信息。
+
+    ```json
+      {
+      "host": "0.0.0.0", // WebUI 监听地址
+      "port": 6099, // WebUI 端口
+      "token": "xxxx", // 登录密钥, 默认是自动生成的随机登录密码
+      "loginRate": 3, // 每分钟登录次数限制
+      }
+    ```
+
+  * 或者登陆后退出，通过手动修改文件配置。进入NapCat.XXXX.Shell\versions\9.9.19-34740\resources\app\napcat\config文件夹
 
   * 现在这里应该有onebot11_{刚才登录的QQ号}.json
 
@@ -170,21 +207,7 @@ Linux       HarukiClient-Linux-amd64-v1.1.7-glibc.app
         "debug": false,
         "heartInterval": 30000
       }
-
-  * 现版本webui已改为随机密码，请在webui.json文件下查看，如无需公网访问webui请将host改为127.0.0.1,port改为0，若需公网使用请临时开启使用后关闭，并使用非默认端口。
-  * webui启用时，启动后可在启动日志中看到形如 [WebUI] WebUI Local Panel Url: http://127.0.0.1:6099/webui?token=xxxx 的 token 信息。
-    
-    ```json
-    {
-    "host": "0.0.0.0", // WebUI 监听地址
-    "port": 6099, // WebUI 端口
-    "token": "xxxx", // 登录密钥, 默认是自动生成的随机登录密码
-    "loginRate": 3, // 每分钟登录次数限制
-    }
-    
-  * 使用客户端或者webui时，点击左侧**网络配置**选项，右侧左上角新建选择**websocket客户端**，url填入
-    ws://127.0.0.1:8000/ws
-  * 名称随意，记得点击**左上角启动**并保存(如需添加其他bot地址，请重复上述操作并填入对应url)
+    ```
 
 - Debian/Ubuntu/Centos等linux系统
 
@@ -196,25 +219,44 @@ Linux       HarukiClient-Linux-amd64-v1.1.7-glibc.app
     https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
     && sudo bash napcat.sh
     ```
- * 启动nc
 
- * ```bash
-   sudo xvfb-run -a /opt/QQ/qq --no-sandbox #第一次登录请扫码
-   sudo xvfb-run -a /opt/QQ/qq --no-sandbox -q QQ号 #以后使用
-   ```
-
-    * 安装完成后先通过napcat start QQ号启动，然后结束，并进入/opt/QQ/resources/app/app_launcher/napcat/config，打开onebot11_{刚才登录的QQ号}.json
-    * 修改websocketClients的值（和Windows的配置相同，复制粘贴ok）
-    * 保存后再次登录即可
-    * Linux也可使用webui进行配置
+  ```
   
+  ```
+
+* 启动nc
+
+* ```bash
+  sudo xvfb-run -a /opt/QQ/qq --no-sandbox #第一次登录请扫码
+  sudo xvfb-run -a /opt/QQ/qq --no-sandbox -q QQ号 #以后使用
+  ```
+
+   * 安装完成后先通过napcat start QQ号启动，然后结束，并进入/opt/QQ/resources/app/app_launcher/napcat/config，打开onebot11_{刚才登录的QQ号}.json
+   * 修改websocketClients的值（和Windows的配置相同，复制粘贴ok）
+   * 保存后再次登录即可
+   * Linux也可使用webui进行配置
+
 * 更多更详细安装方式请访问https://napneko.pages.dev/guide/boot/Shell
-  
 
+## 3.LLOnebot(仅说明，推荐换用Napcat)
+
+* Windows
+
+  * 首先确认你已经安装了64位的原版无插件NTQQ
+
+  * 打开浏览器，输入以下链接:https://github.com/LLOneBot/LLOneBot/releases
+
+  * 下载LLOneBot-win-x64-ffmpeg.zip解压后双击运行exe即可
+
+  * 安装完毕后，登录你所需要挂bot的QQ号，之后打开 QQ 的设置，看到了LLOneBot就代表安装成功了。
+
+  * 打开LLOneBot设置选择反向ws代理，并添加以下地址:ws://127.0.0.1:8000/ws
+
+  * 配置文件,webui配置请查看文档:https://llonebot.com/guide/getting-started
 
 ## 客户端使用与验证
 
-配置完毕bot端后使用管理员权限运行/sudo运行Haruki客户端
+###配置完毕bot端后使用管理员权限运行/sudo运行Haruki客户端
 
 Windows
 
@@ -223,6 +265,7 @@ HarukiClient-Windows-x64-v1.1.7.exe 或 双击运行
 ```
 
 Linux（如Ubuntu/Debian/AlmaLinux）
+
 > 由于Linux-glibc客户端原名较长可选择重命名，例如hrkClient.app
 
 ```sh
@@ -230,19 +273,28 @@ sudo chmod 777 HarukiClient-Linux-amd64-v1.1.7-glibc.app
 ./HarukiClient-Linux-amd64-v1.1.7-glibc.app
 ```
 
-### 首次启动
-
-启动后客户端会要求验证，输入你的**大号QQ号/进群的QQ账号（不是bot账号）**来获取验证码。
-
-复制获得的验证码，到Haruki Dev群内发送指令进行验证
+###准备就绪后可尝试启动客户端，如果没有问题会显示如下日志:
 
 ```text
-/haruki_verify 验证码(客户端里显示的六位数字)
+[xxxx-xx-xx xx:xx:xx] Detected no bot account configured, starting registration...
+```
+
+当你遇到下面的提示的时候，请填写你的**大号QQ号/进群的QQ账号（不是bot账号）**来获取验证码
+
+```text
+Please enter your Instant Messenger User ID (QQ is your qq number): 
+```
+
+当你看到如下消息时，请在Haruki Dev群内发送`/haruki_verify <客户端里显示的六位数字>`完成注册，请注意不要将<>一起包括在内:
+
+```text
+[xxxx-xx-xx xx:xx:xx] Your verification code is {verification_code}, verification code will be expired in 10 minutes.
+[xxxx-xx-xx xx:xx:xx] Please enter after finishing register verification.
 ```
 
 此时群里机器人会提示Successfully verified，或者群友会发啃，偷啃，口啃之类字样
 
-回到客户端处按**回车**才完整通过验证。 如果没有回车就退出了客户端，不会保存配置需要重新验证
+回到客户端处按**回车**完整通过验证。 如果没有回车就退出了客户端，不会保存配置需要重新验证
 
 验证完毕此时客户端后台应该显示这样的语句
 
@@ -252,9 +304,9 @@ sudo chmod 777 HarukiClient-Linux-amd64-v1.1.7-glibc.app
 
 请确保此处显示的端口与填入bot配置中的相同，已有群友看错并填入bot导致无法使用。
 
-验证完毕后请**重启hrk客户端**（或者选择两个都重启），否则bot可能不会发送消息。
+验证完毕后请**重启hrk客户端**(也可一并重启bot端)，否则bot可能不会发送消息。
 
-在有自己bot的群里发送命令，比如/haruki_info，如果一切正常，你的bot应该会回复如下消息:
+在有自己bot的群而不是私聊发送指令测试，比如/haruki_info，如果一切正常，你的bot应该会回复如下消息:
 
 ```text
 Haruki Cloud Env: production 
@@ -264,7 +316,7 @@ Haruki Client v1.1.7
 Haruki Bot Id: <YourBotId>
 ```
 
-如果没有回复，请检查客户端运行是否报错、OneBot 日志是否报错。并重新对照bot与客户端配置
+如果没有回复，请检查客户端运行是否报错、OneBot 日志是否报错。并重新对照bot与客户端配置，最后再带着截图询问群友。
 
 使用lgr后台每几分钟出现一大串warn报错时请先确定bot反馈，若bot正常响应请无视。
 
