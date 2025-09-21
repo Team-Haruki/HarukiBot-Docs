@@ -143,13 +143,13 @@ mumu_manager_path: "C:\\Program Files\\Netease\\MuMuPlayer-12.0\\nx_main\\MuMuMa
 D:\MuMu Player 12\nx_main
 ```
 
-你可以将里面的所有 \ 修改为 / ，然后加上MuMuManager.exe，也就是
+你可以将里面的所有 \ 修改为 / ，然后加上`MuMuManager.exe`，也就是
 
 ```
 D:/MuMu Player 12/nx_main/MuMuManager.exe
 ```
 
-又或者将所有的 \ 变成 \ \，然后加上MuMuManager.exe，也就是
+又或者将所有的 \ 变成 \ \，然后加上`MuMuManager.exe`，也就是
 
 ```
 D:\\MuMu Player 12\\nx_main\\MuMuManager.exe
