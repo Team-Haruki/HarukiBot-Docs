@@ -1,8 +1,8 @@
 # HarukiProxy 介绍与教程
 > [!caution] 阅读前警告
 >
-> 当前HarukiProxy的发布版本为`v1.6.0`，本文档的介绍以及教程均根据`v1.5.0`以上版本编写  
-> 如果你下载的版本不是`v1.5.0`及以上的版本，请务必更新之后再阅读本教程
+> 当前HarukiProxy的发布版本为`v1.7.0`，本文档的介绍以及教程均根据`v1.7.0`以上版本编写  
+> 如果你下载的版本不是`v1.7.0`及以上的版本，请务必更新之后再阅读本教程
 ::: info **特别鸣谢** 
 开发者: [*Haruki Dev Team*](https://github.com/Team-Haruki)  
 教程编写者: `storyxy3`、`Deseer`、 `Aposetles`和`Lemoe`
@@ -43,10 +43,10 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 
 根据你的系统，选择并下载最新版的HarukiProxy
 
-- [HarukiProxy-Windows-x64](/HarukiProxy/HarukiProxy-v1.6.0-windows-x64.zip)
-- [HarukiProxy-Linux-amd64](/HarukiProxy/HarukiProxy-v1.6.0-linux-amd64.tar.gz)
-- [HarukiProxy-Linux-arm64](/HarukiProxy/HarukiProxy-v1.6.0-linux-arm64.tar.gz)
-- [HarukiProxy-macOS-arm64](/HarukiProxy/HarukiProxy-v1.6.0-macos-arm64.tar.gz)
+- [HarukiProxy-Windows-x64](/HarukiProxy/HarukiProxy-v1.7.0-windows-x64.zip)
+- [HarukiProxy-Linux-amd64](/HarukiProxy/HarukiProxy-v1.7.0-linux-amd64.tar.gz)
+- [HarukiProxy-Linux-arm64](/HarukiProxy/HarukiProxy-v1.7.0-linux-arm64.tar.gz)
+- [HarukiProxy-macOS-arm64](/HarukiProxy/HarukiProxy-v1.7.0-macos-arm64.tar.gz)
 
 下载完成后，将压缩包放至自己喜欢的目录，然后进行解压
 
@@ -82,8 +82,8 @@ harukiProxy-vx.x.x.exe
 
 ```
 auto_upload: true # 是否自动上传数据到Haruki Toolbox，一般不需要改为false
-private: true # 是否不公开你的数据在Haruki Suite API公开API上，如果是请保持为true，如果想公开则改为false
 upload_endpoint: "" # 自定义上传数据端点
+disable_encryption: false # 自定义上传数据端点需要将这个改为true，否则上传的数据无法解密
 upload_secret: "" # 自定义上传端点用的私钥
 save_data_locally: false # 是否自动保存数据到本地，如果你有需求可以改为true
 save_data_dir: "./data" # 自动保存的数据路径
@@ -198,14 +198,14 @@ D:\\MuMu Player 12\\nx_main\\MuMuManager.exe
   这一部分控制你是否将抓取到的数据保存在本地，如果你想要查看自己的suite与mysekai数据，抑或是想要手动上传数据，那么就将
   `save_data_locally: false`改为 true，数据则会自动保存在你HarukiProxy目录下的data目录
 
-- `private: true` # 决定除了HarukiBot外的bot能否获取到你的数据，如果你只想使用haruki bot就不用更改，如果向同步到其它bot就改为
-  false
-
 - `goproxy_upstream_proxy: ""` # 上游代理，如果连接状况不佳可以设置(如"http://127.0.0.1:6152")，否则留空即可
 
   如果你不是很清楚代理是什么意思，那么不用管了，否则和注释一样，将6152改为你代理软件中找到的端口号
 
 - `upload_endpoint: ""` # 自定义上传数据端点，不修改则默认上传至haruki toolbox的数据上传端点，你可以修改为想传到的其他端点地址
+
+- `disable_encryption: false` # 如果你需要自定义上传数据端点，必须把这个改为true，否则上传的数据对方无法读取
+
 - `upload_secret: ""` # 自定义上传端点用的私钥，如果你需要上传的端点有要求的话填写即可
 
 > [!caution] 注意
