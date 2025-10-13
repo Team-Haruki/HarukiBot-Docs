@@ -1,6 +1,6 @@
 # Haruki分布式部署文档
 
-本教程包括部署与配置Haruki分布式客户端与Bot端的大部分内容
+本教程包括部署与配置Haruki分布式客户端与Bot端的大部分内容(更新于25/10/13)
 
 ## 准备工作
 
@@ -12,11 +12,13 @@
 
 请合理使用本分布式客户端，恶意使用可能会被开发者收回使用权限、永久拉黑。
 
-*Haruki Dev群号：959939201 如遇任何问题请在自我排除后附上截图在群里询问!!!*
+*Haruki Dev群号：959939201 如遇问题请在完整看完文档排除后附上截图在群里询问!!!*
 
 + 客户端注册过程中要求你填写的QQ号为**你本人的QQ号**，而非**你使用Bot的账号**
 
 + **请不要把Bot账号拉进来！**
+
++ **DEV群是获取/询问bot部署相关内容的，请不要一进去就使用群里的bot**
 
 + **请勿将HarukiClient用于QQ官方机器人！这会导致Haruki Cloud的绑定数据异常！**
 
@@ -148,13 +150,36 @@ Windows版本并非单文件，请把所有文件**解压缩**出来,Linux无需
 
 确认括号成对后保存，再次运行lgr，扫码登录bot账号即可
 
+###进阶-PMHQ方案lgr
+
+如果不想让消息走一遍sign服务器或者sign服务器无法使用的时候可以选用
+
+在Windows下可能相对会比NapCat不容易下线一些
+
+#### 下载与使用方式
+
+https://github.com/linyuchen/PMHQ/blob/main/doc/Lagrange.OneBot.PMHQ.md
+
+* 此链接有PMHQ与lgr-PMHQ的下载/使用，本教程仅补充一点注意事项
+
+    * 老的lgr配置文件中的ws反代部分可以直接复制粘贴进来
+    * PMHQ启动QQ登录后还提示等待QQ登录打开lgr-PMHQ即可
+    * 在PMHQ配置文件中编辑qq号快速自动登录，无头选项可能导致QQ崩溃
+    * 确保appsettings.json里面的PMHQ的Host和Port与pmhq_config.json的一致
+    * 遇到其他问题可以在群内询问，帮助完善此部分
+ 
+* 可以使用以下代码一键部署PMHQ与lgr-PMHQ到Docker
+*   ```bash
+    curl -fsSL https://raw.githubusercontent.com/linyuchen/PMHQ/refs/heads/main/docker/install-lgr.sh -o install-pmhq-lgr.sh && chmod u+x ./install-pmhq-lgr.sh && ./install-pmhq-lgr.sh
+    ```
+
 ## 2.Napcat
 
 首先，需要有一台服务器或者24小时开机联网的电脑，以保证您部署的bot能一直运行。
 
 其次，请在该设备上下载 **Napcat**。
 
-##### 下载安装启动方式：
+#### 下载安装启动方式：
 
 * Windows
 
@@ -206,7 +231,7 @@ Windows版本并非单文件，请把所有文件**解压缩**出来,Linux无需
 
     * 在命令行输入以下命令下载，安装选项可以默认，也可以根据需要自行调整
 
-    * ```bash
+*   ```bash
     curl -o \
     napcat.sh \
     https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
