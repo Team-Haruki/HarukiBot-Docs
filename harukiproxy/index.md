@@ -348,10 +348,10 @@ goproxy_upstream_proxy: ""
 
 ## HarukiProxy 更新记录
 
-# v1.8.1
+### v1.8.1
 - 修复了mysekai birthday party保存本地文件名字错误的问题
 
-## v1.8.0
+### v1.8.0
 - 支持生日双叶刷新地图数据
 - 上传超时从15秒改成60秒
 
