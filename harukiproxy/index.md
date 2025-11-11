@@ -1,7 +1,7 @@
 # HarukiProxy 介绍与教程
 > [!caution] 阅读前警告
 >
-> 当前HarukiProxy的发布版本为`v1.7.0`，本文档的介绍以及教程均根据`v1.7.0`以上版本编写  
+> 当前HarukiProxy的发布版本为`v1.8.1`，本文档的介绍以及教程均根据`v1.7.0`以上版本编写  
 > 如果你下载的版本不是`v1.7.0`及以上的版本，请务必更新之后再阅读本教程
 ::: info **特别鸣谢** 
 开发者: [*Haruki Dev Team*](https://github.com/Team-Haruki)  
@@ -43,10 +43,10 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 
 根据你的系统，选择并下载最新版的HarukiProxy
 
-- [HarukiProxy-Windows-x64](/HarukiProxy/HarukiProxy-v1.7.0-windows-x64.zip)
-- [HarukiProxy-Linux-amd64](/HarukiProxy/HarukiProxy-v1.7.0-linux-amd64.tar.gz)
-- [HarukiProxy-Linux-arm64](/HarukiProxy/HarukiProxy-v1.7.0-linux-arm64.tar.gz)
-- [HarukiProxy-macOS-arm64](/HarukiProxy/HarukiProxy-v1.7.0-macos-arm64.tar.gz)
+- [HarukiProxy-Windows-x64](/HarukiProxy/HarukiProxy-v1.8.1-windows-x64.zip)
+- [HarukiProxy-Linux-amd64](/HarukiProxy/HarukiProxy-v1.8.1-linux-amd64.tar.gz)
+- [HarukiProxy-Linux-arm64](/HarukiProxy/HarukiProxy-v1.8.1-linux-arm64.tar.gz)
+- [HarukiProxy-macOS-arm64](/HarukiProxy/HarukiProxy-v1.8.1-macos-arm64.tar.gz)
 
 下载完成后，将压缩包放至自己喜欢的目录，然后进行解压
 
@@ -347,6 +347,16 @@ goproxy_upstream_proxy: ""
 最好的处理办法就是重新拿一份配置文件，更改你的记事本编码方式或者使用专业编辑器（如VSCode）编辑，然后用正确的编码方式保存
 
 ## HarukiProxy 更新记录
+
+# v1.8.1
+- 修复了mysekai birthday party保存本地文件名字错误的问题
+
+## v1.8.0
+- 支持生日双叶刷新地图数据
+- 上传超时从15秒改成60秒
+
+### v1.7.0
+- 适配新版Haruki工具箱
 
 ### v1.6.0
 - 更换上传端点
