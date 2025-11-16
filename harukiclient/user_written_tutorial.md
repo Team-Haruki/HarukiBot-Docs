@@ -1,6 +1,6 @@
 # Haruki分布式部署文档
 
-本教程包括部署与配置Haruki分布式客户端与Bot端的大部分内容(更新于25/10/13)
+本教程包括部署与配置Haruki分布式客户端与Bot端的大部分内容(更新于25/11/17)
 
 ## 准备工作
 
@@ -37,7 +37,7 @@ macOS仅提供Apple Silicon (即arm64)的打包文件，x86的macOS不提供支�
 
 
 ## 客户端安装与配置
-在群文件中下载对应系统的客户端(群文件客户端文件夹中)与配置文件(群文件主目录7月4日)
+在群文件中下载对应系统的客户端(群文件客户端文件夹中)与配置文件(群文件主目录7月4日或10月4日)
 
 ```text
 Windows       HarukiClient-Windows-x64-v1.1.7.zip
@@ -53,6 +53,10 @@ Windows版本并非单文件，请把所有文件**解压缩**出来,Linux无需
 
 如果官网下载失败可以在群文件主目录9月4日找到win-x64安装包:7z2501-x64.exe
 
+近期Microsoft Defender会误杀客户端exe，请前往恢复，建议关闭或换用其他杀毒软件
+
+或者进入:病毒与防护威胁-"病毒与防护威胁"设置-排除项，将bot文件夹加入其中
+
 :::
 
 将配置文件放在解压出的文件同目录文件目录的位置，否则客户端会闪退
@@ -65,6 +69,10 @@ Windows版本并非单文件，请把所有文件**解压缩**出来,Linux无需
 ```
 
 ### 配置文件configs.json
+
+打开下载的配置文件或在上述位置新建configs.json后填入下述配置**并删去//注释内容**
+
+请在文件夹中勾选:查看-显示-文件扩展名，确认文件是json不是txt
 
 ```json
 {
@@ -95,6 +103,7 @@ Windows版本并非单文件，请把所有文件**解压缩**出来,Linux无需
     "enableCN": true                  //为是否启用国服功能
 }
 ```
+你只需在botAdmins中填入你进群验证的qq号，其余所需项在验证时会自动配置
 
 **客户端的配置告一段落，接下来进入Bot端部署**
 
@@ -122,7 +131,7 @@ Windows版本并非单文件，请把所有文件**解压缩**出来,Linux无需
 然后运行，第一次运行后先退出，**修改生成的appsettings.json文件**
 
 ### 需要修改的地方:
-(版本号无法公开传播请询问群友或者通过lgr官方群或者readme获取)
+(版本号无法公开传播请通过lgr官方群或者readme获取)(目前不可用，自行解决)
 
 "SignServerUrl": "https://sign.lagrangecore.org/api/sign/版本号"
 
@@ -154,24 +163,19 @@ Windows版本并非单文件，请把所有文件**解压缩**出来,Linux无需
 
 如果不想让消息走一遍sign服务器或者sign服务器无法使用的时候可以选用
 
-在Windows下可能相对会比NapCat不容易下线一些
+在Windows下比NapCat不容易下线一些
 
 #### 下载与使用方式
 
-https://github.com/linyuchen/PMHQ/blob/main/doc/Lagrange.OneBot.PMHQ.md
+在LLOnebot的主页或github界面寻找PMHQ相关项目
 
-* 此链接有PMHQ与lgr-PMHQ的下载/使用，本教程仅补充一点注意事项
+* 项目介绍中有PMHQ与lgr-PMHQ的下载/使用方法，本教程仅补充一点注意事项
 
     * 老的lgr配置文件中的ws反代部分可以直接复制粘贴进来
     * PMHQ启动QQ登录后还提示等待QQ登录打开lgr-PMHQ即可
     * 在PMHQ配置文件中编辑qq号快速自动登录，无头选项可能导致QQ崩溃
     * 确保appsettings.json里面的PMHQ的Host和Port与pmhq_config.json的一致
     * 遇到其他问题可以在群内询问，帮助完善此部分
- 
-* 可以使用以下代码一键部署PMHQ与lgr-PMHQ到Docker
-*   ```bash
-    curl -fsSL https://raw.githubusercontent.com/linyuchen/PMHQ/refs/heads/main/docker/install-lgr.sh -o install-pmhq-lgr.sh && chmod u+x ./install-pmhq-lgr.sh && ./install-pmhq-lgr.sh
-    ```
 
 ## 2.Napcat
 
