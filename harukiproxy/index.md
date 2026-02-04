@@ -46,10 +46,10 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 
 根据你的系统，选择并下载最新版的HarukiProxy
 
-- [HarukiProxy-Windows-x64](/download/HarukiProxy/HarukiProxy-v2.0.0-windows-x64.zip)
-- [HarukiProxy-Linux-amd64](/download/HarukiProxy/HarukiProxy-v2.0.0-linux-amd64.tar.gz)
-- [HarukiProxy-Linux-arm64](/download/HarukiProxy/HarukiProxy-v2.0.0-linux-arm64.tar.gz)
-- [HarukiProxy-macOS-arm64](/download/HarukiProxy/HarukiProxy-v2.0.0-macos-arm64.tar.gz)
+- [HarukiProxy-Windows-x64](/download/HarukiProxy/HarukiProxy-v2.0.1-windows-x64.zip)
+- [HarukiProxy-Linux-amd64](/download/HarukiProxy/HarukiProxy-v2.0.1-linux-amd64.tar.gz)
+- [HarukiProxy-Linux-arm64](/download/HarukiProxy/HarukiProxy-v2.0.1-linux-arm64.tar.gz)
+- [HarukiProxy-macOS-arm64](/download/HarukiProxy/HarukiProxy-v2.0.1-macos-arm64.tar.gz)
 
 下载完成后，将压缩包放至自己喜欢的目录，然后进行解压
 
@@ -284,10 +284,6 @@ haruki-proxy.exe(可以在输入了前几个字符后按下Tab自动补全)
 >
 > 如果遇到bot“你上传的MySekai数据里没有正确的数据哦。”，请去编队随便交换个人再进入烤森抓包
 
-> [!caution] 注意
->
-> 当你抓包结束后不需要抓包时请使用快捷键Ctrl+C退出exe程序，直接关闭窗口将不保证能清除代理，可能会导致模拟器无网络连接
-
 # 问题自查
 
 如果在执行文档中的教程时出现问题时，请先查阅此部分进行修复
@@ -350,6 +346,9 @@ goproxy_upstream_proxy: ""
 最好的处理办法就是重新拿一份配置文件，更改你的记事本编码方式或者使用专业编辑器（如VSCode）编辑，然后用正确的编码方式保存
 
 ## HarukiProxy 更新记录
+
+### v2.0.1
+- 修复了Android SP版本无法上传数据的问题
 
 ### v2.0.0
 - 使用Rust重写了HarukiProxy项目
