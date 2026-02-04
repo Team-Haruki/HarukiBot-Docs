@@ -1,7 +1,7 @@
 # HarukiProxy 介绍与教程
 > [!caution] 阅读前警告
 >
-> 当前HarukiProxy的发布版本为`v2.0.0`，本文档的介绍以及教程均根据`v2.0.0`以上版本编写  
+> 当前HarukiProxy的发布版本为`v2.0.2`，本文档的介绍以及教程均根据`v2.0.0`以上版本编写  
 > 
 > 如果你目前使用的版本低于v2.0.0，并且希望使用v2.0.0以后续版本，则更新到v2.0.0以上版本时，需要先删除先前版本的证书文件
 > ![img.png](asset/证书删除.png)
@@ -46,10 +46,10 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 
 根据你的系统，选择并下载最新版的HarukiProxy
 
-- [HarukiProxy-Windows-x64](/download/HarukiProxy/HarukiProxy-v2.0.1-windows-x64.zip)
-- [HarukiProxy-Linux-amd64](/download/HarukiProxy/HarukiProxy-v2.0.1-linux-amd64.tar.gz)
-- [HarukiProxy-Linux-arm64](/download/HarukiProxy/HarukiProxy-v2.0.1-linux-arm64.tar.gz)
-- [HarukiProxy-macOS-arm64](/download/HarukiProxy/HarukiProxy-v2.0.1-macos-arm64.tar.gz)
+- [HarukiProxy-Windows-x64](/download/HarukiProxy/HarukiProxy-v2.0.2-windows-x64.zip)
+- [HarukiProxy-Linux-amd64](/download/HarukiProxy/HarukiProxy-v2.0.2-linux-amd64.tar.gz)
+- [HarukiProxy-Linux-arm64](/download/HarukiProxy/HarukiProxy-v2.0.2-linux-arm64.tar.gz)
+- [HarukiProxy-macOS-arm64](/download/HarukiProxy/HarukiProxy-v2.0.2-macos-arm64.tar.gz)
 
 下载完成后，将压缩包放至自己喜欢的目录，然后进行解压
 
@@ -346,6 +346,10 @@ goproxy_upstream_proxy: ""
 最好的处理办法就是重新拿一份配置文件，更改你的记事本编码方式或者使用专业编辑器（如VSCode）编辑，然后用正确的编码方式保存
 
 ## HarukiProxy 更新记录
+
+### v2.0.2
+- 修复了不知道哪个区服的哪个type数据无法捕获的问题
+- 现在自动上传和自动保存捕获数据文件会异步并行
 
 ### v2.0.1
 - 修复了Android SP版本无法上传数据的问题
