@@ -69,7 +69,7 @@ adb.exe
 AdbWinApi.dll
 AdbWinUsbApi.dll
 config.yaml
-harukiProxy-vx.x.x.exe
+haruki-proxy.exe
 如果没有开启查看后缀名，可能会看不到.后的内容
 ```
 
@@ -228,7 +228,7 @@ D:\\MuMu Player 12\\nx_main\\MuMuManager.exe
 > ***如果你前面使用了MuMu模拟器自带的游戏加速功能，或是你自己在模拟器里使用了什么加速器，这时都该关掉了，不然接下来会抓取不到数据***
 
 
-现在回到解压HarukiProxy的目录，双击HarukiProxy-vx.x.x.exe来打开
+现在回到解压HarukiProxy的目录，双击haruki-proxy.exe来打开
 
 还有另外一种更加建议的方式，使用CMD来打开
 
@@ -239,14 +239,14 @@ D:\\MuMu Player 12\\nx_main\\MuMuManager.exe
 在随后弹出的CMD中，输入
 
 ```
-HarukiProxy-vx.x.x.exe(可以在输入了前几个字符后按下Tab自动补全)
+haruki-proxy.exe(可以在输入了前几个字符后按下Tab自动补全)
 ```
 
 然后按回车来启动HarukiProxy
 
 过程中如果看到MuMu模拟器自动重启，属于完全正常现象，请不用管这些，只要看终端就好了
 
-如果提示WIndowsDefender提示已阻止harukiProxy-vx.x.x.exe的部分功能，请点击下方的允许
+如果提示WindowsDefender提示已阻止haruki-proxy.exe的部分功能，请点击下方的允许
 
 如果遇到了
 
@@ -297,7 +297,7 @@ HarukiProxy-vx.x.x.exe(可以在输入了前几个字符后按下Tab自动补全
 1. 按下键盘上的`Win + R`键，会弹出一个“运行”对话框。在里面输入`cmd`，然后按回车。
 2. 在.exe 文件的文件夹上方的地址栏上单击地址栏，路径就会被完整选中，右键点击选中的路径，选择“复制”
 3. 在命令行中输入`cd`，然后加一个空格，再按`Ctrl+V`粘贴你刚刚复制的路径，最后按回车，可以看到命令行中的路径现在和你的程序所在路径一致
-4. 输入`HarukiProxy`后按tab可以发现会补全为你下载版本的harukiproxy.exe，回车即可以运行
+4. 输入`haruki-proxy`后按tab可以发现会补全为你下载版本的haruki-proxy.exe，回车即可以运行
 5. 你现在可以看到具体的报错，把它复制到浏览器查阅或者询问ai
 
 ## 默认ip配置失效
