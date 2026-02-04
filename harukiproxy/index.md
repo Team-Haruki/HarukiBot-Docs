@@ -1,8 +1,11 @@
 # HarukiProxy 介绍与教程
 > [!caution] 阅读前警告
 >
-> 当前HarukiProxy的发布版本为`v1.8.2`，本文档的介绍以及教程均根据`v1.7.0`以上版本编写  
-> 如果你下载的版本不是`v1.7.0`及以上的版本，请务必更新之后再阅读本教程
+> 当前HarukiProxy的发布版本为`v2.0.0`，本文档的介绍以及教程均根据`v2.0.0`以上版本编写  
+> 
+> 如果你目前使用的版本低于v2.0.0，并且希望使用v2.0.0以后续版本，则更新到v2.0.0以上版本时，需要先删除先前版本的证书文件
+> ![img.png](asset/证书删除.png)
+> 
 ::: info **特别鸣谢** 
 开发者: [*Haruki Dev Team*](https://github.com/Team-Haruki)  
 教程编写者: `storyxy3`、`Deseer`、 `Aposetles`和`Lemoe`
@@ -43,10 +46,10 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 
 根据你的系统，选择并下载最新版的HarukiProxy
 
-- [HarukiProxy-Windows-x64](/HarukiProxy/HarukiProxy-v1.8.2-windows-x64.zip)
-- [HarukiProxy-Linux-amd64](/HarukiProxy/HarukiProxy-v1.8.2-linux-amd64.tar.gz)
-- [HarukiProxy-Linux-arm64](/HarukiProxy/HarukiProxy-v1.8.2-linux-arm64.tar.gz)
-- [HarukiProxy-macOS-arm64](/HarukiProxy/HarukiProxy-v1.8.2-macos-arm64.tar.gz)
+- [HarukiProxy-Windows-x64](/download/HarukiProxy/HarukiProxy-v1.8.2-windows-x64.zip)
+- [HarukiProxy-Linux-amd64](/download/HarukiProxy/HarukiProxy-v1.8.2-linux-amd64.tar.gz)
+- [HarukiProxy-Linux-arm64](/download/HarukiProxy/HarukiProxy-v1.8.2-linux-arm64.tar.gz)
+- [HarukiProxy-macOS-arm64](/download/HarukiProxy/HarukiProxy-v1.8.2-macos-arm64.tar.gz)
 
 下载完成后，将压缩包放至自己喜欢的目录，然后进行解压
 
@@ -58,7 +61,7 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 
 解压后，目录应该有如下文件
 
-![6386d73b97244af2d2cb002a219fca9a](./asset/6386d73b97244af2d2cb002a219fca9a.png)
+![img.png](./asset/目录.png)
 
 ```
 目录名：HarukiProxy-vx.x.x-windows-x64
@@ -255,7 +258,7 @@ HarukiProxy-vx.x.x.exe(可以在输入了前几个字符后按下Tab自动补全
 
 正常没有错误的初次启动大概为下图
 
-![e077e781205f160f6d15ad6768f689c3](./asset/e077e781205f160f6d15ad6768f689c3.png)
+![img.png](./asset/首次启动.png)
 
 ## 抓取
 
@@ -267,13 +270,13 @@ HarukiProxy-vx.x.x.exe(可以在输入了前几个字符后按下Tab自动补全
 
 在登录界面进行登录操作后可以抓取，下图为成功提示
 
-![1111](./asset/1111.jpg)
+![suite.png](./asset/suite.png)
 
 ### mysekai数据
 
 打开mysekai，等到你的豆腐人走出房门，看到如下提示，那么Mysekai数据抓取就顺利完成了
 
-![2222](./asset/2222.jpg)
+![mysekai.png](./asset/mysekai.png)
 
 或者使用msa或者msm进行测试是否抓包成功
 
@@ -347,6 +350,11 @@ goproxy_upstream_proxy: ""
 最好的处理办法就是重新拿一份配置文件，更改你的记事本编码方式或者使用专业编辑器（如VSCode）编辑，然后用正确的编码方式保存
 
 ## HarukiProxy 更新记录
+
+### v2.0.0
+- 使用Rust重写了HarukiProxy项目
+- 现在HarukiProxy不再全解密所有HTTPS流量，仅针对PJSK相关流量进行解密捕获
+- 预计内存占用下降90%，CPU占用下降70%（纯脑测无数据）
 
 ### v1.8.2
 - 修复了mysekai birthday party上传数据失败的问题
