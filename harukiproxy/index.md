@@ -46,10 +46,10 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 
 根据你的系统，选择并下载最新版的HarukiProxy
 
-- [HarukiProxy-Windows-x64](/download/HarukiProxy/HarukiProxy-v1.8.2-windows-x64.zip)
-- [HarukiProxy-Linux-amd64](/download/HarukiProxy/HarukiProxy-v1.8.2-linux-amd64.tar.gz)
-- [HarukiProxy-Linux-arm64](/download/HarukiProxy/HarukiProxy-v1.8.2-linux-arm64.tar.gz)
-- [HarukiProxy-macOS-arm64](/download/HarukiProxy/HarukiProxy-v1.8.2-macos-arm64.tar.gz)
+- [HarukiProxy-Windows-x64](/download/HarukiProxy/HarukiProxy-v2.0.0-windows-x64.zip)
+- [HarukiProxy-Linux-amd64](/download/HarukiProxy/HarukiProxy-v2.0.0-linux-amd64.tar.gz)
+- [HarukiProxy-Linux-arm64](/download/HarukiProxy/HarukiProxy-v2.0.0-linux-arm64.tar.gz)
+- [HarukiProxy-macOS-arm64](/download/HarukiProxy/HarukiProxy-v2.0.0-macos-arm64.tar.gz)
 
 下载完成后，将压缩包放至自己喜欢的目录，然后进行解压
 
