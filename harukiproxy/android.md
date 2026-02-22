@@ -1,4 +1,4 @@
-# HarukiProxy 介绍与教程
+# HarukiProxy-Android 教程
 > [!caution] 阅读前警告
 >
 > 当前HarukiProxy的发布版本为`v2.0.2`，本文档的介绍以及教程均根据`v2.0.0`以上版本编写  
@@ -6,6 +6,8 @@
 > 如果你目前使用的版本低于v2.0.0，并且希望使用v2.0.0以后续版本，则更新到v2.0.0以上版本时，需要先[卸载旧版的HarukiProxy-Android](#卸载harukiproxy-android)
 >
 > 然后[修改harukiproxy.sh的代码](#编辑harukiproxy脚本)
+>
+> 如果你是PC端模拟器用户，请转至[HarukiProxy教程](./index.md)
 
 ::: info **特别鸣谢** 
 开发者: [*Haruki Dev Team*](https://github.com/Team-Haruki)  

@@ -6,6 +6,8 @@
 > 如果你目前使用的版本低于v2.0.0，并且希望使用v2.0.0以后续版本，则更新到v2.0.0以上版本时，需要先删除先前版本的证书文件
 > ![img.png](asset/证书删除.png)
 > 
+> 如果你是安卓用户，请转至[HarukiProxy-Android教程](./android.md)
+
 ::: info **特别鸣谢** 
 开发者: [*Haruki Dev Team*](https://github.com/Team-Haruki)  
 教程编写者: `storyxy3`、`Deseer`、 `Aposetles`和`Lemoe`
