@@ -1,7 +1,7 @@
 # HarukiProxy-Android 教程
 > [!caution] 阅读前警告
 >
-> 当前HarukiProxy的发布版本为`v2.0.2`，本文档的介绍以及教程均根据`v2.0.0`以上版本编写  
+> 当前HarukiProxy的发布版本为`v2.1.0`，本文档的介绍以及教程均根据`v2.0.0`以上版本编写  
 > 
 > 如果你目前使用的版本低于v2.0.0，并且希望使用v2.0.0以后续版本，则更新到v2.0.0以上版本时，需要先[卸载旧版的HarukiProxy-Android](#卸载harukiproxy-android)
 >
@@ -111,7 +111,7 @@ if [ ! -d $ROOT_DIR ]; then
     mkdir -p $ROOT_DIR
 fi
 
-BIN_NAME="HarukiProxy-v2.0.2-android-arm64"
+BIN_NAME="HarukiProxy-v2.1.0-android-arm64"
 BIN_PATH="$ROOT_DIR/$BIN_NAME"
 CONFIG_PATH="$ROOT_DIR/config-android.yaml"
 
