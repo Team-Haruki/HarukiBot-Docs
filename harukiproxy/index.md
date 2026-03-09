@@ -1,7 +1,7 @@
 # HarukiProxy 介绍与教程
 > [!caution] 阅读前警告
 >
-> 当前HarukiProxy的发布版本为`v2.0.2`，本文档的介绍以及教程均根据`v2.0.0`以上版本编写  
+> 当前HarukiProxy的发布版本为`v2.1.0`，本文档的介绍以及教程均根据`v2.0.0`以上版本编写  
 > 
 > 如果你目前使用的版本低于v2.0.0，并且希望使用v2.0.0以后续版本，则更新到v2.0.0以上版本时，需要先删除先前版本的证书文件
 > ![img.png](asset/证书删除.png)
@@ -48,10 +48,10 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 
 根据你的系统，选择并下载最新版的HarukiProxy
 
-- [HarukiProxy-Windows-x64](/download/HarukiProxy/HarukiProxy-v2.0.2-windows-x64.zip)
-- [HarukiProxy-Linux-amd64](/download/HarukiProxy/HarukiProxy-v2.0.2-linux-amd64.tar.gz)
-- [HarukiProxy-Linux-arm64](/download/HarukiProxy/HarukiProxy-v2.0.2-linux-arm64.tar.gz)
-- [HarukiProxy-macOS-arm64](/download/HarukiProxy/HarukiProxy-v2.0.2-macos-arm64.tar.gz)
+- [HarukiProxy-Windows-x64](/download/HarukiProxy/HarukiProxy-v2.1.0-windows-x64.zip)
+- [HarukiProxy-Linux-amd64](/download/HarukiProxy/HarukiProxy-v2.1.0-linux-amd64.tar.gz)
+- [HarukiProxy-Linux-arm64](/download/HarukiProxy/HarukiProxy-v2.1.0-linux-arm64.tar.gz)
+- [HarukiProxy-macOS-arm64](/download/HarukiProxy/HarukiProxy-v2.1.0-macos-arm64.tar.gz)
 
 下载完成后，将压缩包放至自己喜欢的目录，然后进行解压
 
@@ -103,7 +103,8 @@ goproxy_upstream_proxy: "" # 上游代理，如果连接状况不佳可以设置
 
 # 自动控制MuMu选项
 auto_mumu: true # 设置true为启动MuMu全自动操作
-mumu_manager_path: "C:\\Program Files\\Netease\\MuMuPlayer-12.0\\nx_main\\MuMuManager.exe" # MuMuManager的可执行文件地址，如果你的MuMu模拟器安装在C盘则不需要修改，否则需要修改
+mumu_manager_path: "C:\\Program Files\\Netease\\MuMuPlayer-12.0\\nx_main\\MuMuManager.exe" # (Windows) MuMuManager的可执行文件地址，如果你的MuMu模拟器安装在C盘则不需要修改，否则需要修改
+mumu_tool_path: "/Applications/MuMuPlayer.app/Contents/MacOS/mumutool" # (macOS) mumutool的可执行文件地址
 auto_mumu_devices:
   - "0" # 你需要自动操作的MuMu模拟器编号
   # - "1" 可以添加
@@ -229,6 +230,10 @@ D:\\MuMu Player 12\\nx_main\\MuMuManager.exe
 >
 > ***如果你前面使用了MuMu模拟器自带的游戏加速功能，或是你自己在模拟器里使用了什么加速器，这时都该关掉了，不然接下来会抓取不到数据***
 
+> [!caution] 注意
+> 
+> 如果你正在使用Mac版本的MuMu，请务必***先打开MuMu模拟器***，否则无法使用mumutool进行自动化控制
+
 
 现在回到解压HarukiProxy的目录，双击haruki-proxy.exe来打开
 
@@ -348,6 +353,9 @@ goproxy_upstream_proxy: ""
 最好的处理办法就是重新拿一份配置文件，更改你的记事本编码方式或者使用专业编辑器（如VSCode）编辑，然后用正确的编码方式保存
 
 ## HarukiProxy 更新记录
+
+### v2.1.0
+- 新增了Mac版本的MuMu自动化控制
 
 ### v2.0.2
 - 修复了不知道哪个区服的哪个type数据无法捕获的问题
