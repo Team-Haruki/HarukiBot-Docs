@@ -28,6 +28,6 @@ features:
   - title: 高清大图
     details: HarukiBot NEO支持展示卡面高清大图。
   - title: 榜线支持
-    details: HarukiBot NEO以1分钟采集精度提供活动榜线查询、时速查询、排名趋势查询。
+    details: HarukiBot NEO提供了最高10秒的采集精度为活动榜线查询、时速查询、排名趋势查询提供数据。
 ---
 
