@@ -79,7 +79,6 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 | `/卡牌列表` `/cards` `/pjsk cards` `/card-list`                      | 按指定条件筛选卡牌列表                            |
 | `/卡牌一览` `/查箱` `/卡面一览` `/卡一览` `/box` `/card-box` `/pjsk box`      | 按指定条件筛选卡牌，如果有抓包上传的suite数据，未拥有的卡牌会以灰色显示 |
 | `/查卡面` `/pjsk card img` `/卡面原图` `/卡面` `/card` `/卡图`              | 按id查询指定卡的卡图                            |
-| `/卡牌剧情` `/pjsk card story` `/卡面剧情` `/卡剧情` `/卡牌故事` `/卡面故事` `/卡故事` | 按id查询指定卡前后篇的ai剧情总结                     |
 
 <details>
 <summary>卡牌相关的可选参数以及示例可以点击这条展开查看</summary>
