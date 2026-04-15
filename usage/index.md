@@ -115,8 +115,8 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 | `/pjsk chart` `/谱面查询` `/铺面查询` `/谱面预览` `/铺面预览` `/谱面` `/铺面` `/查谱面` `/查铺面` `/查谱` `/技能预览`                   | 查询指定歌曲的谱面预览                                    |
 | `/打歌奖励` `/曲目奖励` `/歌曲奖励` `/music rewards` `/music-rewards` `/pjsk music rewards` `/歌曲挖矿` `/打歌挖矿`         | 查询指定账号剩余的 打歌奖励/挖矿奖励（⚠️需要上传suite数据）             |
 | `/pjsk进度` `/打歌进度` `/歌曲进度` `/打歌信息` `/progress` `/music-progress` `/pjsk music progress` `/pjsk progress` | 查询指定账号指定难度clear/fc/ap完成度（⚠️需要上传suite数据）        |
-| `/查物量` `/pjsk note num` `/pjsk note count` `/物量`                                                        | 查询指定歌曲谱面的物量 或查询指定物量下有哪些歌曲                      |
-| `/查bpm` `/pjsk bpm` `/查BPM`                                                                             | 查询指定歌曲的 BPM                                    |
+| `/查物量` `/pjsk note num` `/pjsk note count` `/物量`                                                        |查询指定物量下有哪些歌曲                      |
+| `/查bpm` `/pjsk bpm` `/查BPM`                                                                             | 查询指定BPM下有哪些歌曲                                    |
 | `/查曲绘`  `/pjsk music cover` `/曲绘`                                                                       | 查询指定歌曲的曲绘原图                                    |
 
 <details>
