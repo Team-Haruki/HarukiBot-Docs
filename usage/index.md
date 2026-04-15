@@ -37,9 +37,8 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 ### 服务器支持与切换
 
 + HarukiBot NEO支持日服（jp）、台服（tw）、韩服（kr）、国际服（en）以及国服（cn）
-  如果需要使用对应区服的功能需要在指令前加区服前缀（如`/cn个人信息`）
-+ HarukiBot NEO现在支持**全局默认绑定账号**和**区服默认绑定账号**，区服相关指令(如sk、sk线、时速等)如果不带区服前缀，会*
-  *默认采用**您的**全局默认绑定账号**的区服
+如果需要使用对应区服的功能需要在指令前加区服前缀（如`/cn个人信息`）
++ HarukiBot NEO现在支持**全局默认绑定账号**和**区服默认绑定账号**，区服相关指令(如sk、sk线、时速等)如果不带区服前缀，会**默认采用**您的**全局默认绑定账号**的区服
 
 > 如您的全局默认绑定为cn服账号，则使用`/sk`等效以前的`/cnsk`
 
@@ -52,28 +51,28 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 > 请确保您在工具箱中有已通过验证的绑定账号再使用此功能  
 > 上传个人信息背景需要验证账号，请确保你已验证账号再使用
 
-| 指令                                                  | 功能                                                                             |
-|:----------------------------------------------------|:-------------------------------------------------------------------------------|
-| `/绑定` `/pjsk bind` `/pjsk id` `/pjsk 绑定`            | 通过游戏uid绑定你的游戏账号，如"/绑定 114514"。                                                 |
-| `/个人信息` `/个人中心` `/profile`<br>                      | 生成个人信息图片，可以输入uid查询指定账号的个人信息，没有uid时会查询自己的默认账号。                                  |
-| `/绑定列表` `/pjsk bind list` `/pjsk绑定列表`               | 列出所有当前qq号已绑定的账号                                                                |
-| `/设置主账号` `/pjsk set main` `/pjsk主账号` `/设置默认绑定`      | 通过游戏uid设置默认查询的账号，如/设置主账号 114514。                                               |
-| `/清除默认绑定` `/取消默认绑定` `/取消主账号` `/清除主账号`               | 无uid时会清除全局默认绑定，有uid时会清除对应账号的区服默认绑定。                                            |
-| `/解绑` `/pjsk unbind` `/取消绑定`                        | 通过游戏uid解绑你的账号，如/解绑 114514。                                                     |
-| `/隐藏抓包` `/pjsk hide suite` `/pjsk隐藏抓包`              | 隐藏suite抓包功能内的详细数据显示。                                                           |
-| `/展示抓包` `/pjsk show suite`                          | 展示suite抓包功能内的详细数据显示。                                                           |
-| `/隐藏烤森抓包` `/pjsk hide mysekai`                      | 隐藏烤森抓包功能内的详细数据显示。                                                              |
-| `/展示烤森抓包` `/pjsk show mysekai`                      | 展示烤森抓包功能内的详细数据显示。                                                              |
-| `/隐藏ID` `/隐藏id` `/pjsk hide id`                     | 在查询中隐藏自己的uid。                                                                  |
-| `/显示ID` `/pjsk show id` `/显示id`                     | 在查询中显示自己的uid。                                                                  |
-| `/抓包数据` `/pjsk check data` `/抓包状态` `/抓包信息` `/sud`   | 查看自己的suite抓包数据上传时间。                                                            |
-| `/烤森抓包数据` `/msd` `/pjsk check mysekai data` `/烤森抓包` | 查看自己的烤森抓包数据上传时间。                                                               |
-| `/pjsk验证` `/pjsk verify`                            | 验证自己的游戏账号，<span style="color:red">部分功能需要验证后使用   </span>，无法快速验证请前往Haruki工具箱进行绑定 |
-| `/pjsk验证列表` `/pjsk verify list` `/pjsk验证状态`         | 查看已验证的账号列表。                                                                    |
-| `/上传个人信息背景` `/pjsk upload profile bg` `/上传个人背景`     | 上传自定义的个人信息背景图，需要消息内含有图片或回复上文中已有的某张图片。`请注意，需要先进行游戏账号验证才能使用!!!`                  |
-| `/清空个人信息背景`                                         | 清除自定义的个人信息背景图                                                                  |
-| `/设置个人信息` `/pjsk adjust profile` `/调整个人信息背景`        | 调整自定义个人信息背景图，可选横屏/竖屏、模糊以及透明度。模糊度范围为0~10，透明度范围为0~100。如：/调整个人信息 竖屏 模糊5 透明50<br>  |
-| `/查时间` `/注册时间` `/pjsk reg time`                     | 查询账号的注册时间                                                                      |
+| 指令                                                  | 功能                                                                            |
+|:----------------------------------------------------|:------------------------------------------------------------------------------|
+| `/绑定` `/pjsk bind` `/pjsk id` `/pjsk 绑定`            | 通过游戏uid绑定你的游戏账号，如"/绑定 114514"。                                                |
+| `/个人信息` `/个人中心` `/profile`<br>                      | 生成个人信息图片，可以输入uid查询指定账号的个人信息，没有uid时会查询自己的默认账号。                                 |
+| `/绑定列表` `/pjsk bind list` `/pjsk绑定列表`               | 列出所有当前qq号已绑定的账号                                                               |
+| `/设置主账号` `/pjsk set main` `/pjsk主账号` `/设置默认绑定`      | 通过游戏uid设置默认查询的账号，如/设置主账号 114514。                                              |
+| `/清除默认绑定` `/取消默认绑定` `/取消主账号` `/清除主账号`               | 无uid时会清除全局默认绑定，有uid时会清除对应账号的区服默认绑定。                                           |
+| `/解绑` `/pjsk unbind` `/取消绑定`                        | 通过游戏uid解绑你的账号，如/解绑 114514。                                                    |
+| `/隐藏抓包` `/pjsk hide suite` `/pjsk隐藏抓包`              | 隐藏suite抓包功能内的详细数据显示。                                                          |
+| `/展示抓包` `/pjsk show suite`                          | 展示suite抓包功能内的详细数据显示。                                                          |
+| `/隐藏烤森抓包` `/pjsk hide mysekai`                      | 隐藏烤森抓包功能内的详细数据显示。                                                             |
+| `/展示烤森抓包` `/pjsk show mysekai`                      | 展示烤森抓包功能内的详细数据显示。                                                             |
+| `/隐藏ID` `/隐藏id` `/pjsk hide id`                     | 在查询中隐藏自己的uid。                                                                 |
+| `/显示ID` `/pjsk show id` `/显示id`                     | 在查询中显示自己的uid。                                                                 |
+| `/抓包数据` `/pjsk check data` `/抓包状态` `/抓包信息` `/sud`   | 查看自己的suite抓包数据上传时间。                                                           |
+| `/烤森抓包数据` `/msd` `/pjsk check mysekai data` `/烤森抓包` | 查看自己的烤森抓包数据上传时间。                                                              |
+| `/pjsk验证` `/pjsk verify`                            | 验证自己的游戏账号，<span style="color:red">部分功能需要验证后使用   </span>，无法快速验证请前往Haruki工具箱进行绑定                                                     |
+| `/pjsk验证列表` `/pjsk verify list` `/pjsk验证状态`         | 查看已验证的账号列表。                                                                   |
+| `/上传个人信息背景` `/pjsk upload profile bg` `/上传个人背景`     | 上传自定义的个人信息背景图，需要消息内含有图片或回复上文中已有的某张图片。`请注意，需要先进行游戏账号验证才能使用!!!`                 |
+| `/清空个人信息背景`                                         | 清除自定义的个人信息背景图                                                                 |
+| `/设置个人信息` `/pjsk adjust profile` `/调整个人信息背景`        | 调整自定义个人信息背景图，可选横屏/竖屏、模糊以及透明度。模糊度范围为0~10，透明度范围为0~100。如：/调整个人信息 竖屏 模糊5 透明50<br> |
+| `/查时间` `/注册时间` `/pjsk reg time`                     | 查询账号的注册时间                                                                     |
 
 ## 卡牌
 
@@ -85,7 +84,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 | `/查卡面` `/pjsk card img` `/卡面原图` `/卡面` `/card` `/卡图`         | 按id查询指定卡的卡图                            |
 
 <details>
-<summary><span style="color:blue">卡牌相关的可选参数以及示例可以点击这条展开查看</span></summary>
+<summary><span style="color:#99CCFF">卡牌相关的可选参数以及示例可以点击这条展开查看</span></summary>
 
 - 团名：`ln` `vbs` `ws` `mmj` `25`
 - 对应团oc/纯vs: `mmjoc` `25oc` `纯v`
@@ -121,7 +120,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 | `/查曲绘`  `/pjsk music cover` `/曲绘`                                                                       | 查询指定歌曲的曲绘原图                                    |
 
 <details>
-<summary><span style="color:blue">乐曲相关的可选参数以及示例可以点击这条展开查看</span></summary>
+<summary><span style="color:#99CCFF">乐曲相关的可选参数以及示例可以点击这条展开查看</span></summary>
 
 难度：支持大部分写法和缩写，例如 `easy` `ma` `APD`，不指定则默认 MASTER 难度
 
@@ -154,7 +153,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 | `/冲榜记录` `/pjsk event record` `/活动记录`                   | 查询指定账号的冲榜记录（⚠️需要上传suite数据） |
 
 <details>
-<summary><span style="color:blue">活动相关的可选参数以及示例可以点击这条展开查看</span></summary>
+<summary><span style="color:#99CCFF">活动相关的可选参数以及示例可以点击这条展开查看</span></summary>
 
 ### 查询单个活动的可用参数格式：
 
@@ -191,7 +190,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 | `/5v5预测` `/pjsk winrate predict` `/胜率预测` `/胜率` `/预测胜率`           | 查询5v5 胜率                                |
 
 <details>
-<summary><span style="color:blue">榜线相关的可选参数以及示例可以点击这条展开查看</span></summary>
+<summary><span style="color:#99CCFF">榜线相关的可选参数以及示例可以点击这条展开查看</span></summary>
 
 `/时速`、`/半日速`、`/日速`指令后面可以跟数字，将特定时间范围内的PT增长转换为对应速度  
 如`/时速10` = 10分钟内PT增长量转换的时速  
@@ -213,7 +212,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 | `/烤森组卡` `/烤森组队` `/ms组卡` `/ms组队` `/mysekai deck` `/pjsk mysekai deck`                                                   | 根据当前活动计算最适合用于挖烤森获取pt的队伍 |
 
 <details>
-<summary><span style="color:blue">组卡部分的可用参数以及示例 可以点击这条展开查看</span></summary>
+<summary><span style="color:#99CCFF">组卡部分的可用参数以及示例 可以点击这条展开查看</span></summary>
 
 | 参数类型         | 可用参数                         | 注意事项                                                                           |
 |:-------------|:-----------------------------|:-------------------------------------------------------------------------------|
@@ -273,7 +272,6 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 + `/烤森组卡` 当期活动烤森组卡
 + `/烤森组卡 event123` 指定活动
 + `/烤森组卡 绿 mmj` 模拟绿mmj加成活动
-
 </details>
 
 ## 养成
@@ -284,7 +282,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 | `/角色加成` `/pjsk power bonus info` `/加成信息` `/加成详情` `/加成进度` | 查询账号的各角色加成信息。    |
 | `/区域道具` `/pjsk area item` `/area item` `/区域道具升级`         | 查询对应区域道具升级所需要的素材 |
 | `/羁绊` `/pjsk bonds` `/羁绊等级` `/角色羁绊` `/牵绊`                | 查询账号的羁绊等级        |
-| `/队长统计` `/领队统计` `/角色领队` `/pjsk leader count`             | 查询队长次数           |
+| `/队长统计` `队长次数` `/领队统计` `/角色领队` `/pjsk leader count`             | 查询队长次数           |
 
 ## MySekai相关查询
 
@@ -341,15 +339,12 @@ iOS / iPadOS 用户 建议使用代理工具MitM模块更新，教程参考[Haru
 | `/查卡池` `/pjsk gacha` `/卡池列表` `/卡池一览` `/卡池`              | 查询卡池列表                              |
 
 ## 关于
-
 + HarukiBot NEO画图与功能参考实现 - LunaBot: [ルナ茶](https://github.com/NeuraXmy)
-+ HarukiBot
-  NEO开发者: [星云希凪](https://github.com/MejiroRina)、[灵潜](https://github.com/xuanmingLQ)、[Deseer](https://github.com/Deseer)、[storyxy3](https://github.com/storyxy3)
++ HarukiBot NEO开发者: [星云希凪](https://github.com/MejiroRina)、[灵潜](https://github.com/xuanmingLQ)、[Deseer](https://github.com/Deseer)、[storyxy3](https://github.com/storyxy3)
 + 联系开发团队: <haruki@seiunx.com>
 + wiki原作者：[綿菓子ウニ](https://space.bilibili.com/622551112)
 + 使用授权：[点击查看](https://images.shiromiku.moe/images/4f956d51aaa3d1b2f407d1922e397a42.jpg)
-+
-wiki适配与编辑：[岩崎阳子](https://space.bilibili.com/11048929)、[Aposetles](https://space.bilibili.com/178748972)、[星云希凪](https://github.com/MejiroRina)、[storyxy3](https://github.com/storyxy3)
++ wiki适配与编辑：[岩崎阳子](https://space.bilibili.com/11048929)、[Aposetles](https://space.bilibili.com/178748972)、[星云希凪](https://github.com/MejiroRina)、[storyxy3](https://github.com/storyxy3)
 + 联系我：<admin@shiromiku.moe>或QQ：`57892198`
 + Logo画师：[小沢翼](https://space.bilibili.com/3493133455198556)
 
