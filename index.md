@@ -24,7 +24,7 @@ features:
   - title: 资料展示
     details: HarukiBot NEO支持个人资料展示。
   - title: 多服支持
-    details: HarukiBot NEO支持港澳台、日、韩、国际服、国服测试服。
+    details: HarukiBot NEO支持港澳台服、日服、韩服、国际服、国服。
   - title: 高清大图
     details: HarukiBot NEO支持展示卡面高清大图。
   - title: 榜线支持

@@ -1,6 +1,21 @@
 # Haruki客户端使用文档
 使用此客户端, 您可以用自己的QQ号搭建一个HarukiBot
 
+> [!caution] 阅读前警告
+> 本文档介绍仍然是HarukiBot v1的部署方法  
+> 目前HarukiBot已经迭代到HarukiBot NEO，**本文不再适用**  
+> 请等待开发团队更新文档
+
+> [!caution] 阅读前警告
+> 本文档介绍仍然是HarukiBot v1的部署方法  
+> 目前HarukiBot已经迭代到HarukiBot NEO，**本文不再适用**  
+> 请等待开发团队更新文档
+
+> [!caution] 阅读前警告
+> 本文档介绍仍然是HarukiBot v1的部署方法  
+> 目前HarukiBot已经迭代到HarukiBot NEO，**本文不再适用**  
+> 请等待开发团队更新文档
+
 ## 准备工作
 
 ::: info
