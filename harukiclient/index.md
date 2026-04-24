@@ -12,7 +12,7 @@
 :::
 
 ### 获取一台服务器
-你需要一台24h不关机的电脑，否则关机这段时间HarukiBot NEO将无法工作，此处推荐购买[雨云](https://www.rainyun.com/MzUzODA4_)运行
+你需要一台24h不关机的电脑，否则关机这段时间HarukiBotNEO将无法工作，此处推荐购买[雨云](https://www.rainyun.com/MzUzODA4_)运行
 
 Windows 电脑需要运行大于等于 Windows 8 或 Windows server 2012 版本的系统（更低版本实测无法运行）  
 Linux 系统推荐使用 ``Ubuntu 22.04``, ``Debian 12`` 或以上的Linux发行版系统  
