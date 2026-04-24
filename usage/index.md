@@ -302,6 +302,7 @@ iOS / iPadOS 用户 建议使用代理工具MitM模块更新，教程参考[Haru
 |:-------------------------------------------------------------------------------------------------|:---------------------|
 | `/msa` `/pjsk mysekai res` `/mysekai-resource` `/mysekai资源` `/烤森资源`                              | 查询烤森信息 （资源 天气 来访角色等） |
 | `/msm` `/pjsk mysekai map` `/mysekai-map` `/mysekai地图` `/烤森地图` `/msmap`                          | 查询烤森地图               |
+| `/msam`                                                                                                   | 同时输出`msa`和`msm`对应的统计信息以及四张烤森地图   |
 | `/烤森对话列表` `/mysekai-talk-list` `/mysekai对话列表`                                                    | 查询烤森角色对话列表           |
 | `/烤森家具列表` `/mysekai-fixture-list` `/mysekai家具列表`                                                 | 查询账号已获得家具列表          |
 | `/家具列表` `/pjsk mysekai furniture` `/pjsk mysekai fixture` `/msf` `/mysekai 家具`                   | 查询所有家具列表             |
@@ -340,6 +341,7 @@ iOS / iPadOS 用户 建议使用代理工具MitM模块更新，教程参考[Haru
 | `/pjsk live` `/虚拟live` `/pjsk vlive` `/vlive`           | 查询虚拟 Live 信息                        |
 | `/逮捕` `/pjsk逮捕` `/pjsk arrest`                          | 查询指定账号乐曲clear/fc/ap进度，不指定uid会查询默认账号 |
 | `/查卡池` `/pjsk gacha` `/卡池列表` `/卡池一览` `/卡池`              | 查询卡池列表                              |
+| `/pjsktz`                                                          | 设置你所在的时区，HarukiBot NEO一切和时间有关的信息都会以你设置的时区渲染         |
 
 ## 关于
 + HarukiBot NEO画图与功能参考实现 - LunaBot: [ルナ茶](https://github.com/NeuraXmy)
@@ -361,4 +363,3 @@ iOS / iPadOS 用户 建议使用代理工具MitM模块更新，教程参考[Haru
 + 预测线: [33Kit](https://3-3.dev/)、[Moesekai](https://pjsk.moe/)
 + 谱面预览: [ぷろせかもえ！](https://pjsekai.moe/)
   code --install-extension yzhang.markdown-all-in-one
-        
