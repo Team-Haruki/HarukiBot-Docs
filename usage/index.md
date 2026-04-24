@@ -367,4 +367,3 @@ wiki适配与编辑：[岩崎阳子](https://space.bilibili.com/11048929)、[Apo
 
 + 预测线: [33Kit](https://3-3.dev/)、[Moesekai](https://pjsk.moe/)
 + 谱面预览: [ぷろせかもえ！](https://pjsekai.moe/)
-  code --install-extension yzhang.markdown-all-in-one
