@@ -34,6 +34,12 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 + 从HarukiBot NEO版本起，所有指令都需要带"/"（例"/绑定"），没有"/"的指令不会被响应。
 
+### 关于QQ官方机器人
+
++ Haruki NEO也有部署为QQ官方机器人“宵崎奏”的分布式，QQ号为2854202255。
++ 使用QQ官方机器人“宵崎奏”时，需要先@机器人然后输入指令（如`@宵崎奏 /个人信息`），否则不会被响应。
++ 如果你在使用QQ官方机器人“宵崎奏”的过程中遇到了**社交平台账号未授权**问题，请按[此教程](https://neo.haruki.seiunx.com/toolboxtutorial/qqofficial-guide)前往[工具箱对应页面](https://haruki.seiunx.com/user/settings)绑定后使用。
+
 ### 服务器支持与切换
 
 + HarukiBot NEO支持日服（jp）、台服（tw）、韩服（kr）、国际服（en）以及国服（cn）
