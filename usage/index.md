@@ -58,7 +58,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 > [!caution] 注意
 > 账号验证功能仅支持`Haruki工具箱快速验证`  
 > 请确保您在工具箱中有已通过验证的绑定账号再使用此功能  
-> 上传个人信息背景需要验证账号，请确保你已验证账号再使用
+> 上传个人信息背景需要验证账号，请确保你已验证账号再使用  
 > 如果你想让其他QQ号或者官方Bot能通过快速验证，请参考[此教程](https://neo.haruki.seiunx.com/toolboxtutorial/qqofficial-guide)中的`关于快速验证`章节
 
 | 指令                                                  | 功能                                                                             |
