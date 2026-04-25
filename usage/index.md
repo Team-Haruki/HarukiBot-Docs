@@ -38,7 +38,9 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 + Haruki NEO也有部署为QQ官方机器人“宵崎奏”的分布式，QQ号为2854202255。
 + 使用QQ官方机器人“宵崎奏”时，需要先@机器人然后输入指令（如`@宵崎奏 /个人信息`），否则不会被响应。
-+ 如果你在使用QQ官方机器人“宵崎奏”的过程中遇到了**社交平台账号未授权**问题，请按[此教程](https://neo.haruki.seiunx.com/toolboxtutorial/qqofficial-guide)前往[工具箱对应页面](https://haruki.seiunx.com/user/settings)绑定后使用。
++ 如果你在使用QQ官方机器人“宵崎奏”的过程中遇到了**社交平台账号未授权**或**你无权查看这个账号的数据**
+  问题，请按[此教程](https://neo.haruki.seiunx.com/toolboxtutorial/qqofficial-guide)
+  前往[工具箱对应页面](https://haruki.seiunx.com/user/settings)绑定后使用。
 
 ### 服务器支持与切换
 
@@ -57,6 +59,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 > 账号验证功能仅支持`Haruki工具箱快速验证`  
 > 请确保您在工具箱中有已通过验证的绑定账号再使用此功能  
 > 上传个人信息背景需要验证账号，请确保你已验证账号再使用
+> 如果你想让其他QQ号或者官方Bot能通过快速验证，请参考[此教程](https://neo.haruki.seiunx.com/toolboxtutorial/qqofficial-guide)中的`关于快速验证`章节
 
 | 指令                                                  | 功能                                                                             |
 |:----------------------------------------------------|:-------------------------------------------------------------------------------|
@@ -121,7 +124,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 | `/查曲` `/查歌` `/查乐` `/查音乐` `/查询乐曲` `/查歌曲` `/歌曲` `/乐曲` `/song` `/music`                                    | 查询单曲信息                                         |
 | `/难度排行` `/歌曲列表` `/歌曲一览` `/乐曲列表` `/乐曲一览` `/定数表` `/歌曲定数` `/查乐曲` `/music-list` `/pjsk music list`          | 查询指定难度等级下的歌曲列表，如果有抓包上传的suite数据会显示clear/fc/ap进度 |
 | `/谱面预览` `/pjsk chart` `/谱面查询` `/铺面查询` `/铺面预览` `/谱面` `/铺面` `/查谱面` `/查铺面` `/查谱` `/技能预览`                   | 查询指定歌曲的谱面预览                                    |
-| `/谱面样式` `/谱面底色` `/设置谱面样式` `/设置谱面底色` `/pjsk chart style`                                               | 指定查询谱面预览时对应的色调（可选white/black）                                 |
+| `/谱面样式` `/谱面底色` `/设置谱面样式` `/设置谱面底色` `/pjsk chart style`                                                 | 指定查询谱面预览时对应的色调（可选white/black）                  |
 | `/打歌奖励` `/曲目奖励` `/歌曲奖励` `/music rewards` `/music-rewards` `/pjsk music rewards` `/歌曲挖矿` `/打歌挖矿`         | 查询指定账号剩余的 打歌奖励/挖矿奖励（⚠️需要上传suite数据）             |
 | `/pjsk进度` `/打歌进度` `/歌曲进度` `/打歌信息` `/progress` `/music-progress` `/pjsk music progress` `/pjsk progress` | 查询指定账号指定难度clear/fc/ap完成度（⚠️需要上传suite数据）        |
 | `/查物量` `/pjsk note num` `/pjsk note count` `/物量`                                                        | 查询指定物量下有哪些歌曲                                   |
