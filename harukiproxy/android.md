@@ -117,13 +117,13 @@ CONFIG_PATH="$ROOT_DIR/config-android.yaml"
 
 # Download binary if not exists
 if [ ! -f "$BIN_PATH" ]; then
-    curl -L -o "$BIN_PATH" "https://docs.haruki.seiunx.com/download/HarukiProxy/${BIN_NAME}/haruki-proxy-android"
+    curl -L -o "$BIN_PATH" "https://dist.haruki.seiunx.com/HarukiProxy/${BIN_NAME}/haruki-proxy-android"
     chmod 0755 "$BIN_PATH"
 fi
 
 # Download config if not exists
 if [ ! -f "$CONFIG_PATH" ]; then
-    curl -L -o "$CONFIG_PATH" "https://docs.haruki.seiunx.com/download/HarukiProxy/config-android.yaml"
+    curl -L -o "$CONFIG_PATH" "https://dist.haruki.seiunx.com/HarukiProxy/config-android.yaml"
     chmod 0755 "$CONFIG_PATH"
 fi
 
