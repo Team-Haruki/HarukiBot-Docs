@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-  name: "HarukiBot 帮助文档"
-  text: "本文档将引导您使用 HarukiBot"
-  tagline: HarukiBot是一款功能型机器人, 主要提供《世界计划 多彩舞台》相关查询服务。
+  name: "HarukiBot NEO 帮助文档"
+  text: "本文档将引导您使用 HarukiBot NEO"
+  tagline: HarukiBot NEO是一款功能型机器人, 主要提供《世界计划 多彩舞台》相关查询服务。
   actions:
     - theme: brand
-      text: HarukiBot 帮助文档
+      text: HarukiBot NEO 帮助文档
       link: /usage/index
     - theme: alt
       text: Haruki Cloud 更新日志
@@ -22,12 +22,12 @@ hero:
 
 features:
   - title: 资料展示
-    details: HarukiBot支持个人资料展示。
+    details: HarukiBot NEO支持个人资料展示。
   - title: 多服支持
-    details: HarukiBot支持港澳台、日、韩、国际服、国服测试服。
+    details: HarukiBot NEO支持港澳台服、日服、韩服、国际服、国服。
   - title: 高清大图
-    details: HarukiBot支持展示卡面高清大图。
+    details: HarukiBot NEO支持展示卡面高清大图。
   - title: 榜线支持
-    details: HarukiBot以1分钟采集精度提供活动榜线查询、时速查询、排名趋势查询。
+    details: HarukiBot NEO具有最高10秒的采集精度能力，为活动榜线查询、时速查询、排名趋势查询提供数据。
 ---
 

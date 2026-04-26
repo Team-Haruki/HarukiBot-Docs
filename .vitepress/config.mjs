@@ -5,8 +5,8 @@ export default defineConfig({
   lang: 'zh',
   base: "/",
   head: [["link", { rel: "icon", href: "https://images.shiromiku.moe/images/HarukiDocsAvatar.webp" }]],
-  title: "HarukiBot 帮助文档",
-  description: "本文档将引导您使用 HarukiBot",
+  title: "HarukiBot NEO帮助文档",
+  description: "本文档将引导您使用 HarukiBot NEO",
   themeConfig: {
     logo: 'https://images.shiromiku.moe/images/HarukiDocsAvatar.webp',
      // 设置搜索框的样式
