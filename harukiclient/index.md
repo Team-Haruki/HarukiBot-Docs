@@ -1,6 +1,12 @@
 # Haruki客户端使用文档
 使用此客户端, 您可以用自己的QQ号搭建一个HarukiBot NEO
 
+::: info
+
+本教程有群友编写的[更加详细的版本](/harukiclient/user_written_tutorial)
+
+:::
+
 ## 准备工作
 
 ::: warning
