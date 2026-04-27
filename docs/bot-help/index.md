@@ -40,7 +40,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 + 使用“宵崎奏”时，需要先@机器人然后输入指令（如`@宵崎奏 /个人信息`），否则不会被响应。
 + “宵崎奏”与其他分布式bot<span style="color:red">不共享绑定信息与suite数据！使用时所有账号相关操作都要重新进行！ </span>如绑定、验证以及调整默认账号等！
 + 如果你在使用QQ官方机器人“宵崎奏”的过程中遇到了**社交平台账号未授权**或**你无权查看这个账号的数据**
-  问题，请按[此教程](https://neo.haruki.seiunx.com/toolboxtutorial/qqofficial-guide)
+  问题，请按[此教程](https://neo.haruki.seiunx.com/toolbox-tutorial/qqofficial-guide)
   前往[工具箱对应页面](https://haruki.seiunx.com/user/settings)绑定后使用。
 
 ### 服务器支持与切换
@@ -59,7 +59,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 > 账号验证功能仅支持`Haruki工具箱快速验证`  
 > 请确保您在工具箱中有已通过验证的绑定账号再使用此功能  
 > 上传个人信息背景需要验证账号，请确保你已验证账号再使用  
-> 如果你想让其他QQ号或者官方Bot能通过快速验证，请参考[此教程](https://neo.haruki.seiunx.com/toolboxtutorial/qqofficial-guide)中的`关于快速验证`章节
+> 如果你想让其他QQ号或者官方Bot能通过快速验证，请参考[此教程](https://neo.haruki.seiunx.com/toolbox-tutorial/qqofficial-guide)中的`关于快速验证`章节
 
 | 指令                                                  | 功能                                                                             |
 |:----------------------------------------------------|:-------------------------------------------------------------------------------|
@@ -304,7 +304,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 ::: info
 Android 用户建议使用 [Haruki工具箱-上传MySekai数据](https://haruki.seiunx.com/upload_mysekai) 的`继承码上传`  
 台服/韩服 Android用户教程参考[Haruki工具箱-HarukiProxy使用教程](/harukiproxy/)  
-iOS / iPadOS 用户 建议使用代理工具MitM模块更新，教程参考[Haruki工具箱-iOS模块上传数据教程](/toolboxtutorial/ios-module)
+iOS / iPadOS 用户 建议使用代理工具MitM模块更新，教程参考[Haruki工具箱-iOS模块上传数据教程](/toolbox-tutorial/ios-module)
 
 :::
 > ⚠️ **所有 MySekai 指令需用户绑定 Haruki工具箱 账号**

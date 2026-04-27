@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: HarukiBot NEO 帮助文档
-      link: /usage/index
+      link: /bot-help/index
     - theme: alt
       text: Haruki Cloud 更新日志
       link: /changelog/cloud
@@ -18,7 +18,7 @@ hero:
       link: /changelog/client
     - theme: alt
       text: 部署属于自己的HarukiBot
-      link: /harukiclient/index
+      link: /haruki-client/index
 
 features:
   - title: 资料展示

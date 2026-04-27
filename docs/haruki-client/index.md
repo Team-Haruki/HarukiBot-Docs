@@ -3,7 +3,7 @@
 
 ::: info
 
-本教程有群友编写的[更加详细的版本](/harukiclient/user_written_tutorial)
+本教程有群友编写的[更加详细的版本](/haruki-client/user_written_tutorial)
 
 :::
 

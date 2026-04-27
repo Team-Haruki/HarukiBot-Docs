@@ -2,7 +2,7 @@
 
 > [!caution] 阅读前警告
 > 本教程仅面向iOS用户，并非面向Android用户  
-> 如果你是Android用户，或许你应该需要的是 [HarukiProxy教程](/harukiproxy/index.md)
+> 如果你是Android用户，或许你应该需要的是 [HarukiProxy教程](/haruki-proxy/index.md)
 
 > [!caution] 阅读前警告
 > 本教程仅面向使用iOS模块方法抓取数据的用户  
@@ -32,7 +32,7 @@
 
 打开App Store搜索需要购买的软件  
 目前支持的软件如下图所示
-![支持的软件](./assets/4DAAB6ED-E64E-472C-A997-9BCAD24E4BEA.jpeg)
+![支持的软件](../assets/ios-module/4DAAB6ED-E64E-472C-A997-9BCAD24E4BEA.jpeg)
 点击购买并且成功付款之后进入到下一步
 
 > [!caution] 注意
@@ -48,13 +48,13 @@
 > 如果你选择了其他软件，你需要确保类似于`MitM`、`HTTPS解密`、`重写`相关功能均为**开启**状态
 
 ### 前软件内步骤
-![前软件内步骤](./assets/0EDE76E2-114D-4E81-AF0D-91AB4D96A181.jpeg)
+![前软件内步骤](../assets/ios-module/0EDE76E2-114D-4E81-AF0D-91AB4D96A181.jpeg)
 
 ### iOS设置内步骤
-![iOS设置内步骤](./assets/859B223E-F16F-47D5-90C1-31D923368527.jpeg)
+![iOS设置内步骤](../assets/ios-module/859B223E-F16F-47D5-90C1-31D923368527.jpeg)
 
 ### 后软件内步骤
-![后软件内步骤](assets/4CE840C0-64C3-423D-91A3-5B58F264E7F0.jpeg)
+![后软件内步骤](../assets/ios-module/4CE840C0-64C3-423D-91A3-5B58F264E7F0.jpeg)
 
 ## 模块安装
 > [!info] 提醒
@@ -74,18 +74,18 @@
 当你成功完成了上述的证书安装步骤之后，请前往[iOS模块安装](https://haruki.seiunx.com/ios-modules)进行下一步操作
 
 ### 功能选择
-![功能选择](./assets/52103D5C-0E8D-4C39-8A96-543C34713EAC.jpeg)
+![功能选择](../assets/ios-module/52103D5C-0E8D-4C39-8A96-543C34713EAC.jpeg)
 
 ### 模块安装
-![模块安装](assets/9E7B42E7-4F75-4B11-92DD-D5C9B1DB542A.jpeg)
+![模块安装](../assets/ios-module/9E7B42E7-4F75-4B11-92DD-D5C9B1DB542A.jpeg)
 
 ### 最后检查
-![最后检查](./assets/C8D00028-31F0-480E-AA2D-C0CEE2BD4177.jpeg)
+![最后检查](../assets/ios-module/C8D00028-31F0-480E-AA2D-C0CEE2BD4177.jpeg)
 
 ## 抓包流程
 
 ### 打开软件
-![打开软件](./assets/38A03982-13AC-4A8E-B6D0-CCADD6630BDF.jpeg)
+![打开软件](../assets/ios-module/38A03982-13AC-4A8E-B6D0-CCADD6630BDF.jpeg)
 
 ### 打开游戏
 接着启动你的世界计划客户端，按照以往一样登录游戏即可
