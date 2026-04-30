@@ -59,40 +59,134 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 > 账号验证功能仅支持`Haruki工具箱快速验证`  
 > 请确保您在工具箱中有已通过验证的绑定账号再使用此功能  
 > 上传个人信息背景需要验证账号，请确保你已验证账号再使用  
-> 如果你想让其他QQ号或者官方Bot能通过快速验证，请参考[此教程](https://neo.haruki.seiunx.com/toolbox-tutorial/qqofficial-guide)中的`关于快速验证`章节
+> 如果你想让其他QQ号或者官方Bot能通过快速验证，请参考[此教程](https://neo.haruki.seiunx.com/toolbox-tutorial/verify-guide)
 
-| 指令                                                  | 功能                                                                             |
-|:----------------------------------------------------|:-------------------------------------------------------------------------------|
-| `/绑定` `/pjsk bind` `/pjsk id` `/pjsk 绑定`            | 通过游戏uid绑定你的游戏账号，如"/绑定 114514"。                                                 |
-| `/个人信息` `/个人中心` `/profile`<br>                      | 生成个人信息图片，可以输入uid查询指定账号的个人信息，没有uid时会查询自己的默认账号。                                  |
-| `/绑定列表` `/pjsk bind list` `/pjsk绑定列表`               | 列出所有当前qq号已绑定的账号                                                                |
-| `/交换绑定`                                             | 交换已经绑定的两个账号的绑定顺序                                                               |
-| `/设置主账号` `/pjsk set main` `/pjsk主账号` `/设置默认绑定`      | 通过游戏uid设置默认查询的账号，如/设置主账号 114514。                                               |
-| `/清除默认绑定` `/取消默认绑定` `/取消主账号` `/清除主账号`               | 无uid时会清除全局默认绑定，有uid时会清除对应账号的区服默认绑定。                                            |
-| `/解绑` `/pjsk unbind` `/取消绑定`                        | 通过游戏uid解绑你的账号，如/解绑 114514。                                                     |
-| `/隐藏抓包` `/pjsk hide suite` `/pjsk隐藏抓包`              | 隐藏suite抓包功能内的详细数据显示。                                                           |
-| `/展示抓包` `/pjsk show suite`                          | 展示suite抓包功能内的详细数据显示。                                                           |
-| `/隐藏烤森抓包` `/pjsk hide mysekai`                      | 隐藏烤森抓包功能内的详细数据显示。                                                              |
-| `/展示烤森抓包` `/pjsk show mysekai`                      | 展示烤森抓包功能内的详细数据显示。                                                              |
-| `/隐藏ID` `/隐藏id` `/pjsk hide id`                     | 在查询中隐藏自己的uid。                                                                  |
-| `/显示ID` `/pjsk show id` `/显示id`                     | 在查询中显示自己的uid。                                                                  |
-| `/抓包数据` `/pjsk check data` `/抓包状态` `/抓包信息` `/sud`   | 查看自己的suite抓包数据上传时间。                                                            |
-| `/烤森抓包数据` `/msd` `/pjsk check mysekai data` `/烤森抓包` | 查看自己的烤森抓包数据上传时间。                                                               |
-| `/pjsk验证` `/pjsk verify`                            | 验证自己的游戏账号，<span style="color:red">部分功能需要验证后使用   </span>，无法快速验证请前往Haruki工具箱进行绑定 |
-| `/pjsk验证列表` `/pjsk verify list` `/pjsk验证状态`         | 查看已验证的账号列表。                                                                    |
-| `/上传个人信息背景` `/pjsk upload profile bg` `/上传个人背景`     | 上传自定义的个人信息背景图，需要消息内含有图片或回复上文中已有的某张图片。`请注意，需要先进行游戏账号验证才能使用!!!`                  |
-| `/清空个人信息背景`                                         | 清除自定义的个人信息背景图                                                                  |
-| `/设置个人信息` `/pjsk adjust profile` `/调整个人信息背景`        | 调整自定义个人信息背景图，可选横屏/竖屏、模糊以及透明度。模糊度范围为0~10，透明度范围为0~100。如：/调整个人信息 竖屏 模糊5 透明50<br>  |
-| `/查时间` `/注册时间` `/pjsk reg time`                     | 查询账号的注册时间                                                                      |
+<CollapseBox title="待确定功能标题1">
+`/绑定` `/pjsk bind` `/pjsk id` `/pjsk 绑定`
+通过游戏uid绑定你的游戏账号，如"/绑定 114514"。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题2">
+`/个人信息` `/个人中心` `/profile`
+生成个人信息图片，可以输入uid查询指定账号的个人信息，没有uid时会查询自己的默认账号。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题3">
+`/绑定列表` `/pjsk bind list` `/pjsk绑定列表`
+列出所有当前qq号已绑定的账号
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题4">
+`/交换绑定`
+交换已经绑定的两个账号的绑定顺序
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题5">
+`/设置主账号` `/pjsk set main` `/pjsk主账号` `/设置默认绑定`
+通过游戏uid设置默认查询的账号，如/设置主账号 114514。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题6">
+`/清除默认绑定` `/取消默认绑定` `/取消主账号` `/清除主账号`
+无uid时会清除全局默认绑定，有uid时会清除对应账号的区服默认绑定。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题7">
+`/解绑` `/pjsk unbind` `/取消绑定`
+通过游戏uid解绑你的账号，如/解绑 114514。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题8">
+`/隐藏抓包` `/pjsk hide suite` `/pjsk隐藏抓包`
+隐藏suite抓包功能内的详细数据显示。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题9">
+`/展示抓包` `/pjsk show suite`
+展示suite抓包功能内的详细数据显示。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题10">
+`/隐藏烤森抓包` `/pjsk hide mysekai`
+隐藏烤森抓包功能内的详细数据显示。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题11">
+`/展示烤森抓包` `/pjsk show mysekai`
+展示烤森抓包功能内的详细数据显示。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题12">
+`/隐藏ID` `/隐藏id` `/pjsk hide id`
+在查询中隐藏自己的uid。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题13">
+`/显示ID` `/pjsk show id` `/显示id`
+在查询中显示自己的uid。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题14">
+`/抓包数据` `/pjsk check data` `/抓包状态` `/抓包信息` `/sud`
+查看自己的suite抓包数据上传时间。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题15">
+`/烤森抓包数据` `/msd` `/pjsk check mysekai data` `/烤森抓包`
+查看自己的烤森抓包数据上传时间。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题16">
+`/pjsk验证` `/pjsk verify`
+验证自己的游戏账号，<span style="color:red">部分功能需要验证后使用</span>，无法快速验证请前往Haruki工具箱进行绑定
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题17">
+`/pjsk验证列表` `/pjsk verify list` `/pjsk验证状态`
+查看已验证的账号列表。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题18">
+`/上传个人信息背景` `/pjsk upload profile bg` `/上传个人背景`
+上传自定义的个人信息背景图，需要消息内含有图片或回复上文中已有的某张图片。`请注意，需要先进行游戏账号验证才能使用!!!`
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题19">
+`/清空个人信息背景`
+清除自定义的个人信息背景图
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题20">
+`/设置个人信息` `/pjsk adjust profile` `/调整个人信息背景`
+调整自定义个人信息背景图，可选横屏/竖屏、模糊以及透明度。模糊度范围为0~10，透明度范围为0~100。如：/调整个人信息 竖屏 模糊5 透明50
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题21">
+`/查时间` `/注册时间` `/pjsk reg time`
+查询账号的注册时间
+</CollapseBox>
 
 ## 卡牌
 
-| 指令                                                          | 功能                                     |
-|:------------------------------------------------------------|:---------------------------------------|
-| `/查卡` `/card-detail` `/查牌` `/查卡牌` `/pjsk card`              | 按指定属性、人物或id查卡                          |
-| `/卡牌列表` `/cards` `/pjsk cards` `/card-list`                 | 按指定条件筛选卡牌列表                            |
-| `/卡牌一览` `/查箱` `/卡面一览` `/卡一览` `/box` `/card-box` `/pjsk box` | 按指定条件筛选卡牌，如果有抓包上传的suite数据，未拥有的卡牌会以灰色显示 |
-| `/查卡面` `/pjsk card img` `/卡面原图` `/卡面` `/card` `/卡图`         | 按id查询指定卡的卡图                            |
+<CollapseBox title="待确定功能标题22">
+`/查卡` `/card-detail` `/查牌` `/查卡牌` `/pjsk card`
+按指定属性、人物或id查卡
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题23">
+`/卡牌列表` `/cards` `/pjsk cards` `/card-list`
+按指定条件筛选卡牌列表
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题24">
+`/卡牌一览` `/查箱` `/卡面一览` `/卡一览` `/box` `/card-box` `/pjsk box`
+按指定条件筛选卡牌，如果有抓包上传的suite数据，未拥有的卡牌会以灰色显示
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题25">
+`/查卡面` `/pjsk card img` `/卡面原图` `/卡面` `/card` `/卡图`
+按id查询指定卡的卡图
+</CollapseBox>
 
 <details>
 <summary><span style="color:#99CCFF">卡牌相关的可选参数以及示例可以点击这条展开查看</span></summary>
@@ -119,18 +213,55 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 ## 音乐/乐曲
 
-| 指令                                                                                                      | 功能                                             |
-|:--------------------------------------------------------------------------------------------------------|:-----------------------------------------------|
-| `/查曲` `/查歌` `/查乐` `/查音乐` `/查询乐曲` `/查歌曲` `/歌曲` `/乐曲` `/song` `/music`                                    | 查询单曲信息                                         |
-| `/难度排行` `/歌曲列表` `/歌曲一览` `/乐曲列表` `/乐曲一览` `/定数表` `/歌曲定数` `/查乐曲` `/music-list` `/pjsk music list`          | 查询指定难度等级下的歌曲列表，如果有抓包上传的suite数据会显示clear/fc/ap进度 |
-| `/谱面预览` `/pjsk chart` `/谱面查询` `/铺面查询` `/铺面预览` `/谱面` `/铺面` `/查谱面` `/查铺面` `/查谱` `/技能预览`                   | 查询指定歌曲的谱面预览                                    |
-| `/谱面样式` `/谱面底色` `/设置谱面样式` `/设置谱面底色` `/pjsk chart style`                                                 | 指定查询谱面预览时对应的色调（可选white/black）                  |
-| `/打歌奖励` `/曲目奖励` `/歌曲奖励` `/music rewards` `/music-rewards` `/pjsk music rewards` `/歌曲挖矿` `/打歌挖矿`         | 查询指定账号剩余的 打歌奖励/挖矿奖励（⚠️需要上传suite数据）             |
-| `/pjsk进度` `/打歌进度` `/歌曲进度` `/打歌信息` `/progress` `/music-progress` `/pjsk music progress` `/pjsk progress` | 查询指定账号指定难度clear/fc/ap完成度（⚠️需要上传suite数据）        |
-| `/查物量` `/pjsk note num` `/pjsk note count` `/物量`                                                        | 查询指定物量下有哪些歌曲                                   |
-| `/查bpm` `/pjsk bpm` `/查BPM`                                                                             | 查询指定BPM下有哪些歌曲                                  |
-| `/查曲绘`  `/pjsk music cover` `/曲绘`                                                                       | 查询指定歌曲的曲绘原图                                    |
-| `/歌曲排行`                                                                                               | 查询指定顺序下的歌曲排行                                    |
+<CollapseBox title="待确定功能标题26">
+`/查曲` `/查歌` `/查乐` `/查音乐` `/查询乐曲` `/查歌曲` `/歌曲` `/乐曲` `/song` `/music`
+查询单曲信息
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题27">
+`/难度排行` `/歌曲列表` `/歌曲一览` `/乐曲列表` `/乐曲一览` `/定数表` `/歌曲定数` `/查乐曲` `/music-list` `/pjsk music list`
+查询指定难度等级下的歌曲列表，如果有抓包上传的suite数据会显示clear/fc/ap进度
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题28">
+`/谱面预览` `/pjsk chart` `/谱面查询` `/铺面查询` `/铺面预览` `/谱面` `/铺面` `/查谱面` `/查铺面` `/查谱` `/技能预览`
+查询指定歌曲的谱面预览
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题29">
+`/谱面样式` `/谱面底色` `/设置谱面样式` `/设置谱面底色` `/pjsk chart style`
+指定查询谱面预览时对应的色调（可选white/black）
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题30">
+`/打歌奖励` `/曲目奖励` `/歌曲奖励` `/music rewards` `/music-rewards` `/pjsk music rewards` `/歌曲挖矿` `/打歌挖矿`
+查询指定账号剩余的 打歌奖励/挖矿奖励（⚠️需要上传suite数据）
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题31">
+`/pjsk进度` `/打歌进度` `/歌曲进度` `/打歌信息` `/progress` `/music-progress` `/pjsk music progress` `/pjsk progress`
+查询指定账号指定难度clear/fc/ap完成度（⚠️需要上传suite数据）
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题32">
+`/查物量` `/pjsk note num` `/pjsk note count` `/物量`
+查询指定物量下有哪些歌曲
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题33">
+`/查bpm` `/pjsk bpm` `/查BPM`
+查询指定BPM下有哪些歌曲
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题34">
+`/查曲绘` `/pjsk music cover` `/曲绘`
+查询指定歌曲的曲绘原图
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题35">
+`/歌曲排行`
+查询指定顺序下的歌曲排行
+</CollapseBox>
 
 <details>
 <summary><span style="color:#99CCFF">乐曲相关的可选参数以及示例可以点击这条展开查看</span></summary>
@@ -164,11 +295,20 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 ## 活动
 
-| 指令                                                     | 功能                         |
-|:-------------------------------------------------------|:---------------------------|
-| `/活动列表` `/pjsk events` `/events` `/活动一览` `/event-list` | 活动列表                       |
-| `/查活动` `/pjsk event` `/活动` `/event`                    | 查询当前/指定活动信息                |
-| `/冲榜记录` `/pjsk event record` `/活动记录`                   | 查询指定账号的冲榜记录（⚠️需要上传suite数据） |
+<CollapseBox title="待确定功能标题36">
+`/活动列表` `/pjsk events` `/events` `/活动一览` `/event-list`
+活动列表
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题37">
+`/查活动` `/pjsk event` `/活动` `/event`
+查询当前/指定活动信息
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题38">
+`/冲榜记录` `/pjsk event record` `/活动记录`
+查询指定账号的冲榜记录（⚠️需要上传suite数据）
+</CollapseBox>
 
 <details>
 <summary><span style="color:#99CCFF">活动相关的可选参数以及示例可以点击这条展开查看</span></summary>
@@ -195,19 +335,60 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 ## 榜线/SK
 
-| 指令                                                               | 功能                                      |
-|:-----------------------------------------------------------------|:----------------------------------------|
-| `/sk线` `/sk-line` `/榜线` `/pjsk sk line` `/skl`                   | 查询榜线                                    |
-| `/sk` `/sk-query` `/sk查询` `/sk查分` `/pjsk sk board` `/pjsk board` | 查指定分数榜位                                 |
-| `/wlsk线`                                                         | 查wl单榜分数榜位                               |
-| `/时速` `/pjsk sk speed` `/sks` `/skv` `/sk时速` `/sk-speed`         | 查询当前榜线时速                                |
-| `/日速` `/pjsk sk daily speed` `/skds` `/skdv` `/sk日速`             | 查询榜线日均速度                                |
-| `/查房` `/sk-check-room` `/sk查房` `/cf` `/pjsk查房`                   | 查询当前房间周回时速等信息                           |
-| `/ptr` `/sk-player-trace` `/玩家轨迹` `/pjsk玩家追踪`                    | 查询账号在当前活动的冲榜统计数据                        |
-| `/档线轨迹` `/sk-rank-trace` `/rtr` `/skt` `/sklt` `/pjsk追踪`         | 查询档线历史轨迹                                |
-| `/sk预测` `/pjsk sk predict` `/榜线预测` `/skp`                        | 查询榜线预测（33kit/moesekai/sekarun，暂不支持WL单榜） |
-| `/5v5预测` `/pjsk winrate predict` `/胜率预测` `/胜率` `/预测胜率`           | 查询5v5 胜率                                |
-| `/csb`                                                           | 查询指定排名的热力图数据                            |
+<CollapseBox title="待确定功能标题39">
+`/sk线` `/sk-line` `/榜线` `/pjsk sk line` `/skl`
+查询榜线
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题40">
+`/sk` `/sk-query` `/sk查询` `/sk查分` `/pjsk sk board` `/pjsk board`
+查指定分数榜位
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题41">
+`/wlsk线`
+查wl单榜分数榜位
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题42">
+`/时速` `/pjsk sk speed` `/sks` `/skv` `/sk时速` `/sk-speed`
+查询当前榜线时速
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题43">
+`/日速` `/pjsk sk daily speed` `/skds` `/skdv` `/sk日速`
+查询榜线日均速度
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题44">
+`/查房` `/sk-check-room` `/sk查房` `/cf` `/pjsk查房`
+查询当前房间周回时速等信息
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题45">
+`/ptr` `/sk-player-trace` `/玩家轨迹` `/pjsk玩家追踪`
+查询账号在当前活动的冲榜统计数据
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题46">
+`/档线轨迹` `/sk-rank-trace` `/rtr` `/skt` `/sklt` `/pjsk追踪`
+查询档线历史轨迹
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题47">
+`/sk预测` `/pjsk sk predict` `/榜线预测` `/skp`
+查询榜线预测（33kit/moesekai/sekarun，暂不支持WL单榜）
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题48">
+`/5v5预测` `/pjsk winrate predict` `/胜率预测` `/胜率` `/预测胜率`
+查询5v5 胜率
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题49">
+`/csb`
+查询指定排名的热力图数据
+</CollapseBox>
 
 <details>
 <summary><span style="color:#99CCFF">榜线相关的可选参数以及示例可以点击这条展开查看</span></summary>
@@ -223,13 +404,30 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 ### 组卡
 
-| 指令                                                                                                                     | 功能                             |
-|:-----------------------------------------------------------------------------------------------------------------------|:-------------------------------|
-| `/活动组卡` `/活动组队` `/活动卡组` `/活动配队` `/组卡` `/组队` `/配队` `/指定属性组卡` `/模拟组卡` `/pjsk event card` `/pjsk event deck` `/pjsk deck` | 根据当前活动加成计算组队                   |
-| `/挑战组卡` `/挑战组队` `/挑战卡组` `/挑战配队` `/pjsk challenge card` `/pjsk challenge deck`                                          | 根据对应角色计算每日挑战组队                 |
-| `/长草组卡` `/长草组队` `/最强卡组` `/最强组卡` `/pjsk no event deck` `/pjsk best deck`                                                | 根据指定条件计算组队                     |
-| `/加成组卡` `/加成组队` `/控分组卡` `/控分配队` `/pjsk bonus deck` `/pjsk bonus card`                                                  | 根据指定加成计算组队                     |
-| `/烤森组卡` `/烤森组队` `/ms组卡` `/ms组队` `/mysekai deck` `/pjsk mysekai deck`                                                   | 根据当前活动计算最适合用于挖烤森获取pt的队伍（国服不开放） |
+<CollapseBox title="待确定功能标题50">
+`/活动组卡` `/活动组队` `/活动卡组` `/活动配队` `/组卡` `/组队` `/配队` `/指定属性组卡` `/模拟组卡` `/pjsk event card` `/pjsk event deck` `/pjsk deck`
+根据当前活动加成计算组队
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题51">
+`/挑战组卡` `/挑战组队` `/挑战卡组` `/挑战配队` `/pjsk challenge card` `/pjsk challenge deck`
+根据对应角色计算每日挑战组队
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题52">
+`/长草组卡` `/长草组队` `/最强卡组` `/最强组卡` `/pjsk no event deck` `/pjsk best deck`
+根据指定条件计算组队
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题53">
+`/加成组卡` `/加成组队` `/控分组卡` `/控分配队` `/pjsk bonus deck` `/pjsk bonus card`
+根据指定加成计算组队
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题54">
+`/烤森组卡` `/烤森组队` `/ms组卡` `/ms组队` `/mysekai deck` `/pjsk mysekai deck`
+根据当前活动计算最适合用于挖烤森获取pt的队伍（国服不开放）
+</CollapseBox>
 
 <details>
 <summary><span style="color:#99CCFF">组卡部分的可用参数以及示例 可以点击这条展开查看</span></summary>
@@ -297,13 +495,30 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 ## 养成
 
-| 指令                                                       | 功能               |
-|:---------------------------------------------------------|:-----------------|
-| `/每日挑战` `/pjsk challenge info` `/挑战信息` `/挑战详情` `/挑战进度`   | 查询账号每日挑战的奖励获取进度。 |
-| `/角色加成` `/pjsk power bonus info` `/加成信息` `/加成详情` `/加成进度` | 查询账号的各角色加成信息。    |
-| `/区域道具` `/pjsk area item` `/area item` `/区域道具升级`         | 查询对应区域道具升级所需要的素材 |
-| `/羁绊` `/pjsk bonds` `/羁绊等级` `/角色羁绊` `/牵绊`                | 查询账号的羁绊等级        |
-| `/队长统计` `队长次数` `/领队统计` `/角色领队` `/pjsk leader count`      | 查询队长次数           |
+<CollapseBox title="待确定功能标题55">
+`/每日挑战` `/pjsk challenge info` `/挑战信息` `/挑战详情` `/挑战进度`
+查询账号每日挑战的奖励获取进度。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题56">
+`/角色加成` `/pjsk power bonus info` `/加成信息` `/加成详情` `/加成进度`
+查询账号的各角色加成信息。
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题57">
+`/区域道具` `/pjsk area item` `/area item` `/区域道具升级`
+查询对应区域道具升级所需要的素材
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题58">
+`/羁绊` `/pjsk bonds` `/羁绊等级` `/角色羁绊` `/牵绊`
+查询账号的羁绊等级
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题59">
+`/队长统计` `队长次数` `/领队统计` `/角色领队` `/pjsk leader count`
+查询队长次数
+</CollapseBox>
 
 ## MySekai相关查询
 
@@ -316,32 +531,102 @@ iOS / iPadOS 用户 建议使用代理工具MitM模块更新，教程参考[Haru
 > ⚠️ **所有 MySekai 指令需用户绑定 Haruki工具箱 账号**
 > ⚠️ **本功能不支持国服**
 
-| 指令                                                                                               | 功能                             |
-|:-------------------------------------------------------------------------------------------------|:-------------------------------|
-| `/msa` `/pjsk mysekai res` `/mysekai-resource` `/mysekai资源` `/烤森资源`                              | 查询烤森信息 （资源 天气 来访角色等）           |
-| `/msm` `/pjsk mysekai map` `/mysekai-map` `/mysekai地图` `/烤森地图` `/msmap`                          | 查询烤森地图                         |
-| `/msam`                                                                                          | 同时输出`msa`和`msm`对应的统计信息以及四张烤森地图 |
-| `/烤森对话列表` `/mysekai-talk-list` `/mysekai对话列表`                                                    | 查询烤森角色对话列表                     |
-| `/烤森家具列表` `/mysekai-fixture-list` `/mysekai家具列表`                                                 | 查询账号已获得家具列表                    |
-| `/家具列表` `/pjsk mysekai furniture` `/pjsk mysekai fixture` `/msf` `/mysekai 家具`                   | 查询所有家具列表                       |
-| `/msg` `/pjsk mysekai gate` `/mysekai-door-upgrade` `/mysekai大门升级` `/烤森大门升级` `/msgate`           | 查询烤森大门升级所需材料                   |
-| `/msr` `/pjsk mysekai musicrecord` `/mysekai-music-record` `/mysekai唱片` `/烤森唱片` `/mss` `/mssong` | 查询烤森音乐唱片收集                     |
-| `/msb` `/pjsk mysekai blueprint` `/mysekai blueprint` `/mysekai 蓝图`                              | 查询烤森蓝图列表                       |
-| `/msp` `/pjsk mysekai photo` `/pjsk mysekai picture` `/mysekai 照片`                               | 展示烤森内拍摄的照片                     |
+<CollapseBox title="待确定功能标题60">
+`/msa` `/pjsk mysekai res` `/mysekai-resource` `/mysekai资源` `/烤森资源`
+查询烤森信息 （资源 天气 来访角色等）
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题61">
+`/msm` `/pjsk mysekai map` `/mysekai-map` `/mysekai地图` `/烤森地图` `/msmap`
+查询烤森地图
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题62">
+`/msam`
+同时输出`msa`和`msm`对应的统计信息以及四张烤森地图
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题63">
+`/烤森对话列表` `/mysekai-talk-list` `/mysekai对话列表`
+查询烤森角色对话列表
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题64">
+`/烤森家具列表` `/mysekai-fixture-list` `/mysekai家具列表`
+查询账号已获得家具列表
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题65">
+`/家具列表` `/pjsk mysekai furniture` `/pjsk mysekai fixture` `/msf` `/mysekai 家具`
+查询所有家具列表
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题66">
+`/msg` `/pjsk mysekai gate` `/mysekai-door-upgrade` `/mysekai大门升级` `/烤森大门升级` `/msgate`
+查询烤森大门升级所需材料
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题67">
+`/msr` `/pjsk mysekai musicrecord` `/mysekai-music-record` `/mysekai唱片` `/烤森唱片` `/mss` `/mssong`
+查询烤森音乐唱片收集
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题68">
+`/msb` `/pjsk mysekai blueprint` `/mysekai blueprint` `/mysekai 蓝图`
+查询烤森蓝图列表
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题69">
+`/msp` `/pjsk mysekai photo` `/pjsk mysekai picture` `/mysekai 照片`
+展示烤森内拍摄的照片
+</CollapseBox>
 
 ## 昵称设置
 
-| 指令                                                   | 功能           |
-|:-----------------------------------------------------|:-------------|
-| `/歌曲别名` `/pjsk alias` `/music alias` `/查歌曲别名`        | 查询曲目别名       |
-| `/添加歌曲别名` `/music alias add` `/pjsk alias add`       | 添加曲目别名至待审核列表 |
-| `/删除歌曲别名` `/music alias del` `/pjsk alias del`       | 管理员删除曲目别名    |
-| `/角色别名` `/pjsk chara alias` `/chara alias` `/查角色别名`  | 查询角色别名       |
-| `/添加角色别名` `/pjsk chara alias add` `/chara alias add` | 添加角色别名至待审核列表 |
-| `/删除角色别名` `/pjsk chara alias del` `/chara alias del` | 管理员删除角色别名    |
-| `/待审核别名` `/别名待审核` `/歌曲别名待审核` `/角色别名待审核`              | 管理员查询待审核列表   |
-| `/同意别名` `/通过别名`                                      | 管理员审核通过别名    |
-| `/拒绝别名`                                              | 管理员审核拒绝别名    |
+<CollapseBox title="待确定功能标题70">
+`/歌曲别名` `/pjsk alias` `/music alias` `/查歌曲别名`
+查询曲目别名
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题71">
+`/添加歌曲别名` `/music alias add` `/pjsk alias add`
+添加曲目别名至待审核列表
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题72">
+`/删除歌曲别名` `/music alias del` `/pjsk alias del`
+管理员删除曲目别名
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题73">
+`/角色别名` `/pjsk chara alias` `/chara alias` `/查角色别名`
+查询角色别名
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题74">
+`/添加角色别名` `/pjsk chara alias add` `/chara alias add`
+添加角色别名至待审核列表
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题75">
+`/删除角色别名` `/pjsk chara alias del` `/chara alias del`
+管理员删除角色别名
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题76">
+`/待审核别名` `/别名待审核` `/歌曲别名待审核` `/角色别名待审核`
+管理员查询待审核列表
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题77">
+`/同意别名` `/通过别名`
+管理员审核通过别名
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题78">
+`/拒绝别名`
+管理员审核拒绝别名
+</CollapseBox>
 
 ::: info
 所有歌曲昵称设置，角色昵称设置的日志内容将会在实时日志页面按日公示。  
@@ -352,14 +637,35 @@ iOS / iPadOS 用户 建议使用代理工具MitM模块更新，教程参考[Haru
 
 ## 杂项
 
-| 指令                                                      | 功能                                          |
-|:--------------------------------------------------------|:--------------------------------------------|
-| `/生日` `/pjsk chara birthday` `/角色生日` `/查生日`             | 查询角色生日                                      |
-| `/贴纸` `/查贴纸` `/pjsk贴纸` `/pjsk表情` `/pjsk stamp` `/stamp` | 查询贴纸                                        |
-| `/pjsk live` `/虚拟live` `/pjsk vlive` `/vlive`           | 查询虚拟 Live 信息                                |
-| `/逮捕` `/pjsk逮捕` `/pjsk arrest`                          | 查询指定账号乐曲clear/fc/ap进度，不指定uid会查询默认账号         |
-| `/查卡池` `/pjsk gacha` `/卡池列表` `/卡池一览` `/卡池`              | 查询卡池列表                                      |
-| `/pjsktz`                                               | 设置你所在的时区，HarukiBot NEO一切和时间有关的信息都会以你设置的时区渲染 |
+<CollapseBox title="待确定功能标题79">
+`/生日` `/pjsk chara birthday` `/角色生日` `/查生日`
+查询角色生日
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题80">
+`/贴纸` `/查贴纸` `/pjsk贴纸` `/pjsk表情` `/pjsk stamp` `/stamp`
+查询贴纸
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题81">
+`/pjsk live` `/虚拟live` `/pjsk vlive` `/vlive`
+查询虚拟 Live 信息
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题82">
+`/逮捕` `/pjsk逮捕` `/pjsk arrest`
+查询指定账号乐曲clear/fc/ap进度，不指定uid会查询默认账号
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题83">
+`/查卡池` `/pjsk gacha` `/卡池列表` `/卡池一览` `/卡池`
+查询卡池列表
+</CollapseBox>
+
+<CollapseBox title="待确定功能标题84">
+`/pjsktz`
+设置你所在的时区，HarukiBot NEO一切和时间有关的信息都会以你设置的时区渲染
+</CollapseBox>
 
 ## 关于
 
