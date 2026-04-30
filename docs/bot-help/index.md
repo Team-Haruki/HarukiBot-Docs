@@ -159,7 +159,6 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 - 模式：`单人` `多人` `AUTO`
 - 排序条件：`分数` `PT` `时速`
-- 难度：`ex` `ma`
 
 </details>
 
