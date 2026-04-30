@@ -130,6 +130,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 | `/查物量` `/pjsk note num` `/pjsk note count` `/物量`                                                        | 查询指定物量下有哪些歌曲                                   |
 | `/查bpm` `/pjsk bpm` `/查BPM`                                                                             | 查询指定BPM下有哪些歌曲                                  |
 | `/查曲绘`  `/pjsk music cover` `/曲绘`                                                                       | 查询指定歌曲的曲绘原图                                    |
+| `/歌曲排行`                                                                                               | 查询指定顺序下的歌曲排行                                    |
 
 <details>
 <summary><span style="color:#99CCFF">乐曲相关的可选参数以及示例可以点击这条展开查看</span></summary>
@@ -153,6 +154,12 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 - 某个难度全部歌曲: `expert`
 - 某个难度单个等级歌曲: `expert 27`
 - 某个难度 闭区间等级范围 的歌曲: `expert 25 37`
+
+### 歌曲排行的可选参数：
+
+- 模式：`单人` `多人` `AUTO`
+- 排序条件：`分数` `PT` `时速`
+- 难度：`ex` `ma`
 
 </details>
 
