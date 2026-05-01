@@ -7,8 +7,10 @@ title: 个人资料与账号
 > 账号验证功能仅支持 `Haruki工具箱快速验证`
 > 
 > 请确保您在工具箱中有已通过验证的绑定账号再使用此功能。
+> 
+> 如果还未验证或绑定，请参考[此教程](https://neo.haruki.seiunx.com/toolbox-tutorial/verify-guide)
 
-## 账号绑定与切换
+<CollapseBox title="账号绑定与切换">
 
 - `/绑定` `/pjsk bind` `/pjsk id` `/pjsk 绑定`
   - 通过游戏uid绑定你的游戏账号，如 `/绑定 114514`。
@@ -24,8 +26,11 @@ title: 个人资料与账号
   - 无 uid 时会清除全局默认绑定，有 uid 时会清除对应账号的区服默认绑定。
 - `/解绑` `/pjsk unbind` `/取消绑定`
   - 通过游戏 uid 解绑你的账号，如 `/解绑 114514`。
+- `/逮捕` `/pjsk逮捕` `/pjsk arrest`
+  - 查询指定账号乐曲 clear/fc/ap 进度，不指定 uid 会查询默认账号。 
+</CollapseBox>
 
-## 抓包显示设置
+<CollapseBox title="抓包显示设置">
 
 - `/隐藏抓包` `/pjsk hide suite` `/pjsk隐藏抓包`
   - 隐藏 suite 抓包功能内的详细数据显示。
@@ -35,29 +40,33 @@ title: 个人资料与账号
   - 隐藏烤森抓包功能内的详细数据显示。
 - `/展示烤森抓包` `/pjsk show mysekai`
   - 展示烤森抓包功能内的详细数据显示。
+</CollapseBox>
 
-## 隐藏与显示 UID
+<CollapseBox title="隐藏与显示 UID">
 
 - `/隐藏ID` `/隐藏id` `/pjsk hide id`
   - 在查询中隐藏自己的 uid。
 - `/显示ID` `/pjsk show id` `/显示id`
   - 在查询中显示自己的 uid。
+</CollapseBox>
 
-## 抓包状态查询
+<CollapseBox title="抓包状态查询">
 
 - `/抓包数据` `/pjsk check data` `/抓包状态` `/抓包信息` `/sud`
   - 查看自己的 suite 抓包数据上传时间。
 - `/烤森抓包数据` `/msd` `/pjsk check mysekai data` `/烤森抓包`
   - 查看自己的烤森抓包数据上传时间。
+</CollapseBox>
 
-## 账号验证
+<CollapseBox title="账号验证">
 
 - `/pjsk验证` `/pjsk verify`
   - 验证自己的游戏账号，<span style="color:red">部分功能需要验证后使用</span>，无法快速验证请前往 Haruki 工具箱进行绑定。
 - `/pjsk验证列表` `/pjsk verify list` `/pjsk验证状态`
   - 查看已验证的账号列表。
+</CollapseBox>
 
-## 个人信息背景
+<CollapseBox title="个人信息背景">
 
 - `/上传个人信息背景` `/pjsk upload profile bg` `/上传个人背景`
   - 上传自定义的个人信息背景图，需要消息内含有图片或回复上文中已有的某张图片。请注意，需要先进行游戏账号验证才能使用。
@@ -65,8 +74,11 @@ title: 个人资料与账号
   - 清除自定义的个人信息背景图。
 - `/设置个人信息` `/pjsk adjust profile` `/调整个人信息背景`
   - 调整自定义个人信息背景图，可选横屏/竖屏、模糊以及透明度。模糊度范围为 0~10，透明度范围为 0~100。如：`/调整个人信息 竖屏 模糊5 透明50`。
+</CollapseBox>
 
-## 其他查询
+<CollapseBox title="查询注册时间">
 
 - `/查时间` `/注册时间` `/pjsk reg time`
   - 查询账号的注册时间。
+</CollapseBox>
+

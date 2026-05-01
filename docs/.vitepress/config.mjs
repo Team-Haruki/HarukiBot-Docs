@@ -3,6 +3,9 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh',
+  server: {
+  allowedHosts: true
+  },
   base: "/",
   head: [["link", { rel: "icon", href: "https://images.shiromiku.moe/images/HarukiDocsAvatar.webp" }]],
   title: "HarukiBot NEO帮助文档",
@@ -57,7 +60,7 @@ export default defineConfig({
             { text: '音乐与乐曲', link: '/bot-help/music' },
             { text: '活动查询', link: '/bot-help/event' },
             { text: '榜线与 SK', link: '/bot-help/sk' },
-            { text: '组卡', link: '/bot-help/suite' },
+            { text: '组卡', link: '/bot-help/recommend' },
             { text: '养成查询', link: '/bot-help/cultivation' },
             { text: 'MySekai 查询', link: '/bot-help/mysekai' },
             { text: '昵称与别名', link: '/bot-help/alias' },

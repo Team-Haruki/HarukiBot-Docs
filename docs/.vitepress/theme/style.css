@@ -137,5 +137,122 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/**
+ * Component: Empty Page Outline
+ * -------------------------------------------------------------------------- */
 
+@media (min-width: 1280px) {
+  .VPDoc.has-aside:not(:has(.VPDocAsideOutline.has-outline)) .aside {
+    display: none;
+  }
 
+  .VPDoc.has-aside:not(:has(.VPDocAsideOutline.has-outline)) .content-container {
+    max-width: 752px;
+  }
+}
+
+/**
+ * Component: Sidebar Toggle
+ * -------------------------------------------------------------------------- */
+
+.sidebar-toggle {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .VPNavBar.has-sidebar .title {
+    width: 272px;
+  }
+
+  /**
+   * Animate --vp-sidebar-width changes via padding transitions.
+   * VitePress uses --vp-sidebar-width internally for all layout padding,
+   * so overriding it makes everything (VPContent, VPDoc, aside, navbar)
+   * reposition automatically — no !important hacks needed.
+   */
+  .VPContent.has-sidebar,
+  .VPDoc.has-sidebar,
+  .VPDoc.has-sidebar .container,
+  .VPNavBar.has-sidebar .content,
+  .VPNavBar.has-sidebar .divider {
+    transition: padding-left 0.25s ease;
+  }
+
+  .sidebar-toggle {
+    position: fixed;
+    top: 86px;
+    left: calc(var(--vp-sidebar-width) - 15px);
+    z-index: calc(var(--vp-z-index-sidebar) + 1);
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 48px;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 999px;
+    background: var(--vp-c-bg);
+    color: var(--vp-c-text-2);
+    box-shadow: var(--vp-shadow-2);
+    cursor: pointer;
+    transition:
+      left 0.25s ease,
+      border-color 0.25s ease,
+      color 0.25s ease,
+      background-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .sidebar-toggle:hover {
+    border-color: var(--vp-c-brand-1);
+    color: var(--vp-c-brand-1);
+  }
+
+  .sidebar-toggle-icon {
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid currentColor;
+    border-left: 2px solid currentColor;
+    transform: translateX(2px) rotate(-45deg);
+    transition: transform 0.25s ease;
+  }
+
+  /* --- Collapsed state --- */
+
+  .sidebar-collapsed {
+    --vp-sidebar-width: 56px;
+  }
+
+  .sidebar-collapsed .sidebar-toggle {
+    left: 14px;
+  }
+
+  .sidebar-collapsed .sidebar-toggle-icon {
+    transform: translateX(-2px) rotate(135deg);
+  }
+
+  .sidebar-collapsed .VPSidebar {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .sidebar-collapsed .VPNavBar.has-sidebar .title {
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .VPNavBar.has-sidebar .title {
+    width: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + 272px - 32px);
+  }
+
+  .sidebar-toggle {
+    left: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 47px);
+  }
+
+  .sidebar-collapsed .sidebar-toggle {
+    left: 14px;
+  }
+}
