@@ -46,7 +46,26 @@ export default defineConfig({
     //   }
     // ],
 
-    sidebar: false, // 关闭侧边栏
+    sidebar: {
+      '/bot-help/': [
+        {
+          text: 'HarukiBot NEO 帮助',
+          items: [
+            { text: '写在前面', link: '/bot-help/' },
+            { text: '个人资料与账号', link: '/bot-help/account' },
+            { text: '卡牌查询', link: '/bot-help/card' },
+            { text: '音乐与乐曲', link: '/bot-help/music' },
+            { text: '活动查询', link: '/bot-help/event' },
+            { text: '榜线与 SK', link: '/bot-help/sk' },
+            { text: '组卡', link: '/bot-help/suite' },
+            { text: '养成查询', link: '/bot-help/cultivation' },
+            { text: 'MySekai 查询', link: '/bot-help/mysekai' },
+            { text: '昵称与别名', link: '/bot-help/alias' },
+            { text: '杂项命令', link: '/bot-help/misc' }
+          ]
+        }
+      ]
+    },
     aside: "left", // 设置右侧侧边栏在左侧显示
 
     // socialLinks: [
