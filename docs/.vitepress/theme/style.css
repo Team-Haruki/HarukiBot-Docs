@@ -138,6 +138,28 @@
 }
 
 /**
+ * Component: ChatBox Grid
+ * -------------------------------------------------------------------------- */
+
+.chatbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.chatbox-grid .chatbox {
+  margin: 0;
+  min-width: 0;
+}
+
+@media (max-width: 719px) {
+  .chatbox-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/**
  * Component: Empty Page Outline
  * -------------------------------------------------------------------------- */
 
@@ -160,22 +182,46 @@
 }
 
 @media (min-width: 960px) {
-  .VPNavBar.has-sidebar .title {
-    width: 272px;
+  :root {
+    --haruki-nav-title-width: 336px;
   }
 
-  /**
-   * Animate --vp-sidebar-width changes via padding transitions.
-   * VitePress uses --vp-sidebar-width internally for all layout padding,
-   * so overriding it makes everything (VPContent, VPDoc, aside, navbar)
-   * reposition automatically — no !important hacks needed.
-   */
+  .VPNavBar.has-sidebar .title {
+    width: var(--haruki-nav-title-width);
+  }
+
+  .VPNavBarTitle .title {
+    min-width: max-content;
+  }
+
+  .VPNavBarTitle .logo {
+    flex: 0 0 auto;
+    width: var(--vp-nav-logo-height);
+    object-fit: contain;
+  }
+
+  .VPNavBarTitle .title span {
+    flex: 0 0 auto;
+  }
+
   .VPContent.has-sidebar,
   .VPDoc.has-sidebar,
   .VPDoc.has-sidebar .container,
   .VPNavBar.has-sidebar .content,
   .VPNavBar.has-sidebar .divider {
     transition: padding-left 0.25s ease;
+  }
+
+  .VPDoc.has-sidebar .left-aside .aside-container {
+    position: sticky;
+    top: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 48px);
+    padding-top: 0;
+    height: auto;
+    max-height: calc(100vh - var(--vp-nav-height) - var(--vp-layout-top-height, 0px) - 48px);
+  }
+
+  .VPDoc.has-sidebar .left-aside .aside-curtain {
+    display: none;
   }
 
   .sidebar-toggle {
@@ -217,10 +263,6 @@
 
   /* --- Collapsed state --- */
 
-  .sidebar-collapsed {
-    --vp-sidebar-width: 56px;
-  }
-
   .sidebar-collapsed .sidebar-toggle {
     left: 14px;
   }
@@ -235,17 +277,19 @@
     visibility: hidden;
   }
 
-  .sidebar-collapsed .VPNavBar.has-sidebar .title {
-    pointer-events: none;
-    opacity: 0;
-    transform: translateX(-100%);
+  .sidebar-collapsed .VPContent.has-sidebar {
+    padding-left: 56px;
   }
 
+  .VPNavBar.has-sidebar .content,
+  .sidebar-collapsed .VPNavBar.has-sidebar .content {
+    padding-left: var(--haruki-nav-title-width);
+  }
 }
 
 @media (min-width: 1440px) {
   .VPNavBar.has-sidebar .title {
-    width: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + 272px - 32px);
+    width: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--haruki-nav-title-width) - 32px);
   }
 
   .sidebar-toggle {
@@ -254,5 +298,14 @@
 
   .sidebar-collapsed .sidebar-toggle {
     left: 14px;
+  }
+
+  .sidebar-collapsed .VPContent.has-sidebar {
+    padding-left: calc((100% - var(--vp-layout-max-width)) / 2 + 56px);
+  }
+
+  .VPNavBar.has-sidebar .content,
+  .sidebar-collapsed .VPNavBar.has-sidebar .content {
+    padding-left: calc((100% - var(--vp-layout-max-width)) / 2 + var(--haruki-nav-title-width));
   }
 }

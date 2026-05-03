@@ -7,7 +7,7 @@ export default defineConfig({
   allowedHosts: true
   },
   base: "/",
-  head: [["link", { rel: "icon", href: "https://images.shiromiku.moe/images/HarukiDocsAvatar.webp" }]],
+  head: [["link", { rel: "icon", href: "/assets/images/navicon.ico" }]],
   title: "HarukiBot NEO帮助文档",
   description: "本文档将引导您使用 HarukiBot NEO",
   themeConfig: {
@@ -55,6 +55,7 @@ export default defineConfig({
           text: 'HarukiBot NEO 帮助',
           items: [
             { text: '写在前面', link: '/bot-help/' },
+            { text: '如何使用工具箱', link: '/bot-help/toolbox_guide' },
             { text: '个人资料与账号', link: '/bot-help/account' },
             { text: '卡牌查询', link: '/bot-help/card' },
             { text: '音乐与乐曲', link: '/bot-help/music' },

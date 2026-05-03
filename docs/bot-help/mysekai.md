@@ -15,17 +15,17 @@ iOS / iPadOS 用户建议使用代理工具 MitM 模块更新，教程参考 [Ha
 > 
 > ⚠️ **本功能不支持国服**
 
-<CollapseBox title="查询烤森资源">
+## 查询烤森资源
 
 - `/msa` `/pjsk mysekai res` `/mysekai-resource` `/mysekai资源` `/烤森资源`
   - 查询烤森信息（资源、天气、来访角色等）。
 - `/msm` `/pjsk mysekai map` `/mysekai-map` `/mysekai地图` `/烤森地图` `/msmap`
   - 查询烤森地图。
+  - `/msm <id>`可以单独输出某张地图
 - `/msam`
   - 同时输出 `msa` 和 `msm` 对应的统计信息以及四张烤森地图。
-</CollapseBox>
 
-<CollapseBox title="查询烤森收集">
+## 查询烤森收集
 
 
 - `/烤森家具列表` `/mysekai-fixture-list` `/mysekai家具列表`
@@ -38,12 +38,10 @@ iOS / iPadOS 用户建议使用代理工具 MitM 模块更新，教程参考 [Ha
   - 查询烤森蓝图列表。
 - `/msp` `/pjsk mysekai photo` `/pjsk mysekai picture` `/mysekai 照片`
   - 展示烤森内拍摄的照片。
-</CollapseBox>
 
-<CollapseBox title="查询烤森养成">
+## 查询烤森养成
 
 - `/烤森对话列表` `/mysekai-talk-list` `/mysekai对话列表`
   - 查询烤森角色对话列表。
 - `/msg` `/pjsk mysekai gate` `/mysekai-door-upgrade` `/mysekai大门升级` `/烤森大门升级` `/msgate`
   - 查询烤森大门升级所需材料。
-</CollapseBox>

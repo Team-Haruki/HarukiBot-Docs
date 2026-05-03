@@ -33,16 +33,43 @@ withDefaults(defineProps<{
 </template>
 
 <style scoped>
-/* 样式直接复用即可 [cite: 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] */
 .chatbox {
+  --chat-panel-bg: var(--vp-c-bg-soft);
+  --chat-panel-border: var(--vp-c-divider);
+  --chat-bot-bg: var(--vp-c-bg);
+  --chat-bot-text: var(--vp-c-text-1);
+  --chat-bot-avatar-bg: var(--vp-c-bg);
+  --chat-bot-avatar-border: var(--vp-c-divider);
+  --chat-user-bg: var(--vp-c-brand-soft);
+  --chat-user-text: var(--vp-c-brand-1);
+  --chat-user-avatar-bg: var(--vp-c-brand-3);
+  --chat-user-avatar-text: var(--vp-c-white);
+  --chat-code-bg: rgb(0 0 0 / 6%);
+  --chat-shadow: rgb(0 0 0 / 6%);
+
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 16px;
-  background: #f0f4e8;
+  background: var(--chat-panel-bg);
   border-radius: 14px;
-  border: 1px solid #d8e3cc;
+  border: 1px solid var(--chat-panel-border);
   margin: 12px 0;
+}
+
+:global(.dark .chatbox) {
+  --chat-panel-bg: rgb(255 255 255 / 4%);
+  --chat-panel-border: rgb(255 255 255 / 10%);
+  --chat-bot-bg: rgb(255 255 255 / 7%);
+  --chat-bot-text: var(--vp-c-text-1);
+  --chat-bot-avatar-bg: rgb(255 255 255 / 8%);
+  --chat-bot-avatar-border: rgb(255 255 255 / 12%);
+  --chat-user-bg: rgb(100 140 255 / 18%);
+  --chat-user-text: rgb(195 210 255);
+  --chat-user-avatar-bg: var(--vp-c-brand-2);
+  --chat-user-avatar-text: var(--vp-c-white);
+  --chat-code-bg: rgb(255 255 255 / 8%);
+  --chat-shadow: rgb(0 0 0 / 24%);
 }
 
 .chat-row {
@@ -73,13 +100,13 @@ withDefaults(defineProps<{
 }
 
 .chat-left .chat-avatar {
-  background: #fff;
-  border: 1.5px solid #c5e1a5;
+  background: var(--chat-bot-avatar-bg);
+  border: 1.5px solid var(--chat-bot-avatar-border);
 }
 
 .chat-right .chat-avatar {
-  background: #66bb6a;
-  color: #fff;
+  background: var(--chat-user-avatar-bg);
+  color: var(--chat-user-avatar-text);
 }
 
 .chat-avatar img {
@@ -97,17 +124,17 @@ withDefaults(defineProps<{
 }
 
 .chat-left .chat-bubble {
-  background: #fff;
-  color: #263238;
+  background: var(--chat-bot-bg);
+  color: var(--chat-bot-text);
   border-top-left-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 3px var(--chat-shadow);
 }
 
 .chat-right .chat-bubble {
-  background: #a5d6a7;
-  color: #1b5e20;
+  background: var(--chat-user-bg);
+  color: var(--chat-user-text);
   border-top-right-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 3px var(--chat-shadow);
 }
 
 .chat-bubble.mono {
@@ -117,7 +144,7 @@ withDefaults(defineProps<{
 
 /* 在 Vue 中，使用 :deep() 处理深度选择器  */
 :deep(.chat-bubble code) {
-  background: rgba(0, 0, 0, 0.06);
+  background: var(--chat-code-bg);
   padding: 1px 5px;
   border-radius: 4px;
   font-family: Consolas, Monaco, monospace;

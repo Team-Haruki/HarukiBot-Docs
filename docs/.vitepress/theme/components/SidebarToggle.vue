@@ -22,11 +22,6 @@ const { hasSidebar } = useLayout()
 function applyState() {
   const isCollapsed = hasSidebar.value && collapsed.value
   document.documentElement.classList.toggle('sidebar-collapsed', isCollapsed)
-  if (isCollapsed) {
-    document.documentElement.style.setProperty('--vp-sidebar-width', '56px')
-  } else {
-    document.documentElement.style.removeProperty('--vp-sidebar-width')
-  }
 }
 
 function toggle() {
