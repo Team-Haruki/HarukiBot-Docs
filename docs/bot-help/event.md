@@ -2,6 +2,16 @@
 title: 活动查询
 ---
 
+<script setup>
+import ChatBox from '/bot-help/components/ChatBox.vue'
+
+const eventdetail = [
+  { text: '/活动 17', from: 'user' },
+  { text: '[id为17的活动详情]', from:'bot' }
+]
+
+</script>
+
 # 活动
 
 ## 活动指令
@@ -28,3 +38,8 @@ title: 活动查询
   - 年份：`2025年` `今年` `去年`
   - 活动类型：`普活` `5v5` `wl` `wl`
 - 以上参数可以混合使用，用空格分隔。
+
+## 指令示例
+<div class="chatbox-grid">
+<ChatBox :messages="eventdetail" />
+</div>

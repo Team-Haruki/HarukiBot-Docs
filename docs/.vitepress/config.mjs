@@ -6,6 +6,13 @@ export default defineConfig({
   server: {
   allowedHosts: true
   },
+  vite: {
+    server: {
+      watch: {
+        usePolling: true,
+      },
+    },
+  },
   base: "/",
   head: [["link", { rel: "icon", href: "/assets/images/navicon.ico" }]],
   title: "HarukiBot NEO帮助文档",

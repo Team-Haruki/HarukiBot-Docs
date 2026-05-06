@@ -47,6 +47,8 @@ const cardlist1 = [
 | 年份 | `2025年` `今年` `去年` |  |
 | 活动 id 或者箱活缩写 | `event123` `mnr1` |  |
 
+请注意，参数 纯数字的 4 ，在 查卡 和 查卡面中解析为卡牌id 4 ，在 卡牌列表 和 卡牌一览 中 解析为卡牌稀有度4星
+
 ## 指令示例
 <div class="chatbox-grid">
 <ChatBox :messages="cardlist" />
