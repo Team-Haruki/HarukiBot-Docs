@@ -3,6 +3,35 @@ title: 音乐与乐曲
 outline: false
 ---
 
+<script setup>
+import ChatBox from '/bot-help/components/ChatBox.vue'
+
+const musicdetail = [
+  { text: '/查曲 112', from: 'user' },
+  { text: '[id为112的歌曲的详情]', from: 'bot'}
+]
+
+const musichard = [
+  { text: '/难度排行31', from: 'user' },
+  { text: '[难度定数为31的歌曲列表]', from: 'bot'}
+]
+
+const kuroba = [
+  { text: '/谱面预览 112', from: 'user' },
+  { text: '[id为112的歌曲的谱面预览]', from: 'bot'}
+]
+
+const reward = [
+  { text: '/打歌奖励', from: 'user' },
+  { text: '[当前账户的歌曲剩余奖励]', from: 'bot'}
+]
+const schedule = [
+  { text: '/pjsk进度', from: 'user' },
+  { text: '[当前账户的歌曲完成情况]', from: 'bot'}
+]
+
+</script>
+
 # 音乐/乐曲
 
 ## 基本指令
@@ -55,3 +84,16 @@ outline: false
 
 - 模式：`单人` `多人` `AUTO`
 - 排序条件：`分数` `PT` `时速`
+
+## 指令示例
+<div class="chatbox-grid">
+<ChatBox :messages="musicdetail" />
+
+<ChatBox :messages="musichard" />
+
+<ChatBox :messages="kuroba" />
+
+<ChatBox :messages="reward" />
+
+<ChatBox :messages="schedule" />
+</div>

@@ -8,7 +8,12 @@ import ChatBox from '/bot-help/components/ChatBox.vue'
 
 const eventdetail = [
   { text: '/活动 17', from: 'user' },
-  { text: '[id为17的活动详情]', from:'bot' }
+  { text: '[id为17的活动详情]', from: 'bot' }
+]
+
+const eventlist = [
+  { text: '/活动列表', from: 'user' },
+  { text: '[包含当前服务器所有活动的长串列表]', from: 'bot' }
 ]
 
 </script>
@@ -43,4 +48,6 @@ const eventdetail = [
 ## 指令示例
 <div class="chatbox-grid">
 <ChatBox :messages="eventdetail" />
+
+<ChatBox :messages="eventlist" />
 </div>
