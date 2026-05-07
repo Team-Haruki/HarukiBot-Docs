@@ -1,5 +1,6 @@
 ---
 title: 卡牌查询
+outline: false
 ---
 
 <script setup>

@@ -1,6 +1,32 @@
 ---
 title: 榜线与 SK
+outline: false
 ---
+
+<script setup>
+import ChatBox from '/bot-help/components/ChatBox.vue'
+
+const sklineDemo = [
+  { text: '/sk线', from: 'user' },
+  { text: '[当期活动各排名的分数线]', from: 'bot' }
+]
+
+const skDemo = [
+  { text: '/sk', from: 'user' },
+  { text: '[用户当期活动的排名以及分数]', from: 'bot' }
+]
+
+const sk1DeckDemo = [
+  { text: '/sk 1', from: 'user' },
+  { text: '[当期活动排名为1的玩家的分数]', from: 'bot' }
+]
+
+const wlsklineDemo = [
+  { text: '/wlsk knd', from: 'user' },
+  { text: '[当期wl活动knd章节各排名的分数线]', from: 'bot' }
+]
+
+</script>
 
 # 榜线/SK
 
@@ -34,3 +60,17 @@ title: 榜线与 SK
 - `/时速`、`/半日速`、`/日速` 指令后面可以跟数字，将特定时间范围内的 PT 增长转换为对应速度。
 - 如 `/时速10` = 10 分钟内 PT 增长量转换的时速。
 - 可输入数字单位为分钟，最大不超过 1440 分钟（即一天）。
+
+## 指令示例
+
+<div class="chatbox-grid">
+
+<ChatBox :messages="sklineDemo" />
+
+<ChatBox :messages="skDemo" />
+
+<ChatBox :messages="sk1Demo" />
+
+<ChatBox :messages="wlsklineDemo" />
+
+</div>

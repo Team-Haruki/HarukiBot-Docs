@@ -1,5 +1,6 @@
 ---
 title: 其他命令
+outline: false
 ---
 
 # 杂项

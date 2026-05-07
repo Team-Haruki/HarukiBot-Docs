@@ -1,5 +1,6 @@
 ---
 title: 活动查询
+outline: false
 ---
 
 <script setup>

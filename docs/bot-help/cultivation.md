@@ -1,5 +1,6 @@
 ---
 title: 养成查询
+outline: false
 ---
 
 ## 养成

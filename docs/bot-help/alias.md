@@ -1,5 +1,6 @@
 ---
 title: 昵称与别名
+outline: false
 ---
 
 ## 昵称设置
