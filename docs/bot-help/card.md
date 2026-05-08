@@ -16,6 +16,21 @@ const cardlist1 = [
   { text: '[mzk1活动卡牌的四星卡列表]', from: 'bot' }
 ]
 
+const cardlistmmj = [
+  { text: '/卡牌列表 mmj 4', from: 'user' },
+  { text: '[包含所有mmj四星卡牌的卡牌列表，可能会因为卡牌过多变为卡牌一览]', from: 'bot' }
+]
+
+const cardlistminori = [
+  { text: '/卡牌一览 mnr', from: 'user' },
+  { text: '[包含所有mnr卡牌略缩图的卡牌一览]', from: 'bot' }
+]
+
+const minoriminori = [
+  { text: '/查卡面 190', from: 'user' },
+  { text: '[卡牌id190所有卡面的图片]', from: 'bot' }
+]
+
 </script>
 
 # 卡牌查询
@@ -49,11 +64,18 @@ const cardlist1 = [
 | 活动 id 或者箱活缩写 | `event123` `mnr1` |  |
 
 请注意，参数 纯数字的 4 ，在 查卡 和 查卡面中解析为卡牌id 4 ，在 卡牌列表 和 卡牌一览 中 解析为卡牌稀有度4星
-查卡指令的卡牌过多时，会自动转为卡牌列表模式
+查卡指令查询到多张卡牌时，会自动转为卡牌列表模式
+假设查询的卡牌过多，会自动转为卡牌一览模式
 
 ## 指令示例
 <div class="chatbox-grid">
 <ChatBox :messages="cardlist" />
 
 <ChatBox :messages="cardlist1" />
+
+<ChatBox :messages="cardlistmmj" />
+
+<ChatBox :messages="cardlistminori" />
+
+<ChatBox :messages="minoriminori" />
 </div>

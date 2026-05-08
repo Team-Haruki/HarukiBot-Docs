@@ -16,6 +16,16 @@ const eventlist = [
   { text: '[包含当前服务器所有活动的长串列表]', from: 'bot' }
 ]
 
+const eventlistmmj = [
+  { text: '/活动列表 mmj 橙', from: 'user'},
+  { text: '[包含所有mmj成员参与了的活动属性为橙的活动的列表]', from: 'bot' }
+]
+
+const eventlistonlymmj = [
+  { text: '/活动列表 仅mmj 蓝', from: 'user'},
+  { text: '[包含仅有mmj成员参与了的活动属性为蓝的活动的列表]', from: 'bot' }
+]
+
 </script>
 
 # 活动
@@ -37,6 +47,7 @@ const eventlist = [
   - 箱活缩写，例如 `mnr1`
 - 查询多个活动筛选方式：
   - 团名英文缩写：`mmj` `vs`
+  - 仅团名缩写: `仅mmj` `仅25h`
   - 查询某个角色有出场的活动：`miku` `miku ick`
   - 查询角色箱活：`ick箱` `ickban`
   - 查询混活：`混活`
@@ -45,9 +56,15 @@ const eventlist = [
   - 活动类型：`普活` `5v5` `wl` `wl`
 - 以上参数可以混合使用，用空格分隔。
 
+注意，仅+团名和团名是两个不同参数，前者只会检索出团队的箱活，后者会检索全局有该团队成员参与的活动
+
 ## 指令示例
 <div class="chatbox-grid">
 <ChatBox :messages="eventdetail" />
 
 <ChatBox :messages="eventlist" />
+
+<ChatBox :messages="eventlistmmj" />
+
+<ChatBox :messages="eventlistonlymmj" />
 </div>

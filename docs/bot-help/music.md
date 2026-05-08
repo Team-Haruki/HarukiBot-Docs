@@ -30,6 +30,16 @@ const schedule = [
   { text: '[当前账户的歌曲完成情况]', from: 'bot'}
 ]
 
+const abaaba = [
+  { text: '/查物量 1235', from: 'user' },
+  { text: '[歌曲某一难度谱面物量为1235的曲目的列表]', from: 'bot'}
+]
+
+const weee = [
+  { text: '/查bpm 193', from: 'user' },
+  { text: '[曲目BPM为193的曲目的列表]', from: 'bot'}
+]
+
 </script>
 
 # 音乐/乐曲
@@ -49,7 +59,7 @@ const schedule = [
 - `/pjsk进度` `/打歌进度` `/歌曲进度` `/打歌信息` `/progress` `/music-progress` `/pjsk music progress` `/pjsk progress`
   - 查询指定账号指定难度 clear/fc/ap 完成度（⚠️需要上传 suite 数据）。
 - `/查物量` `/pjsk note num` `/pjsk note count` `/物量`
-  - 查询指定物量下有哪些歌曲。
+  - 查询指定物量下有哪些歌曲,如果只有一首曲目会返回谱面预览。
 - `/查bpm` `/pjsk bpm` `/查BPM`
   - 查询指定 BPM 下有哪些歌曲。
 - `/查曲绘` `/pjsk music cover` `/曲绘`
@@ -96,4 +106,8 @@ const schedule = [
 <ChatBox :messages="reward" />
 
 <ChatBox :messages="schedule" />
+
+<ChatBox :messages="abaaba" />
+
+<ChatBox :messages="weee" />
 </div>
