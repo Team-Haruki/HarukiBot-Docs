@@ -12,7 +12,7 @@ const musicdetail = [
 ]
 
 const musichard = [
-  { text: '/难度排行31', from: 'user' },
+  { text: '/难度排行 31', from: 'user' },
   { text: '[难度定数为31的歌曲列表]', from: 'bot'}
 ]
 

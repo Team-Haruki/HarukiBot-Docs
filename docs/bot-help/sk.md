@@ -69,7 +69,7 @@ const wlsklineDemo = [
 
 <ChatBox :messages="skDemo" />
 
-<ChatBox :messages="sk1Demo" />
+<ChatBox :messages="sk1DeckDemo" />
 
 <ChatBox :messages="wlsklineDemo" />
 
