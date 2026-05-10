@@ -137,5 +137,175 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/**
+ * Component: ChatBox Grid
+ * -------------------------------------------------------------------------- */
 
+.chatbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 12px 0;
+}
 
+.chatbox-grid .chatbox {
+  margin: 0;
+  min-width: 0;
+}
+
+@media (max-width: 719px) {
+  .chatbox-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/**
+ * Component: Empty Page Outline
+ * -------------------------------------------------------------------------- */
+
+@media (min-width: 1280px) {
+  .VPDoc.has-aside:not(:has(.VPDocAsideOutline.has-outline)) .aside {
+    display: none;
+  }
+
+  .VPDoc.has-aside:not(:has(.VPDocAsideOutline.has-outline)) .content-container {
+    max-width: 752px;
+  }
+}
+
+/**
+ * Component: Sidebar Toggle
+ * -------------------------------------------------------------------------- */
+
+.sidebar-toggle {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  :root {
+    --haruki-nav-title-width: 336px;
+  }
+
+  .VPNavBar.has-sidebar .title {
+    width: var(--haruki-nav-title-width);
+  }
+
+  .VPNavBarTitle .title {
+    min-width: max-content;
+  }
+
+  .VPNavBarTitle .logo {
+    flex: 0 0 auto;
+    width: var(--vp-nav-logo-height);
+    object-fit: contain;
+  }
+
+  .VPNavBarTitle .title span {
+    flex: 0 0 auto;
+  }
+
+  .VPContent.has-sidebar,
+  .VPDoc.has-sidebar,
+  .VPDoc.has-sidebar .container,
+  .VPNavBar.has-sidebar .content,
+  .VPNavBar.has-sidebar .divider {
+    transition: padding-left 0.25s ease;
+  }
+
+  .VPDoc.has-sidebar .left-aside .aside-container {
+    position: sticky;
+    top: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 48px);
+    padding-top: 0;
+    height: auto;
+    max-height: calc(100vh - var(--vp-nav-height) - var(--vp-layout-top-height, 0px) - 48px);
+  }
+
+  .VPDoc.has-sidebar .left-aside .aside-curtain {
+    display: none;
+  }
+
+  .sidebar-toggle {
+    position: fixed;
+    top: 86px;
+    left: calc(var(--vp-sidebar-width) - 15px);
+    z-index: calc(var(--vp-z-index-sidebar) + 1);
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 48px;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 999px;
+    background: var(--vp-c-bg);
+    color: var(--vp-c-text-2);
+    box-shadow: var(--vp-shadow-2);
+    cursor: pointer;
+    transition:
+      left 0.25s ease,
+      border-color 0.25s ease,
+      color 0.25s ease,
+      background-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .sidebar-toggle:hover {
+    border-color: var(--vp-c-brand-1);
+    color: var(--vp-c-brand-1);
+  }
+
+  .sidebar-toggle-icon {
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid currentColor;
+    border-left: 2px solid currentColor;
+    transform: translateX(2px) rotate(-45deg);
+    transition: transform 0.25s ease;
+  }
+
+  /* --- Collapsed state --- */
+
+  .sidebar-collapsed .sidebar-toggle {
+    left: 14px;
+  }
+
+  .sidebar-collapsed .sidebar-toggle-icon {
+    transform: translateX(-2px) rotate(135deg);
+  }
+
+  .sidebar-collapsed .VPSidebar {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .sidebar-collapsed .VPContent.has-sidebar {
+    padding-left: 56px;
+  }
+
+  .VPNavBar.has-sidebar .content,
+  .sidebar-collapsed .VPNavBar.has-sidebar .content {
+    padding-left: var(--haruki-nav-title-width);
+  }
+}
+
+@media (min-width: 1440px) {
+  .VPNavBar.has-sidebar .title {
+    width: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--haruki-nav-title-width) - 32px);
+  }
+
+  .sidebar-toggle {
+    left: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 47px);
+  }
+
+  .sidebar-collapsed .sidebar-toggle {
+    left: 14px;
+  }
+
+  .sidebar-collapsed .VPContent.has-sidebar {
+    padding-left: calc((100% - var(--vp-layout-max-width)) / 2 + 56px);
+  }
+
+  .VPNavBar.has-sidebar .content,
+  .sidebar-collapsed .VPNavBar.has-sidebar .content {
+    padding-left: calc((100% - var(--vp-layout-max-width)) / 2 + var(--haruki-nav-title-width));
+  }
+}

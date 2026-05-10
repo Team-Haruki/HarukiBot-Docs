@@ -1,0 +1,113 @@
+---
+title: 音乐与乐曲
+outline: false
+---
+
+<script setup>
+import ChatBox from '/bot-help/components/ChatBox.vue'
+
+const musicdetail = [
+  { text: '/查曲 112', from: 'user' },
+  { text: '[id为112的歌曲的详情]', from: 'bot'}
+]
+
+const musichard = [
+  { text: '/难度排行 31', from: 'user' },
+  { text: '[难度定数为31的歌曲列表]', from: 'bot'}
+]
+
+const kuroba = [
+  { text: '/谱面预览 112', from: 'user' },
+  { text: '[id为112的歌曲的谱面预览]', from: 'bot'}
+]
+
+const reward = [
+  { text: '/打歌奖励', from: 'user' },
+  { text: '[当前账户的歌曲剩余奖励]', from: 'bot'}
+]
+const schedule = [
+  { text: '/pjsk进度', from: 'user' },
+  { text: '[当前账户的歌曲完成情况]', from: 'bot'}
+]
+
+const abaaba = [
+  { text: '/查物量 1235', from: 'user' },
+  { text: '[歌曲某一难度谱面物量为1235的曲目的列表]', from: 'bot'}
+]
+
+const weee = [
+  { text: '/查bpm 193', from: 'user' },
+  { text: '[曲目BPM为193的曲目的列表]', from: 'bot'}
+]
+
+</script>
+
+# 音乐/乐曲
+
+## 基本指令
+
+- `/查曲` `/查歌` `/查乐` `/查音乐` `/查询乐曲` `/查歌曲` `/歌曲` `/乐曲` `/song` `/music`
+  - 查询单曲信息。
+- `/难度排行` `/歌曲列表` `/歌曲一览` `/乐曲列表` `/乐曲一览` `/定数表` `/歌曲定数` `/查乐曲` `/music-list` `/pjsk music list`
+  - 查询指定难度等级下的歌曲列表，如果有抓包上传的 suite 数据会显示 clear/fc/ap 进度。
+- `/谱面预览` `/pjsk chart` `/谱面查询` `/铺面查询` `/铺面预览` `/谱面` `/铺面` `/查谱面` `/查铺面` `/查谱` `/技能预览`
+  - 查询指定歌曲的谱面预览。
+- `/谱面样式` `/谱面底色` `/设置谱面样式` `/设置谱面底色` `/pjsk chart style`
+  - 指定查询谱面预览时对应的色调（可选 `white`/`black`）。
+- `/打歌奖励` `/曲目奖励` `/歌曲奖励` `/music rewards` `/music-rewards` `/pjsk music rewards` `/歌曲挖矿` `/打歌挖矿`
+  - 查询指定账号剩余的打歌奖励/挖矿奖励（⚠️需要上传 suite 数据）。
+- `/pjsk进度` `/打歌进度` `/歌曲进度` `/打歌信息` `/progress` `/music-progress` `/pjsk music progress` `/pjsk progress`
+  - 查询指定账号指定难度 clear/fc/ap 完成度（⚠️需要上传 suite 数据）。
+- `/查物量` `/pjsk note num` `/pjsk note count` `/物量`
+  - 查询指定物量下有哪些歌曲,如果只有一首曲目会返回谱面预览。
+- `/查bpm` `/pjsk bpm` `/查BPM`
+  - 查询指定 BPM 下有哪些歌曲。
+- `/查曲绘` `/pjsk music cover` `/曲绘`
+  - 查询指定歌曲的曲绘原图。
+- `/歌曲排行`
+  - 查询指定顺序下的歌曲排行。
+- `/歌曲meta`
+  - 查询指定歌曲的各项数据指标。 
+
+## 可选参数说明
+
+- 难度：支持大部分写法和缩写，例如 `easy` `ma` `APD`，不指定则默认 MASTER 难度。
+- 歌曲别名：每个服务器单独一个别名库，但是在本服务器别名库未匹配到时会从其他服务器查找。
+
+### 查询单首歌曲格式
+
+- 歌曲 id，注意 id 和数字之间不能有空格：`id123`
+- 负数索引，表示倒数第几首歌曲：`-1`
+- 活动 id 查活动曲：`event123`
+- 箱活缩写，例如 `mnr1`
+- 添加的歌曲别名：`虾` `龙`
+- 歌曲名，任意语言均可，会进行模糊匹配：`六兆年零一夜物语`
+
+### 查询多首歌曲格式
+
+- 不加参数，默认查询 MASTER 难度的全部歌曲。
+- 某个难度全部歌曲：`expert`
+- 某个难度单个等级歌曲：`expert 27`
+- 某个难度 闭区间等级范围 的歌曲：`expert 25 37`
+
+### 歌曲排行相关
+
+- 模式：`单人` `多人` `AUTO`
+- 排序条件：`分数` `PT` `时速`
+
+## 指令示例
+<div class="chatbox-grid">
+<ChatBox :messages="musicdetail" />
+
+<ChatBox :messages="musichard" />
+
+<ChatBox :messages="kuroba" />
+
+<ChatBox :messages="reward" />
+
+<ChatBox :messages="schedule" />
+
+<ChatBox :messages="abaaba" />
+
+<ChatBox :messages="weee" />
+</div>

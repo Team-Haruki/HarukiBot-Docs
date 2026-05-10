@@ -1,3 +1,7 @@
+---
+outline: false
+---
+
 <div style="text-align: center;">
     <img src="https://images.shiromiku.moe/images/HarukiDocsMaid1.webp" alt="logo" width="256" height="256" style="display: block; margin: 0 auto;">
 
@@ -7,28 +11,24 @@
 Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 </div>
 
+>
+> 本文档将引导您使用 HarukiBot NEO
+>
+
 # 阅读前提示
 
 + HarukiBot NEO具有配套功能网站[Haruki工具箱](https://haruki.seiunx.com)。
 + 如果你不知道有什么群可以加，也可以访问[Haruki工具箱](https://haruki.seiunx.com)
   的[推荐群聊](https://haruki.seiunx.com/friend_groups)页面。
 + 推荐群聊页面仅接受熟人申请。
-+ HarukiBot NEO目前处于公测状态，可能存在各种各样的Bug，如果你遇到了Bug或者有任何意见反馈，请联系HarukiBot分布式Bot主反馈，HarukiBot分布式Bot主会将问题反馈到Haruki
-  Dev Team
-+ 该使用文档或许存在遗漏或者错误内容，如果发现请联系HarukiBot分布式Bot主反馈，HarukiBot分布式Bot主会将问题反馈到Haruki Dev
-  Team
-
->
-> 本文档将引导您使用 HarukiBot NEO
->
-
 + HarukiBot NEO是一款功能型机器人, 目前主要提供《世界计划 多彩舞台》相关查询服务。
 + 该Bot不提供私聊服务。
 + 使用该Bot，即意味着你同意[使用条款](/licence/)及[隐私条款](/privacy/)。
 + 如果你在使用过程中遇到任何问题，你可以在该页面最下方的``关于``下面联系``开发者``进行反馈。
 + 目前HarukiBot NEO**仍然处于开发状态**，**有多种功能仍在开发中**，如果没有你需要的功能，请不要着急，请耐心等待开发者开发完善。
++ 本文档的部分板块仍在完善中，如果你认为本文档有内容解释不清或没有介绍，请向我们反馈。
 
-## 写在前面的一些提醒
+## 一些提醒
 
 ### 关于指令
 
@@ -380,8 +380,7 @@ iOS / iPadOS 用户 建议使用代理工具MitM模块更新，教程参考[Haru
 + 联系开发团队: <haruki@seiunx.com>
 + wiki原作者：[綿菓子ウニ](https://space.bilibili.com/622551112)
 + 使用授权：[点击查看](https://images.shiromiku.moe/images/4f956d51aaa3d1b2f407d1922e397a42.jpg)
-+
-wiki适配与编辑：[岩崎阳子](https://space.bilibili.com/11048929)、[Aposetles](https://space.bilibili.com/178748972)、[星雲希凪](https://github.com/MejiroRina)、[storyxy3](https://github.com/storyxy3)
++ wiki适配与编辑：[岩崎阳子](https://space.bilibili.com/11048929)、[Aposetles](https://space.bilibili.com/178748972)、[星雲希凪](https://github.com/MejiroRina)、[storyxy3](https://github.com/storyxy3)
 + 联系我：<admin@shiromiku.moe>或QQ：`57892198`
 + Logo画师：[小沢翼](https://space.bilibili.com/3493133455198556)
 
