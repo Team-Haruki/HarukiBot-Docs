@@ -138,6 +138,124 @@
 }
 
 /**
+ * Component: Sponsor Banner
+ * -------------------------------------------------------------------------- */
+
+.sponsor-banner {
+  width: 100%;
+  background-color: #fff0f6;
+  border-bottom: 1px solid #f9a8d4;
+}
+
+.dark .sponsor-banner {
+  background-color: #2d1020;
+  border-bottom-color: #6d2845;
+}
+
+.sponsor-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px 14px;
+  max-width: var(--vp-layout-max-width, 1440px);
+  margin: 0 auto;
+  padding: 12px 24px;
+}
+
+.sponsor-icon {
+  flex-shrink: 0;
+  color: #be185d;
+}
+
+.dark .sponsor-icon {
+  color: #f472b6;
+}
+
+.sponsor-title {
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #9d174d;
+}
+
+.dark .sponsor-title {
+  color: #f9a8d4;
+}
+
+.sponsor-descs {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+}
+
+/* On wide screens the two sentences run inline on one line */
+.sponsor-descs p {
+  display: inline;
+  margin: 0;
+}
+
+.sponsor-descs p + p::before {
+  content: ' ';
+}
+
+.sponsor-descs strong {
+  color: #9d174d;
+  font-weight: 600;
+}
+
+.dark .sponsor-descs strong {
+  color: #f472b6;
+}
+
+.sponsor-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  background-color: #be185d;
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease;
+}
+
+.sponsor-btn:hover {
+  background-color: #9d174d;
+}
+
+/* Portrait: grid layout so icon+title share row 1, descs row 2, button row 3 */
+@media (max-width: 640px) {
+  .sponsor-inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "icon  title"
+      "descs descs"
+      "btn   btn";
+    padding: 12px 16px;
+    gap: 6px 8px;
+  }
+
+  .sponsor-icon { grid-area: icon; align-self: center; }
+  .sponsor-title { grid-area: title; align-self: center; }
+  .sponsor-descs { grid-area: descs; }
+  .sponsor-btn   { grid-area: btn; width: 100%; justify-content: center; }
+
+  /* Restore block display so each sentence is its own line */
+  .sponsor-descs p {
+    display: block;
+  }
+
+  .sponsor-descs p + p::before {
+    content: none;
+  }
+}
+
+/**
  * Component: ChatBox Grid
  * -------------------------------------------------------------------------- */
 

@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import CollapseBox from '../../bot-help/components/CollapseBox.vue'
 import ClassicCollapseBox from '../../bot-help/components/ClassicCollapseBox.vue'
 import SidebarToggle from './components/SidebarToggle.vue'
+import SponsorBanner from './components/SponsorBanner.vue'
 import './style.css'
 
 /** @type {import('vitepress').Theme} */
@@ -12,7 +13,8 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'layout-bottom': () => h(SidebarToggle)
+      'layout-bottom': () => h(SidebarToggle),
+      'home-hero-before': () => h(SponsorBanner)
     })
   },
   enhanceApp({ app }) {

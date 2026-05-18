@@ -2,6 +2,11 @@
 outline: false
 ---
 
+> [!info] 我们需要您的帮助
+> 运营HarukiBot NEO以及相关Haruki服务需要投入大量人力、财力与精力  
+> 为了Haruki Dev Team能够更好的服务大家，您可以到我们的**[爱发电](https://www.ifdian.net/a/seiunx)**帮助我们做的更好
+
+
 <div style="text-align: center;">
     <img src="https://images.shiromiku.moe/images/HarukiDocsMaid1.webp" alt="logo" width="256" height="256" style="display: block; margin: 0 auto;">
 
@@ -26,7 +31,6 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 + 使用该Bot，即意味着你同意[使用条款](/licence/)及[隐私条款](/privacy/)。
 + 如果你在使用过程中遇到任何问题，你可以在该页面最下方的``关于``下面联系``开发者``进行反馈。
 + 本文档的部分板块**仍在完善中**，如果你认为本文档有内容解释不清或没有介绍，请向我们反馈。
-+ 如果HarukiBot NEO帮助了你很多，可以到我们的**[爱发电](https://www.ifdian.net/a/seiunx)**帮助我们做的更好
 
 ## 一些提醒
 
@@ -57,8 +61,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 ## 关于
 
 + HarukiBot NEO画图与功能参考实现 - LunaBot: [ルナ茶](https://github.com/NeuraXmy)
-+ HarukiBot
-  NEO开发者: [星雲希凪](https://github.com/MejiroRina)、[灵潜](https://github.com/xuanmingLQ)、[Deseer](https://github.com/Deseer)、[storyxy3](https://github.com/storyxy3)
++ HarukiBot NEO开发者: [星雲希凪](https://seiun.io)、[灵潜](https://github.com/xuanmingLQ)、[Deseer](https://github.com/Deseer)、[storyxy3](https://github.com/storyxy3)
 + 联系开发团队: <haruki@seiunx.com>
 + wiki原作者：[綿菓子ウニ](https://space.bilibili.com/622551112)
 + 使用授权：[点击查看](https://images.shiromiku.moe/images/4f956d51aaa3d1b2f407d1922e397a42.jpg)
