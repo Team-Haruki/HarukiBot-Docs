@@ -4,7 +4,7 @@
 > 因此在使用“宵崎奏”Bot前您需要重新执行QQ官方Bot的绑定
 
 ## 第一步: 登陆Haruki工具箱
-登陆[Haruki工具箱](https://haruki.seiunx.com/)，进入[账号设置](https://haruki.seiunx.com/user/settings)
+登陆[Haruki工具箱](https://haruki.seiunx.com/)，进入[HarukiBot 数据授权](https://haruki.seiunx.com/user/harukibot-authorization)
 找到`授权社交平台查询`，并点击其中的`新增授权`，再点击`平台-QQ官方Bot`
 ![授权社交平台查询](..\assets\qqofficial-guide\1-1.webp)
 ![新增授权](..\assets\qqofficial-guide\1-2.webp)

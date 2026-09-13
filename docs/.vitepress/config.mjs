@@ -66,6 +66,7 @@ export default defineConfig({
             { text: '新功能速递', link: '/bot-help/new-features' },
             { text: '个人资料与账号', link: '/bot-help/account' },
             { text: '卡牌查询', link: '/bot-help/card' },
+            { text: '服装查询', link: '/bot-help/costume' },
             { text: '音乐与乐曲', link: '/bot-help/music' },
             { text: '活动查询', link: '/bot-help/event' },
             { text: '榜线与 SK', link: '/bot-help/sk' },
