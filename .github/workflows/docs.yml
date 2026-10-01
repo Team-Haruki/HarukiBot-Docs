@@ -1,0 +1,26 @@
+name: Docs
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master] # PRs (incl. Dependabot) now build the site; deploy stays push-only
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  site:
+    name: Site
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: seiunx-dev/ci-templates/.github/workflows/pages.yml@v1
+    with:
+      bun-version: 1.3.14 # or packageManager in package.json; delete the stale package-lock.json
