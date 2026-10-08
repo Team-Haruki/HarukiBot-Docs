@@ -1,5 +1,13 @@
 # Haruki Cloud 更新日志
 
+::: info
+
+本页只记录到 v2.0.9，之后的版本不再在这里逐条更新。
+
+完整的版本更新记录请查看 [Haruki Cloud Releases](https://github.com/Team-Haruki/Haruki-Cloud/releases)，面向用户的新功能请查看[新功能速递](/bot-help/new-features)。
+
+:::
+
 ## v2.0.9
 
 + 更新日期: `2026-04-26`

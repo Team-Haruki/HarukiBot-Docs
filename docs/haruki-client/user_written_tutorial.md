@@ -41,9 +41,9 @@
 
 Windows 电脑需要运行大于等于 Windows 8 或 Windows server 2012 版本的x64系统
 
-Linux 系统推荐使用 ``Ubuntu 22.04``, ``Debian 12`` 或以上的Linux x64发行版系统
+Linux 系统推荐使用 ``Ubuntu 22.04``, ``Debian 12`` 或以上的Linux发行版系统
 
-暂时不支持MacOS及其他任何arm版本
+客户端提供 Windows x64、Linux x64、Linux arm64 与 macOS arm64 版本
 
 ## 客户端安装与配置
 
@@ -52,9 +52,14 @@ Linux 系统推荐使用 ``Ubuntu 22.04``, ``Debian 12`` 或以上的Linux x64�
 在分布式群文件中下载对应系统的客户端
 
 ```text
-Windows       haruki-zerobot-windows-x64.zip
-Linux       haruki-zerobot-linux-x64.tar.gz
+Windows x64      haruki-client-<版本号>-windows-x64.zip
+Linux x64        haruki-client-<版本号>-linux-x64.tar.gz
+Linux arm64      haruki-client-<版本号>-linux-arm64.tar.gz
+macOS arm64      haruki-client-<版本号>-macos-arm64.tar.gz
 ```
+
+压缩包里包含客户端程序 `haruki-client`（Windows 为 `haruki-client.exe`）以及配置文件 `configs.yaml`、`cn_collect_configs.yaml`
+
 ::: warning
 
 请把所有文件**解压缩**出来
@@ -74,22 +79,31 @@ Linux       haruki-zerobot-linux-x64.tar.gz
 Windows
 
 ```powershell
-haruki-zerobot.exe 或 双击运行
+haruki-client.exe 或 双击运行
 ```
 
-Linux（如Ubuntu/Debian/AlmaLinux）
+Linux（如Ubuntu/Debian/AlmaLinux）/ macOS
 
 ```sh
-sudo chmod 777 haruki-zerobot
-.haruki-zerobot
+chmod +x haruki-client
+./haruki-client
 ```
 
-###准备就绪后可尝试启动客户端，如果没有问题会显示如下日志:
+::: tip
+
+`configs.yaml` 里明文保存着你的凭据，Linux/macOS 下如果其他用户也能读取这个文件，客户端启动时会告警，建议执行 `chmod 600 configs.yaml`
+
+:::
+
+###准备就绪后可尝试启动客户端，如果没有问题会显示类似如下的日志（节选，按默认配置，控制 API 与 OneBot 共用 8111 端口）:
 
 ```text
-2026/04/24 05:03:03 control api listening on http://127.0.0.1:8112/haruki_client/controller
-time="2026-04-24T05:03:03+08:00" level=info msg="[wss] Websocket服务器开始监听: 127.0.0.1:8111"
-time="2026-04-24T05:03:03+08:00" level=info msg="[wss] WebSocket 服务器开始处理: 127.0.0.1:8111"
+[2026-09-04 12:00:00.000][INFO][main] ========================= Haruki Client v3.0.0 =========================
+[2026-09-04 12:00:00.000][INFO][main] Powered by Haruki Dev Team
+[2026-09-04 12:00:00.100][INFO][main] starting Haruki-Client: work_dir=., driver_mode=ws_server, driver_target=0.0.0.0:8111
+[2026-09-04 12:00:00.500][INFO][main] runtime startup completed
+[2026-09-04 12:00:00.500][INFO][main] control api route mounted on onebot websocket server at http://0.0.0.0:8111/haruki_client/controller
+[2026-09-04 12:00:00.500][INFO][main] onebot websocket server starting on ws://0.0.0.0:8111/ws
 ```
 
 **客户端的配置告一段落，请不要关闭。接下来进入Bot端部署**

@@ -63,12 +63,12 @@ credential: "" # 你的HarukiClient的登录凭证，应为很长一串JWT字符
 
 ## 测试对话
 
-在有机器人的群里发送命令，比如`/haruki_info`，如果一切正常，ta 应该会回复如下消息:
+在有机器人的群里发送命令，比如`/haruki_info`，如果一切正常，ta 应该会回复类似下面的消息（版本号以实际为准）:
 ```
-Haruki Cloud Env: production 
-Haruki Cloud v2.0.1
-Latest Client v2.0.0
-HClient Ver. 2.0.0
+Haruki Cloud Env: production
+Haruki Cloud v3.8.3
+Latest Client v3.0.0
+Haruki Client v3.0.0
 Haruki Bot Id: <YourBotId>
 ```
 

@@ -354,6 +354,11 @@ goproxy_upstream_proxy: ""
 
 ## HarukiProxy 更新记录
 
+### v2.2.0
+- 全新的日志格式
+- 隐藏了hudsucker的部分报错
+- 修复了日服suite匹配路径的问题
+
 ### v2.1.0
 - 新增了Mac版本的MuMu自动化控制
 
