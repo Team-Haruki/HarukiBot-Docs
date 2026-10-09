@@ -1,6 +1,10 @@
 # HarukiProxy-Android 教程
 > [!caution] 阅读前警告
 >
+> HarukiProxyV3即将发布，请转到[HarukiProxyV3-Android](./android.v3.md)查看详情
+>
+> V2版本即将下线。
+>
 > 当前HarukiProxy的发布版本为`v2.2.0`，本文档的介绍以及教程均根据`v2.0.0`以上版本编写  
 > 
 > 如果你目前使用的版本低于v2.0.0，并且希望使用v2.0.0以后续版本，则更新到v2.0.0以上版本时，需要先[卸载旧版的HarukiProxy-Android](#卸载harukiproxy-android)
