@@ -80,11 +80,11 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 > [!tip] 提示
 > 本教程使用的是光速虚拟机，所以选择方式一。如果你使用的是Root管理器设备，请自行使用方式二完成证书安装。
 
-安装完成后，需要重启一下虚拟机，我们点击右侧的悬浮球，在出现的悬浮栏中上划，找到关机键，关闭虚拟机。这一步是为了让证书生效。
+安装完成后，需要重启一下虚拟机，点击右侧的悬浮球，在出现的悬浮栏中上划，找到关机键，关闭虚拟机。这一步是为了让证书生效。
 ![img.jpg](../assets/haruki-proxy-android/点击悬浮球.jpg)
 ![img.jpg](../assets/haruki-proxy-android/关机.jpg)
 ### 工具箱授权
-随后重新启动虚拟机，打开HarukiProxy，再次点击右上角的设置按钮。往下翻找到“链接Haruki工具箱”的设置，但是不要直接点击这个按钮。我们点击旁边的“设备码登录”。
+随后重新启动虚拟机，打开HarukiProxy，再次点击右上角的设置按钮。往下翻找到“链接Haruki工具箱”的设置，但是不要直接点击这个按钮。点击旁边的“设备码登录”。
 ![img.jpg](../assets/haruki-proxy-android/设备码登录.jpg)
 ![img.jpg](../assets/haruki-proxy-android/复制链接.jpg)
 > [!tip] 提示
@@ -121,3 +121,13 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 ![img.jpg](../assets/haruki-proxy-android/检测到代理.jpg)
 
 那么你需要[关闭HarukiProxyV2](./android.md#关闭harukiproxy-android)
+
+# 问题自查
+## 按照教程的步骤操作完成之后，回到Proxy主页发现没有捕获成功
+可能是VPN模式本身的限制导致抓包失败，可以在设置中尝试切换为系统代理模式。系统代理会让虚拟机的所有流量都走HarukiProxy，更容易抓包成功。
+![img.jpg](../assets/haruki-proxy-android/开启系统代理.jpg)
+
+> [!caution] HarukiProxy承诺
+>
+> 只抓取pjsk游戏中的玩家suite数据和mysekai数据，不会对任何其他数据做任何处理
+> 
