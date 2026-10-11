@@ -64,17 +64,17 @@ export default defineConfig({
             { text: '写在前面', link: '/bot-help/' },
             { text: '如何使用工具箱', link: '/bot-help/toolbox_guide' },
             { text: '新功能速递', link: '/bot-help/new-features' },
-            { text: '个人资料与账号', link: '/bot-help/account' },
+            { text: '个人信息与账号', link: '/bot-help/account' },
             { text: '卡牌查询', link: '/bot-help/card' },
             { text: '服装查询', link: '/bot-help/costume' },
-            { text: '音乐与乐曲', link: '/bot-help/music' },
+            { text: '音乐与歌曲', link: '/bot-help/music' },
             { text: '活动查询', link: '/bot-help/event' },
             { text: '榜线与 SK', link: '/bot-help/sk' },
             { text: '组卡', link: '/bot-help/recommend' },
             { text: '养成查询', link: '/bot-help/cultivation' },
             { text: 'MySekai 查询', link: '/bot-help/mysekai' },
             { text: '昵称与别名', link: '/bot-help/alias' },
-            { text: '杂项命令', link: '/bot-help/misc' }
+            { text: '杂项指令', link: '/bot-help/misc' }
           ]
         }
       ]

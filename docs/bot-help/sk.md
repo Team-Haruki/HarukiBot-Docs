@@ -8,59 +8,63 @@ import ChatBox from '/bot-help/components/ChatBox.vue'
 
 const sklineDemo = [
   { text: '/sk线', from: 'user' },
-  { text: '[当期活动各排名的分数线]', from: 'bot' }
+  { text: '[当期活动各名次的榜线]', from: 'bot' }
 ]
 
 const skDemo = [
   { text: '/sk', from: 'user' },
-  { text: '[用户当期活动的排名以及分数]', from: 'bot' }
+  { text: '[自己在当期活动的名次和 PT]', from: 'bot' }
 ]
 
 const sk1DeckDemo = [
   { text: '/sk 1', from: 'user' },
-  { text: '[当期活动排名为1的玩家的分数]', from: 'bot' }
+  { text: '[当期活动第 1 名玩家的 PT]', from: 'bot' }
 ]
 
 const wlsklineDemo = [
-  { text: '/wlsk knd', from: 'user' },
-  { text: '[当期wl活动knd章节各排名的分数线]', from: 'bot' }
+  { text: '/wl榜线 knd', from: 'user' },
+  { text: '[当期 WL 活动 knd 章节各名次的榜线]', from: 'bot' }
 ]
 
 </script>
 
-# 榜线/SK
+# 榜线与 SK
 
 ## 常用指令
 
-- `/sk线` `/sk-line` `/榜线` `/pjsk sk line` `/skl`
-  - 查询榜线。
-- `/sk` `/sk-query` `/sk查询` `/sk查分` `/pjsk sk board` `/pjsk board`
-  - 查指定分数榜位。
-- `/wlsk线`
-  - 查 WL 单榜分数榜位。
-- `/时速` `/pjsk sk speed` `/sks` `/skv` `/sk时速` `/sk-speed`
-  - 查询当前榜线时速。
-- `/日速` `/pjsk sk daily speed` `/skds` `/skdv` `/sk日速`
-  - 查询榜线日均速度。
-- `/查房` `/sk-check-room` `/sk查房` `/cf` `/pjsk查房`
-  - 查询当前房间周回时速等信息。
-- `/ptr` `/sk-player-trace` `/玩家轨迹` `/pjsk玩家追踪`
-  - 查询账号在当前活动的冲榜统计数据。
-- `/档线轨迹` `/sk-rank-trace` `/rtr` `/skt` `/sklt` `/pjsk追踪`
-  - 查询档线历史轨迹。
-- `/sk预测` `/pjsk sk predict` `/榜线预测` `/skp`
-  - 查询榜线预测（33kit/moesekai/sekarun，暂不支持 WL 单榜）。
-- `/5v5预测` `/pjsk winrate predict` `/胜率预测` `/胜率` `/预测胜率`
-  - 查询 5v5 胜率。
-- `/csb`
-  - 查询指定排名的热力图数据。
+- `/榜线` `/sk线` `/skl` `/sk-line` `/pjsk sk line` `/pjsk board line`
+  - 查询各名次当前的 PT，不写名次时显示常用名次，例如 `/榜线 100 1000`、`/sk线 event123`。
+- `/sk` `/sk查分` `/sk查询` `/sk-query` `/pjsk board` `/pjsk sk board`
+  - 查询活动排名：自己、指定玩家或指定名次的 PT 和名次，不写时查询自己，例如 `/sk 100`、`/sk 1-10`、`/sk u2`。
+  - 对方发送 `/隐藏sk` 后，不能再通过 @ 查询对方的活动排名。
+- `/时速` `/sks` `/skv` `/时速线` `/sk时速` `/sktime` `/sk-speed` `/pjsk sk speed` `/pjsk board speed`
+  - 查询常用名次最近一段时间的 PT 增长速度，可以写分钟数（默认 60），例如 `/时速 30`。
+- `/日速` `/每日时速` `/skds` `/skdv` `/sk日速` `/pjsk sk daily speed` `/pjsk board daily speed`
+  - 查询常用名次最近几天的日均 PT 增长，可以写天数（默认 1），例如 `/日速 3`。
+- `/榜线预测` `/sk预测` `/skp` `/pjsk sk predict` `/pjsk board predict`
+  - 查询各名次活动结束时的预测 PT，例如 `/sk预测 100 1000`。
+- `/查房` `/cf` `/sk查房` `/pjsk查房` `/sk-check-room`
+  - 查看指定玩家或名次附近最近的打榜记录，不写时查询自己，例如 `/查房 100`、`/cf u2`。
+- `/cfl`
+  - 一次查看前 100 名的常用名次最近的打榜记录。
+- `/查水表` `/csb` `/停车时间` `/pjsk查水表`
+  - 查看指定玩家或名次的停车时间（停止打榜的时段），不写时查询自己，例如 `/查水表 100`、`/csb @群友`。
+- `/玩家追踪` `/ptr` `/玩家轨迹` `/sk玩家轨迹` `/pjsk ptr` `/pjsk玩家追踪` `/sk-player-trace`
+  - 查看玩家本期活动的 PT 变化曲线。可以写玩家或名次（最多 2 个），写 `#100` 可以同时画出某个名次的曲线作对比，例如 `/玩家追踪 u2 #100`、`/ptr 100`。
+- `/排名追踪` `/rtr` `/skt` `/sklt` `/sktl` `/pjsk追踪` `/pjsk sk追踪` `/sk-rank-trace` `/档线轨迹` `/sk档线轨迹`
+  - 查看名次的 PT 变化曲线，例如 `/排名追踪 100 1000`、`/排名追踪 event123 100`。
+- `/胜率预测` `/胜率` `/预测胜率` `/5v5预测` `/5v5胜率` `/预测5v5` `/pjsk winrate predict`
+  - 预测当前欢乐嘉年华(5v5)活动两队的胜率，只支持日服(JP)。
 
 ## 说明
 
-- `/时速`、`/日速` 指令后面可以跟数字，将特定时间范围内的 PT 增长转换为对应速度。
-- 如 `/时速10` = 10 分钟内 PT 增长量转换的时速。
-- `/时速` 可输入数字单位为分钟，最大不超过 1440 分钟（即一天）。
-- `/日速` 后的数字单位为天，如 `/日速2` = 2 天内 PT 增长量转换的日速。
+- 名次：一个或多个正整数，用空格分隔；范围写成 `起始-结束`，一次最多 20 个名次。
+- 玩家：写游戏 UID、`u序号`（自己的第几个绑定账号）或 `@群友`。
+- 活动：`event123` 或 `e123` 指定活动；不写时使用当前活动。
+- WL 章节：在指令前加 `wl` 查询 WL 章节榜，角色写在参数开头，例如 `/wl榜线 miku`、`/wlsk miku 100`；不写角色时查询当前章节。也可以在参数里写 `wl2`（第 2 章）或 `wlmiku`。
+- `/时速` 后的数字单位是分钟，例如 `/时速 10` 是 10 分钟内的 PT 增长量换算成的时速。
+- `/日速` 后的数字单位是天，例如 `/日速 2` 是 2 天内的 PT 增长量换算成的日速。
+- 通过 @群友 查询时，对方的游戏 UID 是否打码由对方的 `/隐藏id` 设置决定，见[隐私设置](/bot-help/account#隐私设置)。
 
 ## 指令示例
 
