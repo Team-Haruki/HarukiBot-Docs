@@ -5,6 +5,7 @@ import CollapseBox from '../../bot-help/components/CollapseBox.vue'
 import ClassicCollapseBox from '../../bot-help/components/ClassicCollapseBox.vue'
 import SidebarToggle from './components/SidebarToggle.vue'
 import SponsorBanner from './components/SponsorBanner.vue'
+import logo from '../../assets/images/icon.ico'
 import './style.css'
 
 /** @type {import('vitepress').Theme} */
@@ -17,7 +18,11 @@ export default {
       'home-hero-before': () => h(SponsorBanner)
     })
   },
-  enhanceApp({ app }) {
+  enhanceApp({ app, siteData }) {
+    siteData.value = {
+      ...siteData.value,
+      themeConfig: { ...siteData.value.themeConfig, logo }
+    }
     app.component('CollapseBox', CollapseBox)
     app.component('ClassicCollapseBox', ClassicCollapseBox)
   }

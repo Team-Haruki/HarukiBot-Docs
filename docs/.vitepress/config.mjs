@@ -18,7 +18,6 @@ export default defineConfig({
   title: "HarukiBot NEO帮助文档",
   description: "本文档将引导您使用 HarukiBot NEO",
   themeConfig: {
-    logo: 'https://images.shiromiku.moe/images/HarukiDocsAvatar.webp',
      // 设置搜索框的样式
      search: {
       provider: "local",

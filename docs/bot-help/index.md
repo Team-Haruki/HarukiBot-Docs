@@ -2,13 +2,17 @@
 outline: false
 ---
 
+<script setup>
+import authorizationImage from '../assets/uni发表讲话.jpg'
+</script>
+
 > [!info] 我们需要你的帮助
 > 运营 HarukiBot NEO 以及相关 Haruki 服务需要投入大量人力、财力与精力  
 > 为了 Haruki Dev Team 能够更好地服务大家，你可以到我们的**[爱发电](https://www.ifdian.net/a/seiunx)**帮助我们做得更好
 
 
 <div style="text-align: center;">
-    <img src="https://images.shiromiku.moe/images/HarukiDocsMaid1.webp" alt="logo" width="256" height="256" style="display: block; margin: 0 auto;">
+    <img src="../assets/haruka.webp" alt="logo" width="256" height="256" style="display: block; margin: 0 auto;">
 
 # HarukiBot NEO
 
@@ -81,7 +85,7 @@ Logo 由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 + HarukiBot NEO 开发者：[星雲希凪](https://seiun.io)、[灵潜](https://github.com/xuanmingLQ)、[Deseer](https://github.com/Deseer)、[storyxy3](https://github.com/storyxy3)
 + 联系开发团队：<haruki@seiunx.com>
 + wiki 原作者：[綿菓子ウニ](https://space.bilibili.com/622551112)
-+ 使用授权：[点击查看](https://images.shiromiku.moe/images/4f956d51aaa3d1b2f407d1922e397a42.jpg)
++ 使用授权：<a :href="authorizationImage">点击查看</a>
 + wiki 适配与编辑：[岩崎阳子](https://space.bilibili.com/11048929)、[Aposetles](https://space.bilibili.com/178748972)、[星雲希凪](https://github.com/MejiroRina)、[Deseer](https://github.com/Deseer)、[storyxy3](https://github.com/storyxy3)
 + 联系我：<admin@shiromiku.moe> 或 QQ：`57892198`
 + Logo 画师：[小沢翼](https://space.bilibili.com/3493133455198556)
