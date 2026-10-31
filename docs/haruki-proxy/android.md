@@ -1,29 +1,23 @@
-# HarukiProxy-Android 教程
+# HarukiProxyV3-Android
 > [!caution] 阅读前警告
 >
-> HarukiProxyV3即将发布，请转到[HarukiProxyV3-Android](./android.v3.md)查看详情
->
-> V2版本即将下线。
->
-> 当前HarukiProxy的发布版本为`v2.2.0`，本文档的介绍以及教程均根据`v2.0.0`以上版本编写  
-> 
-> 如果你目前使用的版本低于v2.0.0，并且希望使用v2.0.0以后续版本，则更新到v2.0.0以上版本时，需要先[卸载旧版的HarukiProxy-Android](#卸载harukiproxy-android)
->
-> 然后[修改harukiproxy.sh的代码](#编辑harukiproxy脚本)
+> 如果你是V2版本的用户，请转至[HarukiProxy-Android](./android.v2.md)，V2版本即将下线。
 >
 > 如果你是PC端模拟器用户，请转至[HarukiProxy教程](./index.md)
+>
+> 如果你曾经使用过V2版本的HarukiProxy，那你可能需要[关闭HarukiProxyV2](./android.v2.md#关闭harukiproxy-android)
 
 ::: info **特别鸣谢** 
 开发者: [*Haruki Dev Team*](https://github.com/Team-Haruki)  
 教程编写者: `storyxy3`、`Deseer`、 `Aposetles`、`Lemoe` 和 `LQ`
 
 :::
-## 什么是HarukiProxy
+## 什么是HarukiProxyV3
 
-HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一款Android平台**半自动**抓取游戏pjsk的数据的程序
+HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一款Android平台**半自动**抓取游戏pjsk的数据的程序。V3版本相比V2版本有用户友好的界面，操作更加方便，而且更加安全。
 
-## HarukiProxy的特点
-
+## HarukiProxyV3的特点
+- 用户友好的界面
 - 支持`国服`、`日服`、`台服`、`韩服`、`国际服`数据抓取
 - 支持**自动上传数据**到Haruki工具箱
 - 支持选择是否公开自己自动上传到Haruki工具箱的数据在公开API访问
@@ -31,6 +25,7 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 - 支持保存抓取的数据到本地
 - 支持保存抓取的suite数据到本地
 - 支持保存抓取的mysekai数据到本地
+- 可以作为VPN代理指定应用的流量
 - 支持自动为Android设备设置HarukiProxy为代理
 - 支持自定义上游HTTP代理
 
@@ -38,19 +33,13 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 > [!caution] 阅读前注意
 > ***本程序只能在获取root权限的Android设备上运行，现在大部分的Android设备无法轻易获取root权限，所以本教程在Android设备上的Android虚拟机来运行本程序***
 >
-> ***Android原生的终端缺少本教程所用到的一些国内，所以本教程使用MT管理器来启动本程序***
+>   Root管理器用户具有一定的动手能力，因此不提供单独的教程。只有证书设置的操作不同。
 >
 > ***由于不可抗力，本程序不能抓取国服的MySekai数据***
 >
 
-> [!tip] 提醒
->
-> 配置出现问题时请跳转至[问题自查](#问题自查)
->
-先查找是否为常见问题，再借助搜素引擎和ai尝试解决问题，最后再在群聊里问群友，不会提问的请务必先阅读[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
-
-- 需要在Android手机上安装Android虚拟机，本教程使用[光速虚拟机](https://vphoneos.com/)
-- 需要在虚拟机中安装[MT管理器](https://mt2.cn/)，也可以使用其他的方式来运行本程序，请自行设置。
+- 需要在Android手机上安装可root的Android虚拟机，本教程使用[光速虚拟机](https://vphoneos.com/)
+- [HarukiProxyV3-Android安装包](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.7/HarukiProxy-v3.0.0-beta.7-android-arm64.apk)。你可以复制该连接，粘贴到虚拟机内的Via浏览器的网址栏中下载到虚拟机，也可以在本机中点击该连接下载安装包，然后将安装包导入到虚拟机中。
 
 ## 虚拟机设置
 
@@ -67,255 +56,95 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 
 ![img.jpg](../assets/haruki-proxy-android/新建虚拟机.jpg)
 
-然后启动你的虚拟机，它会请求一些权限，有些权限不同意可能无法启动。第一次启动会花一分钟左右的时间，耐心等待。启动成功后来到虚拟机的桌面，点击右下角的`导入导出`，点击`导入`。必须同意`获取已安装应用的权限`，才能把本机上的pjsk导入到虚拟机，如果你在本机上安装了MT管理器也一并导入。
-
+然后启动你的虚拟机，它会请求一些权限，有些权限不同意可能无法启动。第一次启动会花一分钟左右的时间，耐心等待。启动成功后来到虚拟机的桌面，点击右下角的`导入导出`，点击`导入到虚拟机`。必须同意`获取已安装应用的权限`，才能把本机上的pjsk导入到虚拟机。在文件中找到本机中HarukiProxyV3-Android安装包的位置，将它导入。（不要在意安装包的名字不一样，教程使用的是较旧版本的安装包）
 ![img.jpg](../assets/haruki-proxy-android/虚拟机主页-导入导出.jpg)
 ![img.jpg](../assets/haruki-proxy-android/导入游戏.jpg)
+![img.jpg](../assets/haruki-proxy-android/导入安装包.jpg)
 
 > [!tip] 提示
-> 导入的应用会自动安装，导入的文件会放在虚拟机的/sdcard/Documents文件夹里。
+> 导入的应用和安装包会自动安装，导入的文件会放在虚拟机的/sdcard/Documents文件夹里。
 >
-> 如果你不想提供权限，也可以用虚拟机内自带的VIA浏览器下载游戏和MT管理器
+> 如果你不想提供权限，也可以用虚拟机内自带的VIA浏览器下载游戏和HarukiProxy
 >
 
-等待安装完毕后回到桌面，上滑，显示所有应用。能看到游戏和MT管理器，你可以长按应用程序的图标将它们添加到主页。
+等待安装完毕后回到桌面，上滑，显示所有应用。能看到导入的游戏和HarukiProxy。可以长按应用的图标将它添加到虚拟机桌面。
 
-![img.jpg](../assets/haruki-proxy-android/虚拟机所有应用.jpg)
+![img.jpg](../assets/haruki-proxy-android/虚拟机所有应用.v3.jpg)
 
-## HarukiProxy-Android设置
+## HarukiProxyV3-Android设置
+### 证书安装
+首先启动HarukiProxy，打开软件后首先点击右上角的设置按钮，往下翻找到证书设置的位置。
 
-如果你没有把应用添加到主页，上滑，查看所有应用。启动MT管理器，同意它的用户协议和权限，然后不用登录。点击下方的`+`，输入文件名`harukiproxy.sh`，点击`文件`来新建一个shell脚本文件。
-
-![img.jpg](../assets/haruki-proxy-android/MT管理器-新建.jpg)
-![img.jpg](../assets/haruki-proxy-android/MT管理器-新建harukiproxy.jpg)
-
-#### 编辑harukiproxy脚本
-
-点击`harukiproxy.sh`文件，选择`编辑`。然后输入以下代码：
-
-``` shell
-#!/bin/sh
-
-# Check if running as root
-if [ "$(id -u)" -ne 0 ]; then
-    if command -v su >/dev/null 2>&1; then
-        exec su -c "$0 $*"
-    elif command -v sudo >/dev/null 2>&1; then
-        exec sudo "$0" "$@"
-    else
-        echo "This script must be run as root." >&2
-        exit 1
-    fi
-fi
-
-ROOT_DIR="/data/local/tmp/harukiproxy"
-
-# Ensure root_dir exists
-if [ ! -d $ROOT_DIR ]; then
-    mkdir -p $ROOT_DIR
-fi
-
-BIN_NAME="HarukiProxy-v2.2.0-android-arm64"
-BIN_PATH="$ROOT_DIR/$BIN_NAME"
-CONFIG_PATH="$ROOT_DIR/config-android.yaml"
-
-# Download binary if not exists
-if [ ! -f "$BIN_PATH" ]; then
-    curl -L -o "$BIN_PATH" "https://dist.haruki.seiunx.com/HarukiProxy/${BIN_NAME}/haruki-proxy-android"
-    chmod 0755 "$BIN_PATH"
-fi
-
-# Download config if not exists
-if [ ! -f "$CONFIG_PATH" ]; then
-    curl -L -o "$CONFIG_PATH" "https://dist.haruki.seiunx.com/HarukiProxy/config-android.yaml"
-    chmod 0755 "$CONFIG_PATH"
-fi
-
-su2 -c "sh -s $ROOT_DIR $BIN_NAME" <<'EOF'
-# Run the binary from its directory without -c argument
-cd $1 && exec ./$2
-EOF
-
-```
-
-![img.jpg](../assets/haruki-proxy-android/mt管理器-选择harukipproxy-编辑.jpg)
-![img.jpg](../assets/haruki-proxy-android/编辑保存harukiproxy.jpg)
-
-点击右上角的保存，然后点击下方的`◁`回到MT管理器。再次点击harukiproxy.sh，点开`设置`，选择`使用扩展包环境执行`，并勾选`使用ROOT权限执行`，然后点击执行。
-
-![img.jpg](../assets/haruki-proxy-android/mt管理器-执行harukiproxy.jpg)
-
+![img.jpg](../assets/haruki-proxy-android/Proxy打开设置.jpg)
+选择方式一，“检测并安装证书”,同意HarukiProxyV3-Android的root权限，点击安装。
+![img.jpg](../assets/haruki-proxy-android/检测并安装证书.jpg)
+![img.jpg](../assets/haruki-proxy-android/确认安装证书.jpg)
 > [!tip] 提示
-> 第一次使用时，它会让你下载终端扩展包
-> ![img.jpg](../assets/haruki-proxy-android/mt管理器-下载终端扩展包.jpg)
-> 等待下载完毕后，按下`◁`返回，开始执行脚本
+> 本教程使用的是光速虚拟机，所以选择方式一。如果你使用的是Root管理器设备，请自行使用方式二完成证书安装。
 
-脚本会自动下载所需的软件和配置文件，请保持网络通畅。它会自动完成相应配置，安装证书并自动重启。
+安装完成后，需要重启一下虚拟机，点击右侧的悬浮球，在出现的悬浮栏中上划，找到关机键，关闭虚拟机。这一步是为了让证书生效。
+![img.jpg](../assets/haruki-proxy-android/点击悬浮球.jpg)
+![img.jpg](../assets/haruki-proxy-android/关机.jpg)
+### 工具箱授权
+随后重新启动虚拟机，打开HarukiProxy，再次点击右上角的设置按钮。往下翻找到“链接Haruki工具箱”的设置，但是不要直接点击这个按钮。点击旁边的“设备码登录”。
+![img.jpg](../assets/haruki-proxy-android/设备码登录.jpg)
+![img.jpg](../assets/haruki-proxy-android/复制链接.jpg)
+> [!tip] 提示
+> 因为光速虚拟机的系统自带浏览器版本过低，它无法打开工具箱的网页，所以使用设备码登录，你可以通过在虚拟机中安装Chrome来解决这个问题。
 
-![img.jpg](../assets/haruki-proxy-android/执行脚本-重启.jpg)
+在打开的弹窗中点击`复制链接`，**不要关闭虚拟机和HarukiProxy**，然后在**已经登录过工具箱的浏览器**的网址栏粘贴这个链接并进入。**确定是你自己的号自己的设备码**，点击“继续”。仔细查看告警信息，**确定是你自己的号自己的设备码**。
+
+![img.jpg](../assets/haruki-proxy-android/授权设备继续.jpg)
+![img.jpg](../assets/haruki-proxy-android/允许登录.jpg)
+
+然后回到HarukiProxy，可以看到登陆的工具箱账号和其中绑定的游戏账号。
+
+![img.jpg](../assets/haruki-proxy-android/工具箱登录完毕.jpg)
+
+点击左上角的`←`回到HarukiProxy主页。至此HarukiProxyV3-Android就设置好了。接下来开始抓包了。
 
 ## 开始抓包
+在HarukiProxy的主页点击选择游戏，需要注意国服的官服和b服的游戏名称相同，带有bilibili的是b服，另一个是官服。选择你要抓包的游戏。
 
-打开MT管理器，点击harukiproxy.sh，点击执行。如果前面的操作正确，那么它就会自动设置代理并开启抓包。当显示`启动HarukiProxy-Android: 0.0.0.0:8888`时，就说明执行成功了。
-
-![img.jpg](../assets/haruki-proxy-android/mt管理器-执行harukiproxy.jpg)
-![img.jpg](../assets/haruki-proxy-android/执行脚本-v2成功.jpg)
-
-> [!caution] 注意
-> 不要直接按两下`◁`退出，这会将脚本关闭，可以按`◯`或`▢`回到桌面再打开游戏。
-> 如果你在执行后出现下面的`代理捕获到错误: io error`，显示`[进程已结束]`。可能是之前运行的脚本没有被正确关闭导致的，请[关闭harukiproxy](#关闭harukiproxy-android)。
-> ![img.jpg](../assets/haruki-proxy-android/端口被占用导致进程关闭.jpg)
->
-
-打开虚拟机内的游戏，正常登录自己的账号，等待到这下图一步就好，不用下载游戏数据。
+![img.jpg](../assets/haruki-proxy-android/选择游戏.jpg)
+![img.jpg](../assets/haruki-proxy-android/准备开始.jpg)
+![img.jpg](../assets/haruki-proxy-android/VPN请求.jpg)
+![img.jpg](../assets/haruki-proxy-android/打开游戏.jpg)
+点击“开始抓包”按钮，同意网络连接请求，然后点击“打开 初音未来：缤纷舞台”。正常登录自己的账号，等待到这下图一步就好，不用下载游戏数据。
 
 ![img.jpg](../assets/haruki-proxy-android/下载游戏数据.jpg)
+然后回到HarukiProxy的主页，你就能看到玩家数据捕获与上传的情况。
+![img.jpg](../assets/haruki-proxy-android/上传成功.jpg)
+这样一来抓包就完成了，可以使用bot的需要抓包的功能了。
 
-回到MT管理器，你就能找到这样的日志。默认是上传到[Haruki工具箱](https://haruki.seiunx.com/)，你可以在[配置](#配置config-android)中设置`upload_endpoint`将抓包数据上传到你设置的端点。为了数据安全，Haruki工具箱需要注册并绑定账号后才能使用。
+## 关闭HarukiProxyV2
+如果你曾使用过HarukiProxyV2，那么你在开始抓包时可能会遇到下面这种情况。
 
-![img.jpg](../assets/haruki-proxy-android/执行脚本-抓包成功.jpg)
+![img.jpg](../assets/haruki-proxy-android/检测到代理.jpg)
 
-
-## 关闭HarukiProxy-Android
-
-运行HarukiProxy后，关闭MT管理器也不会关掉HarukiProxy（关机可以，但是不会删除代理设置），需要用命令强行关闭。
-新建文件`kill-harukiproxy.sh`，然后输入以下代码：
-
-``` shell
-#!/bin/sh
-
-pkill -l 2 "HarukiProxy"
-
-su2 <<SETTINGS
-settings put global http_proxy :0
-settings put global https_proxy :0
-SETTINGS
-
-```
-
-保存后同样设置`使用扩展包环境执行`，并勾选`使用ROOT权限执行`，然后点击执行。它会关掉HarukiProxy的进程，并且重置代理设置。
-
-## 卸载HarukiProxy-Android
-
-如果你要更新HarukiProxy，那么你必须要先卸载掉旧的。新建文件`uninstall-harukiproxy.sh`，然后输入以下代码：
-
-``` shell
-#!/bin/sh
-
-# Check if running as root
-if [ "$(id -u)" -ne 0 ]; then
-    if command -v su >/dev/null 2>&1; then
-        exec su -c "$0 $*"
-    elif command -v sudo >/dev/null 2>&1; then
-        exec sudo "$0" "$@"
-    else
-        echo "This script must be run as root." >&2
-        exit 1
-    fi
-fi
-
-ROOT_DIR="/data/local/tmp/harukiproxy"
-SYSTEM_CACERTS_DIR="/system/etc/security/cacerts"
-
-#remove resolv.conf
-if [ -f /etc/resolv.conf ]; then
-    echo "删除/etc/resolv.conf"
-    mount -o remount,rw /system
-    rm -f /etc/resolv.conf || exit 1
-fi
-
-# Ensure root_dir exists
-if [ ! -d $ROOT_DIR ]; then
-    echo "${ROOT_DIR}不存在"
-    exit 0
-fi
-
-#remove cacert
-find "$ROOT_DIR" -type f -name "*.0" | while read cacert_file; do
-    #提取文件名
-    file_name=$(basename "$cacert_file")
-    system_cacert_file="$SYSTEM_CACERTS_DIR/$file_name"
-    if [ -f "$system_cacert_file" ]; then
-        echo "删除：$system_cacert_file"
-        mount -o remount,rw /system
-        rm -f "$system_cacert_file" || exit 1
-    fi
-done
-
-#remove root_dir
-if [ -d $ROOT_DIR ]; then
-    echo "删除harukiproxy目录：$ROOT_DIR"
-    rm -r -f "$ROOT_DIR" || exit 1
-fi
-
-echo "卸载完成"
-
-```
-
-保存后同样设置`使用扩展包环境执行`，并勾选`使用ROOT权限执行`，然后点击执行。它会删除`/etc/resolv.conf`文件，从系统目录中删除与`/data/local/tmp/harukiproxy`文件夹中的.0证书文件同名的证书文件，删掉`/data/local/tmp/harukiproxy`文件夹。
-
-## 配置config-android
-
-打开MT管理器，点击左上方的文件夹路径，打开跳转输入框。输入`/data/local/tmp/harukiproxy`，跳转过去。
-
-![img.jpg](../assets/haruki-proxy-android/mt管理器-点击文件夹路径.jpg)
-![img.jpg](../assets/haruki-proxy-android/mt管理器-跳转到harukiproxy目录.jpg)
-
-点击打开config-android.yaml文件，请根据注释自行配置。
-
-``` yaml
-auto_upload: true # 是否自动上传数据到Haruki Toolbox，一般不需要改为false
-
-upload_endpoint: "" # 自定义上传数据端点，不修改则默认上传至haruki toolbox的数据上传端点，你可以修改为想传到的其他端点地址
-
-disable_encryption: false # 自定义上传数据端点需要将这个改为true，否则上传的数据无法解密
-
-upload_secret: "" # 自定义上传端点用的私钥
-
-save_data_locally: false # 是否自动保存数据到本地，如果你有需求可以改为true
-
-save_data_dir: "./data" # 自动保存的数据路径，默认为在HarukiProxy目录下的data文件夹
-
-save_suite_locally: true # 是否自动保存suite数据到本地，如果save_data_locally未启用，则该选项不会生效
-
-save_mysekai_locally: true # 是否自动保存mysekai数据到本地，如果save_data_locally未启用，则该选项不会生效
-#这一部分控制你是否将抓取到的数据保存在本地，如果你想要查看自己的suite与mysekai数据，抑或是想要手动上传数据，那么就将 save_data_locally: false改为 true，数据则会自动保存在你HarukiProxy目录下的data目录
-
-listen: "0.0.0.0:8888" # MitM监听，一般情况下无需更改
-
-android_proxy_ip: "" # 手动设置代理IP，如果自动获取IP并设置会导致模拟器/设备无法联网，请填写此项
-
-goproxy_debug: false # 启用调试模式，如果有问题时请改为true，否则保持false即可
-
-goproxy_upstream_proxy: "" # 上游代理，如果连接状况不佳可以设置(如"http://127.0.0.1:6152")，否则留空即可
-#如果你不是很清楚上游代理是什么意思，那么不用管了，否则和注释一样，将6152改为你代理软件中的端口号
-
-```
+那么你需要[关闭HarukiProxyV2](./android.v2.md#关闭harukiproxy-android)
 
 # 问题自查
+## 按照教程的步骤操作完成之后，回到Proxy主页发现没有捕获成功
+可能是VPN模式本身的限制导致抓包失败，可以在设置中尝试切换为系统代理模式。系统代理会让虚拟机的所有流量都走HarukiProxy，更容易抓包成功。
+![img.jpg](../assets/haruki-proxy-android/开启系统代理.jpg)
 
-## 程序直接停止
+> [!caution] HarukiProxy承诺
+>
+> 只抓取pjsk游戏中的玩家suite数据和mysekai数据，不会对任何其他数据做任何处理
+> 
+## 国服登陆时显示“访问频繁”
+![img.jpg](../assets/haruki-proxy-android/访问频繁.jpg)
+出现这个说明账号被风控了，这不是HarukiProxy的问题。多尝试或许能登录。
 
-在执行后出现下面的`代理捕获到错误: io error`，显示`[进程已结束]`。可能是之前运行的脚本没有被正确关闭导致的，请[关闭HarukiProxy-Android](#关闭HarukiProxy-Android)。
+# 附录
+## 导出抓包文件和日志
+如果你想把抓包文件做其他用途，可以在设置中开启`保存到本地`功能。如果你在使用HarukiProxy的过程中出现问题，可以在设置中导出诊断日志。
 
-![img.jpg](../assets/haruki-proxy-android/端口被占用导致进程关闭.jpg)
+如果目录选择器无法正常工作，在选择保存方式时使用`兼容保存`。文件会直接保存到*虚拟机内*的`Android/data`目录下。
+![img.jpg](../assets/haruki-proxy-android/兼容保存.jpg)
+抓包完毕或者日志导出完毕后，回到虚拟机的桌面使用导入导出功能，在文件中进入到保存的目录下可以将保存的文件导出到本机。
 
-## 启动了程序但是无法联网
-
-### 可能是错误的点击返回导致程序被关闭
-
-这种情况下，如果直接运行脚本会出现上面的[程序直接停止](#程序直接停止)的错误，需要先[关闭HarukiProxy-Android](#关闭HarukiProxy-Android)。
-不要直接按两下◁退出，这会将脚本关闭，可以按◯或▢回到桌面再打开游戏。
-
-### 可能是默认配置ip失效
-检查[配置文件](#配置config-android)中下面这一项设置。
-
-``` yaml
-android_proxy_ip: "" # 手动设置代理IP，如果自动获取IP并设置会导致模拟器/设备无法联网，请填写此项
-```
-
-尝试填写127.0.0.1
-
-## 没有启动程序但是无法联网
-
-如果在程序运行中直接按两下`◁`退出、关闭MT管理器或关闭虚拟机。这样都会导致程序的运行直接中断，无法清理代理设置，可以通过执行[关闭HarukiProxy-Android](#关闭harukiproxy-android)脚本来重置代理设置。
+## 帮他人抓包
+HarukiProxyV3必须要登录工具箱，一般只能为工具箱绑定的账号抓包。如果你想帮其他人代抓，需要他人登录自己的工具箱，然后授予你的工具箱账号写入权限。这样你就可以帮他抓包了。
+![img.jpg](../assets/haruki-proxy-android/为他人授权.png)
