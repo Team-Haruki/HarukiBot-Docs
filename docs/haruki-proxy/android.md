@@ -3,7 +3,7 @@
 >
 > 如果你是V2版本的用户，请转至[HarukiProxy-Android](./android.v2.md)。注意Haruki工具箱已不再接受V2版本上传的数据。
 >
-> 如果你是PC端模拟器用户，请转至[HarukiProxy教程](./index.md)
+> 如果你是PC端模拟器用户，或想看看其他抓包方式，请转至[HarukiProxy 抓包方式索引](./index.md)
 >
 > 如果你曾经使用过V2版本的HarukiProxy，那你可能需要[关闭HarukiProxyV2](./android.v2.md#关闭harukiproxy-android)
 >

@@ -5,12 +5,15 @@
 ## 目录结构
 
 - `docs/index.md`：首页（`layout: home`），hero 按钮链接到 Bot 帮助、两个更新日志页和 Haruki Client 部署文档。
-- `docs/bot-help/`：Bot 指令帮助。侧边栏只为这个目录配置，顺序写在 `docs/.vitepress/config.mjs` 的 `themeConfig.sidebar['/bot-help/']`；新增页面时要同步加进去。
+- `docs/bot-help/`：Bot 指令帮助。侧边栏顺序写在 `docs/.vitepress/config.mjs` 的 `themeConfig.sidebar['/bot-help/']`；新增页面时要同步加进去。
   - `new-features.md`：新功能速递，按日期（`## YYYY-MM-DD`）倒序追加。
   - `components/`：`ChatBox.vue`（页面内 `<script setup>` 里自行 import）、`CollapseBox.vue` 和 `ClassicCollapseBox.vue`（在主题里全局注册）。
 - `docs/changelog/`：`cloud.md`（只记录到 v2.0.9，之后指向 Haruki Cloud 的 GitHub Releases）和 `client.md`。
 - `docs/haruki-client/`：自建 Bot 的客户端部署文档；`user_written_tutorial.md` 是群友写的详细版。
-- `docs/haruki-proxy/`：HarukiProxy PC（`index.md`，含更新记录）与 Android（`android.md`）抓包教程。
+- `docs/haruki-proxy/`：HarukiProxy 抓包教程，侧边栏在 `themeConfig.sidebar['/haruki-proxy/']`，新增页面时同步加进去。
+  - `index.md`：抓包方式索引，按设备列出各方法并链接到具体教程，也放 V3 桌面版下载；新增方法时在表格里加一行。
+  - `android.md`（V3 + 光速虚拟机）、`android.india.md`（V3 免安装证书，免 Root）。
+  - `pc.v2.md`（V2 PC 命令行版，含 V2 更新记录）、`android.v2.md`（V2 Android）。V2 仍有人在用，教程保留维护；只是 Haruki 工具箱不再接受 V2 上传，不要写成 V2 已下线。
 - `docs/toolbox-tutorial/`：工具箱相关教程（iOS 模块、QQ 官方 Bot 绑定、账号验证）。
 - `docs/licence/`、`docs/privacy/`：使用条款与隐私条款。
 - `docs/examples/`：VitePress 脚手架/组件示例页，不在任何导航里，但仍会被构建发布。

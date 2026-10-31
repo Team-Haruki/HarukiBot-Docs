@@ -76,6 +76,24 @@ export default defineConfig({
             { text: '杂项指令', link: '/bot-help/misc' }
           ]
         }
+      ],
+      '/haruki-proxy/': [
+        {
+          text: 'HarukiProxy',
+          items: [
+            { text: '抓包方式索引', link: '/haruki-proxy/' },
+            { text: 'V3 Android（光速虚拟机）', link: '/haruki-proxy/android' },
+            { text: 'V3 Android（免Root）', link: '/haruki-proxy/android.india' }
+          ]
+        },
+        {
+          text: 'V2（工具箱已不接受上传）',
+          collapsed: true,
+          items: [
+            { text: 'V2 PC', link: '/haruki-proxy/pc.v2' },
+            { text: 'V2 Android', link: '/haruki-proxy/android.v2' }
+          ]
+        }
       ]
     },
     aside: "left", // 设置右侧侧边栏在左侧显示
