@@ -6,6 +6,8 @@
 > 如果你是PC端模拟器用户，请转至[HarukiProxy教程](./index.md)
 >
 > 如果你曾经使用过V2版本的HarukiProxy，那你可能需要[关闭HarukiProxyV2](./android.v2.md#关闭harukiproxy-android)
+>
+> 如果你的手机没有Root、也不想安装光速虚拟机，可以尝试[免Root抓包方式](./android.india.md)
 
 ::: info **特别鸣谢** 
 开发者: [*Haruki Dev Team*](https://github.com/Team-Haruki)  

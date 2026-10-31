@@ -296,7 +296,7 @@ goproxy_upstream_proxy: "" # 上游代理，如果连接状况不佳可以设置
 
 ## 程序直接停止
 
-在执行后出现下面的`代理捕获到错误: io error`，显示`[进程已结束]`。可能是之前运行的脚本没有被正确关闭导致的，请[关闭HarukiProxy-Android](#关闭HarukiProxy-Android)。
+在执行后出现下面的`代理捕获到错误: io error`，显示`[进程已结束]`。可能是之前运行的脚本没有被正确关闭导致的，请[关闭HarukiProxy-Android](#关闭harukiproxy-android)。
 
 ![img.jpg](../assets/haruki-proxy-android/端口被占用导致进程关闭.jpg)
 
@@ -304,7 +304,7 @@ goproxy_upstream_proxy: "" # 上游代理，如果连接状况不佳可以设置
 
 ### 可能是错误的点击返回导致程序被关闭
 
-这种情况下，如果直接运行脚本会出现上面的[程序直接停止](#程序直接停止)的错误，需要先[关闭HarukiProxy-Android](#关闭HarukiProxy-Android)。
+这种情况下，如果直接运行脚本会出现上面的[程序直接停止](#程序直接停止)的错误，需要先[关闭HarukiProxy-Android](#关闭harukiproxy-android)。
 不要直接按两下◁退出，这会将脚本关闭，可以按◯或▢回到桌面再打开游戏。
 
 ### 可能是默认配置ip失效

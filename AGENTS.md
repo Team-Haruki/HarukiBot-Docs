@@ -47,5 +47,5 @@ bun run docs:preview            # 预览构建产物
 
 - Bot 指令名以 Haruki Cloud 的指令注册为准（`Team-Haruki/Haruki-Cloud` 的 `internal/pjsk/handler/*.go` 中各 handler 的 `Commands`）。指令按前缀匹配，文档里写的触发词必须是已注册的指令，否则用户发送后不会有回复。
 - 客户端相关内容（配置项、日志、`/haruki_info` 回复格式）以 Haruki Client 当前发布版本为准；配置项说明见发布包内的 `configs.yaml`。
-- HarukiProxy 下载链接指向 `dist.haruki.seiunx.com` 镜像，改版本号前先确认镜像上已有对应文件。
+- HarukiProxy V3 下载链接指向 `haruki-dl-esa-cn.seiunx.com/HarukiProxy/<tag>/`（`dist.haruki.seiunx.com` 没有 V3 安装包），改版本号前先确认链接能下载。
 - 本仓库是公开仓库，不要写入内部服务器、内网地址、令牌或其他凭据。
