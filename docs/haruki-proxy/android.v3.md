@@ -37,7 +37,7 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 >
 
 - 需要在Android手机上安装可root的Android虚拟机，本教程使用[光速虚拟机](https://vphoneos.com/)
-- [HarukiProxyV3-Android安装包](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.5/HarukiProxy-v3.0.0-beta.5-android-arm64.apk)。你可以复制该连接，粘贴到虚拟机内的Via浏览器的网址栏中下载到虚拟机，也可以在本机中点击该连接下载安装包，然后将安装包导入到虚拟机中。
+- [HarukiProxyV3-Android安装包](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.7/HarukiProxy-v3.0.0-beta.7-android-arm64.apk)。你可以复制该连接，粘贴到虚拟机内的Via浏览器的网址栏中下载到虚拟机，也可以在本机中点击该连接下载安装包，然后将安装包导入到虚拟机中。
 
 ## 虚拟机设置
 
