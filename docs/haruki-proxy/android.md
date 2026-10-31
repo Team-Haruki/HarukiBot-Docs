@@ -1,7 +1,7 @@
 # HarukiProxyV3-Android
 > [!caution] 阅读前警告
 >
-> 如果你是V2版本的用户，请转至[HarukiProxy-Android](./android.v2.md)，V2版本即将下线。
+> 如果你是V2版本的用户，请转至[HarukiProxy-Android](./android.v2.md)。注意Haruki工具箱已不再接受V2版本上传的数据。
 >
 > 如果你是PC端模拟器用户，请转至[HarukiProxy教程](./index.md)
 >

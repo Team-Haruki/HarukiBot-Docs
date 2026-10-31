@@ -1,9 +1,9 @@
 # HarukiProxy-Android 教程
 > [!caution] 阅读前警告
 >
-> HarukiProxyV3即将发布，请转到[HarukiProxyV3-Android](./android.md)查看详情
+> HarukiProxyV3已发布，推荐使用[HarukiProxyV3-Android](./android.md)
 >
-> V2版本即将下线。
+> **Haruki工具箱已不再接受V2版本上传的数据。** V2仍可以把数据保存到本地，或通过`upload_endpoint`上传到仍支持V2的第三方服务。
 >
 > 当前HarukiProxy的发布版本为`v2.2.0`，本文档的介绍以及教程均根据`v2.0.0`以上版本编写  
 > 
@@ -38,7 +38,7 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 > [!caution] 阅读前注意
 > ***本程序只能在获取root权限的Android设备上运行，现在大部分的Android设备无法轻易获取root权限，所以本教程在Android设备上的Android虚拟机来运行本程序***
 >
-> ***Android原生的终端缺少本教程所用到的一些国内，所以本教程使用MT管理器来启动本程序***
+> ***Android原生的终端缺少本教程用到的一些命令（如`curl`），所以本教程使用MT管理器的扩展包环境来启动本程序***
 >
 > ***由于不可抗力，本程序不能抓取国服的MySekai数据***
 >
@@ -47,7 +47,7 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 >
 > 配置出现问题时请跳转至[问题自查](#问题自查)
 >
-先查找是否为常见问题，再借助搜素引擎和ai尝试解决问题，最后再在群聊里问群友，不会提问的请务必先阅读[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
+先查找是否为常见问题，再借助搜索引擎和ai尝试解决问题，最后再在群聊里问群友，不会提问的请务必先阅读[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
 
 - 需要在Android手机上安装Android虚拟机，本教程使用[光速虚拟机](https://vphoneos.com/)
 - 需要在虚拟机中安装[MT管理器](https://mt2.cn/)，也可以使用其他的方式来运行本程序，请自行设置。
@@ -89,7 +89,7 @@ HarukiProxy是由[*Haruki Dev Team*](https://github.com/Team-Haruki)开发的一
 ![img.jpg](../assets/haruki-proxy-android/MT管理器-新建.jpg)
 ![img.jpg](../assets/haruki-proxy-android/MT管理器-新建harukiproxy.jpg)
 
-#### 编辑harukiproxy脚本
+### 编辑harukiproxy脚本
 
 点击`harukiproxy.sh`文件，选择`编辑`。然后输入以下代码：
 
@@ -121,13 +121,16 @@ CONFIG_PATH="$ROOT_DIR/config-android.yaml"
 
 # Download binary if not exists
 if [ ! -f "$BIN_PATH" ]; then
-    curl -L -o "$BIN_PATH" "https://dist.haruki.seiunx.com/HarukiProxy/${BIN_NAME}/haruki-proxy-android"
+    # 先下到临时文件，下载失败时不会留下不完整的程序
+    curl -fL -o "$BIN_PATH.tmp" "https://dist.haruki.seiunx.com/HarukiProxy/${BIN_NAME}/haruki-proxy-android" \
+        && mv "$BIN_PATH.tmp" "$BIN_PATH" || { rm -f "$BIN_PATH.tmp"; echo "下载程序失败，请检查网络后重试" >&2; exit 1; }
     chmod 0755 "$BIN_PATH"
 fi
 
 # Download config if not exists
 if [ ! -f "$CONFIG_PATH" ]; then
-    curl -L -o "$CONFIG_PATH" "https://dist.haruki.seiunx.com/HarukiProxy/config-android.yaml"
+    curl -fL -o "$CONFIG_PATH.tmp" "https://dist.haruki.seiunx.com/HarukiProxy/config-android.yaml" \
+        && mv "$CONFIG_PATH.tmp" "$CONFIG_PATH" || { rm -f "$CONFIG_PATH.tmp"; echo "下载配置失败，请检查网络后重试" >&2; exit 1; }
     chmod 0755 "$CONFIG_PATH"
 fi
 
@@ -171,7 +174,7 @@ EOF
 
 ![img.jpg](../assets/haruki-proxy-android/下载游戏数据.jpg)
 
-回到MT管理器，你就能找到这样的日志。默认是上传到[Haruki工具箱](https://haruki.seiunx.com/)，你可以在[配置](#配置config-android)中设置`upload_endpoint`将抓包数据上传到你设置的端点。为了数据安全，Haruki工具箱需要注册并绑定账号后才能使用。
+回到MT管理器，你就能找到这样的日志。**Haruki工具箱已不再接受V2版本上传的数据**，你可以在[配置](#配置config-android)中设置`upload_endpoint`将抓包数据上传到仍支持V2的第三方服务，或开启`save_data_locally`把数据保存到本地。需要上传到Haruki工具箱请使用[HarukiProxyV3](./android.md)。
 
 ![img.jpg](../assets/haruki-proxy-android/执行脚本-抓包成功.jpg)
 
@@ -217,11 +220,17 @@ fi
 ROOT_DIR="/data/local/tmp/harukiproxy"
 SYSTEM_CACERTS_DIR="/system/etc/security/cacerts"
 
-#remove resolv.conf
+#remove resolv.conf：旧版脚本会创建它并写入223.5.5.5和223.6.6.6
 if [ -f /etc/resolv.conf ]; then
-    echo "删除/etc/resolv.conf"
     mount -o remount,rw /system
-    rm -f /etc/resolv.conf || exit 1
+    if grep -qv -e "nameserver 223.5.5.5" -e "nameserver 223.6.6.6" /etc/resolv.conf; then
+        # 文件里还有其他配置，说明不是HarukiProxy创建的，只移除HarukiProxy添加的两行
+        echo "从/etc/resolv.conf中移除HarukiProxy添加的DNS"
+        sed -i -e "/nameserver 223.5.5.5/d" -e "/nameserver 223.6.6.6/d" /etc/resolv.conf || exit 1
+    else
+        echo "删除/etc/resolv.conf"
+        rm -f /etc/resolv.conf || exit 1
+    fi
 fi
 
 # Ensure root_dir exists
