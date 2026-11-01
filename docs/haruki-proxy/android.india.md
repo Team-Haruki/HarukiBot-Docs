@@ -14,7 +14,7 @@ Android系统自带并信任印度CA eMudhra的根证书，而它的一张中间
 
 ## HarukiProxy设置
 
-- [HarukiProxyV3-Android安装包](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.7/HarukiProxy-v3.0.0-beta.7-android-arm64.apk)
+- [HarukiProxyV3-Android安装包](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.8/HarukiProxy-v3.0.0-beta.8-android-arm64.apk)
 
 点击上方连接下载HarukiProxy，直接安装到安卓机上。
 ### 证书安装
