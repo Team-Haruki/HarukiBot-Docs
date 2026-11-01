@@ -1,17 +1,15 @@
-# HarukiProxy-Android 教程
+# HarukiProxy-Android 教程（V2，已废弃）
 > [!caution] 阅读前警告
 >
-> HarukiProxyV3已发布，推荐使用[HarukiProxyV3-Android](./android.md)
+> **HarukiProxy V2已完全废弃，不再维护，Haruki工具箱也不再接受V2上传的数据。** 需要上传到Haruki工具箱请改用[HarukiProxyV3-Android](./android.md)；V2仍可以把数据保存到本地，或通过`upload_endpoint`上传到仍支持V2的第三方服务。
 >
-> **Haruki工具箱已不再接受V2版本上传的数据。** V2仍可以把数据保存到本地，或通过`upload_endpoint`上传到仍支持V2的第三方服务。
->
-> 当前HarukiProxy的发布版本为`v2.2.0`，本文档的介绍以及教程均根据`v2.0.0`以上版本编写  
+> 本文档的介绍以及教程均根据V2的`v2.0.0`以上版本编写，最后更新时的版本为`v2.2.0`  
 > 
 > 如果你目前使用的版本低于v2.0.0，并且希望使用v2.0.0以后续版本，则更新到v2.0.0以上版本时，需要先[卸载旧版的HarukiProxy-Android](#卸载harukiproxy-android)
 >
 > 然后[修改harukiproxy.sh的代码](#编辑harukiproxy脚本)
 >
-> 如果你是PC端模拟器用户，请转至[HarukiProxy V2 PC教程](./pc.v2.md)
+> 如果你是PC端模拟器用户，请转至[HarukiProxyV3-PC](./pc.v3.md)
 
 ::: info **特别鸣谢** 
 开发者: [*Haruki Dev Team*](https://github.com/Team-Haruki)  

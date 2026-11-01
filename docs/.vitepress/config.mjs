@@ -88,7 +88,7 @@ export default defineConfig({
           ]
         },
         {
-          text: 'V2（工具箱已不接受上传）',
+          text: 'V2（已废弃）',
           collapsed: true,
           items: [
             { text: 'V2 PC', link: '/haruki-proxy/pc.v2' },

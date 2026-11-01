@@ -6,7 +6,7 @@ HarukiProxy有多种使用方式，请根据你的设备在下面选择对应的
 
 > [!caution] 版本说明
 >
-> **Haruki工具箱只接受HarukiProxy V3上传的数据。** V2仍可以把数据保存到本地，或上传到仍支持V2的第三方服务，相关教程保留在[V2教程](#v2)中。
+> **HarukiProxy V2已完全废弃，Haruki工具箱只接受V3上传的数据，请使用V3。** V2仍可以把数据保存到本地，或上传到仍支持V2的第三方服务，相关教程保留在[V2教程](#v2)中。
 >
 > ***由于不可抗力，HarukiProxy不能抓取国服的MySekai数据***
 
@@ -17,7 +17,7 @@ HarukiProxy有多种使用方式，请根据你的设备在下面选择对应的
 | Android手机（无Root） | V3 + 免安装证书 | 系统仍信任eMudhra相关证书，较新的安全更新可能已移除 | [免Root抓包方式](./android.india.md) |
 | Android手机（无Root） | V3 + 光速虚拟机 | 手机能运行光速虚拟机 | [HarukiProxyV3-Android](./android.md) |
 | 已Root的Android设备 | V3 | 能自行把证书安装为系统证书 | 参考[HarukiProxyV3-Android](./android.md)，跳过虚拟机部分 |
-| Windows电脑 + MuMu模拟器或Android设备 | V3桌面版（测试版） | Windows x64 | [V3桌面版](#v3-desktop) |
+| Windows电脑 + MuMu模拟器或Android设备 | V3桌面版（测试版） | Windows x64 | [HarukiProxyV3-PC](./pc.v3.md) |
 | iOS设备 | 不使用HarukiProxy | — | [iOS模块上传数据教程](/toolbox-tutorial/ios-module) |
 
 > [!tip] 提醒
@@ -26,16 +26,16 @@ HarukiProxy有多种使用方式，请根据你的设备在下面选择对应的
 
 ## V3桌面版（Windows） {#v3-desktop}
 
-V3桌面版目前是测试版，详细教程编写中。
+V3桌面版目前是测试版，详细教程请查看[HarukiProxyV3-PC](./pc.v3.md)。
 
 - [HarukiProxyV3-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.7/HarukiProxy-v3.0.0-beta.7-windows-x64.zip)
 - [adb补丁包](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.7/HarukiProxy-v3.0.0-beta.7-windows-x64-adb.zip)：`v3.0.0-beta.7`的安装包漏打包了adb，请把补丁包解压到`HarukiProxy.exe`所在的目录。使用MuMu模拟器时同样需要。
 
 解压后运行`HarukiProxy.exe`，在设置中连接Haruki工具箱，然后选择MuMu模拟器实例或已连接的Android设备开始抓包。
 
-## V2教程 {#v2}
+## V2教程（已废弃） {#v2}
 
-V2版本的Haruki工具箱上传已停止，以下教程仅供仍在使用V2的用户参考。
+HarukiProxy V2已完全废弃，不再维护。以下教程仅供仍需保存到本地，或上传到仍支持V2的第三方服务的用户参考。
 
 - [HarukiProxy V2 PC教程](./pc.v2.md)：Windows / Linux / macOS命令行版，可自动配置MuMu模拟器，包含V2更新记录
 - [HarukiProxy V2 Android教程](./android.v2.md)：光速虚拟机 + MT管理器
