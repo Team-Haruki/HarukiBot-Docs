@@ -82,6 +82,7 @@ export default defineConfig({
           text: 'HarukiProxy',
           items: [
             { text: '抓包方式索引', link: '/haruki-proxy/' },
+            { text: 'V3 PC', link: '/haruki-proxy/pc.v3' },
             { text: 'V3 Android（光速虚拟机）', link: '/haruki-proxy/android' },
             { text: 'V3 Android（免Root）', link: '/haruki-proxy/android.india' }
           ]
