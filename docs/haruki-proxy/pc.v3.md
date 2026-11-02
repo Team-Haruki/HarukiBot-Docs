@@ -124,7 +124,9 @@ C:\Program Files\Netease\MuMuPlayer-12.0\nx_main\MuMuManager.exe
 回到***首页***，点击***开始捕获数据***，会自动启动MuMu模拟器实例，首页出现***运行中 · 等待游戏数据***后进入游戏即可进行抓取。抓取完成后，点击***停止并恢复设备***
 
 ![准备完毕](../assets/haruki-proxy-pc/准备完毕.jpg)
-
+> [!caution]
+>
+>请一定要先在Proxy中 ***停止并恢复设备*** 再退出模拟器，否则会出现网络异常的情况!!!
 ## 常见问题
 
 ### 提示“无法启动 ADB，请安装 platform-tools 并加入 PATH”
