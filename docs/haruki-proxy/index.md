@@ -28,7 +28,7 @@ HarukiProxy有多种使用方式，请根据你的设备在下面选择对应的
 
 V3桌面版目前是测试版，详细教程请查看[HarukiProxyV3-PC](./pc.v3.md)。
 
-- [HarukiProxyV3-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.10/HarukiProxy-v3.0.0-beta.10-windows-x64.zip)：已包含控制模拟器和设备所需的adb
+- [HarukiProxyV3-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.11/HarukiProxy-v3.0.0-beta.11-windows-x64.zip)：已包含控制模拟器和设备所需的adb
 
 解压后运行`HarukiProxy.exe`，在设置中连接Haruki工具箱，然后选择MuMu模拟器实例或已连接的Android设备开始抓包。
 
