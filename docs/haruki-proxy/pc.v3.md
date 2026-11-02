@@ -1,7 +1,7 @@
 # HarukiProxyV3-PC
 > [!caution] 阅读前警告
 >
-> HarukiProxy V3桌面版目前是测试版，最新版本为`v3.0.0-beta.9`，本文档的介绍以及教程均根据此版本编写
+> HarukiProxy V3桌面版目前是测试版，最新版本为`v3.0.0-beta.10`，本文档的介绍以及教程均根据此版本编写
 >
 > V2已完全废弃，Haruki工具箱也不再接受V2上传的数据。
 >
@@ -19,7 +19,7 @@
 
 最新版的HarukiProxy链接为：
 
-- [HarukiProxy-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.9/HarukiProxy-v3.0.0-beta.9-windows-x64.zip)
+- [HarukiProxy-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.10/HarukiProxy-v3.0.0-beta.10-windows-x64.zip)
 
 下载完成后，将压缩包放至自己喜欢的目录，然后进行解压
 
