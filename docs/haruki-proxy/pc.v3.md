@@ -1,7 +1,7 @@
 # HarukiProxyV3-PC
 > [!caution] 阅读前警告
 >
-> HarukiProxy V3桌面版目前是测试版，最新版本为`v3.0.0-beta.7`，本文档的介绍以及教程均根据此版本编写
+> HarukiProxy V3桌面版目前是测试版，最新版本为`v3.0.0-beta.11`，本文档的介绍以及教程均根据此版本编写
 >
 > V2已完全废弃，Haruki工具箱也不再接受V2上传的数据。
 >
@@ -19,10 +19,9 @@
 
 最新版的HarukiProxy链接为：
 
-- [HarukiProxy-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.7/HarukiProxy-v3.0.0-beta.7-windows-x64.zip)
-- [adb补丁包](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.7/HarukiProxy-v3.0.0-beta.7-windows-x64-adb.zip)：`v3.0.0-beta.7`的安装包漏打包了adb，请一并下载
+- [HarukiProxy-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.11/HarukiProxy-v3.0.0-beta.11-windows-x64.zip)
 
-下载完成后，将压缩包放至自己喜欢的目录，然后进行解压，再把adb补丁包解压到`HarukiProxy.exe`所在的目录
+下载完成后，将压缩包放至自己喜欢的目录，然后进行解压
 
 > [!caution] 注意
 >
@@ -36,7 +35,7 @@
 
 ![压缩包内容](../assets/haruki-proxy-pc/压缩包内容.jpg)
 
-解压adb补丁包后，这个目录里还会多出`adb.exe`、`AdbWinApi.dll`、`AdbWinUsbApi.dll`三个文件
+其中`adb.exe`、`AdbWinApi.dll`、`AdbWinUsbApi.dll`是控制模拟器和设备所需的adb，`v3.0.0-beta.8`起随安装包提供，不需要另外下载
 
 ![补丁](../assets/haruki-proxy-pc/补丁.jpg)
 
@@ -131,7 +130,7 @@ C:\Program Files\Netease\MuMuPlayer-12.0\nx_main\MuMuManager.exe
 
 ### 提示“无法启动 ADB，请安装 platform-tools 并加入 PATH”
 
-请确认adb补丁包已经解压到`HarukiProxy.exe`所在的目录，`adb.exe`和`HarukiProxy.exe`要在同一层，然后重试
+请确认`adb.exe`和`HarukiProxy.exe`在同一层目录。如果目录里没有`adb.exe`，请重新下载最新的安装包并完整解压，然后重试
 
 ### HarukiProxy异常退出后，模拟器里的游戏连不上网
 
