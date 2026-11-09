@@ -1,7 +1,7 @@
 # HarukiProxyV3-PC
 > [!caution] 阅读前警告
 >
-> HarukiProxy V3桌面版目前是测试版，最新版本为`v3.0.0-beta.11`，本文档的介绍以及教程均根据此版本编写
+> HarukiProxy V3桌面版最新版本为`v3.0.0`，支持Windows x64和Apple芯片的Mac，本文档的介绍以及教程均根据此版本编写
 >
 > V2已完全废弃，Haruki工具箱也不再接受V2上传的数据。
 >
@@ -19,7 +19,8 @@
 
 最新版的HarukiProxy链接为：
 
-- [HarukiProxy-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0-beta.11/HarukiProxy-v3.0.0-beta.11-windows-x64.zip)
+- [HarukiProxy-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0/HarukiProxy-v3.0.0-windows-x64.zip)
+- [HarukiProxy-macOS-arm64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0/HarukiProxy-v3.0.0-macos-arm64.zip)：仅支持Apple芯片（M系列）的Mac，需要macOS 12及以上，配合MuMu模拟器Pro使用。Mac用户请先阅读[macOS版说明](#macos)
 
 下载完成后，将压缩包放至自己喜欢的目录，然后进行解压
 
@@ -35,7 +36,7 @@
 
 ![压缩包内容](../assets/haruki-proxy-pc/压缩包内容.jpg)
 
-其中`adb.exe`、`AdbWinApi.dll`、`AdbWinUsbApi.dll`是控制模拟器和设备所需的adb，`v3.0.0-beta.8`起随安装包提供，不需要另外下载
+其中`adb.exe`、`AdbWinApi.dll`、`AdbWinUsbApi.dll`是控制模拟器和设备所需的adb，Windows版随安装包提供，不需要另外下载
 
 ![补丁](../assets/haruki-proxy-pc/补丁.jpg)
 
@@ -118,6 +119,28 @@ C:\Program Files\Netease\MuMuPlayer-12.0\nx_main\MuMuManager.exe
 >
 > 如果界面提示有未保存的设置，请点击***立即保存***。保存后的设置在下次捕获时生效
 
+## macOS版说明 {#macos}
+
+macOS版的界面和使用流程与Windows版相同，按上面的教程操作即可，区别只有下面几点：
+
+1. **安装adb**：macOS版没有自带adb，请先安装[Homebrew](https://brew.sh/)，然后在“终端”中执行
+
+   ```bash
+   brew install --cask android-platform-tools
+   ```
+
+2. **打开应用**：解压后把`HarukiProxy.app`拖进“应用程序”文件夹。安装包没有经过Apple公证，第一次打开时系统会提示无法验证开发者或“已损坏”，请在“终端”中执行下面的命令后再打开
+
+   ```bash
+   xattr -dr com.apple.quarantine /Applications/HarukiProxy.app
+   ```
+
+3. **MuMu模拟器**：请使用MuMu模拟器Pro。macOS版MuMu的控制工具是`mumutool`，不是`MuMuManager.exe`。HarukiProxy会自动在“应用程序”文件夹中查找；如果没有找到，在***设置***中点击***选择文件***，按`Command+Shift+G`粘贴下面的路径后确认
+
+   ```
+   /Applications/MuMuPlayer Pro.app/Contents/MacOS/mumutool
+   ```
+
 ## 使用HarukiProxy
 
 回到***首页***，点击***开始捕获数据***，会自动启动MuMu模拟器实例，首页出现***运行中 · 等待游戏数据***后进入游戏即可进行抓取。抓取完成后，点击***停止并恢复设备***
@@ -130,7 +153,9 @@ C:\Program Files\Netease\MuMuPlayer-12.0\nx_main\MuMuManager.exe
 
 ### 提示“无法启动 ADB，请安装 platform-tools 并加入 PATH”
 
-请确认`adb.exe`和`HarukiProxy.exe`在同一层目录。如果目录里没有`adb.exe`，请重新下载最新的安装包并完整解压，然后重试
+Windows：请确认`adb.exe`和`HarukiProxy.exe`在同一层目录。如果目录里没有`adb.exe`，请重新下载最新的安装包并完整解压，然后重试
+
+macOS：请按[macOS版说明](#macos)用Homebrew安装`android-platform-tools`，然后重新打开HarukiProxy
 
 ### HarukiProxy异常退出后，模拟器里的游戏连不上网
 
