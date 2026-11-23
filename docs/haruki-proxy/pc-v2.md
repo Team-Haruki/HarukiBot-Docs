@@ -1,7 +1,7 @@
 # HarukiProxy V2 PC 教程（已废弃）
 > [!caution] 阅读前警告
 >
-> **HarukiProxy V2已完全废弃，不再维护，Haruki工具箱也不再接受V2上传的数据。** 需要上传到Haruki工具箱请改用[HarukiProxyV3-PC](./pc.v3.md)；V2仍可以把数据保存到本地，或上传到仍支持V2的第三方服务。
+> **HarukiProxy V2已完全废弃，不再维护，Haruki工具箱也不再接受V2上传的数据。** 需要上传到Haruki工具箱请改用[HarukiProxyV3-PC](./pc-v3.md)；V2仍可以把数据保存到本地，或上传到仍支持V2的第三方服务。
 >
 > 本文档的介绍以及教程均根据V2的`v2.0.0`以上版本编写，最后更新时的版本为`v2.2.0`  
 > 

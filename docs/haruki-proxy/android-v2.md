@@ -9,7 +9,7 @@
 >
 > 然后[修改harukiproxy.sh的代码](#编辑harukiproxy脚本)
 >
-> 如果你是PC端模拟器用户，请转至[HarukiProxyV3-PC](./pc.v3.md)
+> 如果你是PC端模拟器用户，请转至[HarukiProxyV3-PC](./pc-v3.md)
 
 ::: info **特别鸣谢** 
 开发者: [*Haruki Dev Team*](https://github.com/Team-Haruki)  
