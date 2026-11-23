@@ -1,7 +1,7 @@
 # HarukiProxyV3-PC
 > [!caution] 阅读前警告
 >
-> HarukiProxy V3桌面版最新版本为`v3.0.0`，支持Windows x64和Apple芯片的Mac，本文档的介绍以及教程均根据此版本编写
+> HarukiProxy V3桌面版最新版本为`v3.0.1`，支持Windows x64和Apple芯片的Mac，本文档的介绍以及教程均根据此版本编写
 >
 > V2已完全废弃，Haruki工具箱也不再接受V2上传的数据。
 >
@@ -19,8 +19,8 @@
 
 最新版的HarukiProxy链接为：
 
-- [HarukiProxy-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0/HarukiProxy-v3.0.0-windows-x64.zip)
-- [HarukiProxy-macOS-arm64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0/HarukiProxy-v3.0.0-macos-arm64.zip)：仅支持Apple芯片（M系列）的Mac，需要macOS 12及以上，配合MuMu模拟器Pro使用。Mac用户请先阅读[macOS版说明](#macos)
+- [HarukiProxy-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.1/HarukiProxy-v3.0.1-windows-x64.zip)
+- [HarukiProxy-macOS-arm64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.1/HarukiProxy-v3.0.1-macos-arm64.zip)：仅支持Apple芯片（M系列）的Mac，需要macOS 12及以上，配合MuMu模拟器Pro使用。Mac用户请先阅读[macOS版说明](#macos)
 
 下载完成后，将压缩包放至自己喜欢的目录，然后进行解压
 

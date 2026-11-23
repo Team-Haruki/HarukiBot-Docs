@@ -28,8 +28,8 @@ HarukiProxy有多种使用方式，请根据你的设备在下面选择对应的
 
 V3桌面版支持Windows和macOS，详细教程请查看[HarukiProxyV3-PC](./pc.v3.md)。
 
-- [HarukiProxyV3-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0/HarukiProxy-v3.0.0-windows-x64.zip)：已包含控制模拟器和设备所需的adb
-- [HarukiProxyV3-macOS-arm64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.0/HarukiProxy-v3.0.0-macos-arm64.zip)：仅支持Apple芯片的Mac，需要另外安装adb，见[macOS版说明](./pc.v3.md#macos)
+- [HarukiProxyV3-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.1/HarukiProxy-v3.0.1-windows-x64.zip)：已包含控制模拟器和设备所需的adb
+- [HarukiProxyV3-macOS-arm64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.1/HarukiProxy-v3.0.1-macos-arm64.zip)：仅支持Apple芯片的Mac，需要另外安装adb，见[macOS版说明](./pc.v3.md#macos)
 
 解压后运行`HarukiProxy.exe`（macOS为`HarukiProxy.app`），在设置中连接Haruki工具箱，然后选择MuMu模拟器实例或已连接的Android设备开始抓包。
 
