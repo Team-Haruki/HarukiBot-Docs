@@ -83,17 +83,17 @@ export default defineConfig({
           items: [
             { text: '抓包方式索引', link: '/haruki-proxy/' },
             { text: 'V3 更新介绍', link: '/haruki-proxy/v3' },
-            { text: 'V3 PC', link: '/haruki-proxy/pc.v3' },
+            { text: 'V3 PC', link: '/haruki-proxy/pc-v3' },
             { text: 'V3 Android（光速虚拟机）', link: '/haruki-proxy/android' },
-            { text: 'V3 Android（免Root）', link: '/haruki-proxy/android.india' }
+            { text: 'V3 Android（免Root）', link: '/haruki-proxy/android-india' }
           ]
         },
         {
           text: 'V2（已废弃）',
           collapsed: true,
           items: [
-            { text: 'V2 PC', link: '/haruki-proxy/pc.v2' },
-            { text: 'V2 Android', link: '/haruki-proxy/android.v2' }
+            { text: 'V2 PC', link: '/haruki-proxy/pc-v2' },
+            { text: 'V2 Android', link: '/haruki-proxy/android-v2' }
           ]
         }
       ]

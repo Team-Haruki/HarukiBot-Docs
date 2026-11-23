@@ -11,9 +11,9 @@
 - `docs/changelog/`：`cloud.md`（只记录到 v2.0.9，之后指向 Haruki Cloud 的 GitHub Releases）和 `client.md`。
 - `docs/haruki-client/`：自建 Bot 的客户端部署文档；`user_written_tutorial.md` 是群友写的详细版。
 - `docs/haruki-proxy/`：HarukiProxy 抓包教程，侧边栏在 `themeConfig.sidebar['/haruki-proxy/']`，新增页面时同步加进去。
-  - `index.md`：抓包方式索引，按设备列出各方法并链接到具体教程，也放 V3 桌面版下载和 `pc.v3.md` 入口；新增方法时在表格里加一行。
-  - `pc.v3.md`（V3 Windows 桌面版，MuMu 模拟器）、`android.md`（V3 + 光速虚拟机）、`android.india.md`（V3 免安装证书，免 Root）。
-  - `pc.v2.md`（V2 PC 命令行版，含 V2 更新记录）、`android.v2.md`（V2 Android）。V2 已完全废弃，这两篇不再维护，新内容不要把 V2 当作推荐方案；Haruki 工具箱不接受 V2 上传，但保留“V2 仍可保存到本地或上传到仍支持 V2 的第三方服务”的说明。
+  - `index.md`：抓包方式索引，按设备列出各方法并链接到具体教程，也放 V3 桌面版下载和 `pc-v3.md` 入口；新增方法时在表格里加一行。
+  - `pc-v3.md`（V3 Windows 桌面版，MuMu 模拟器）、`android.md`（V3 + 光速虚拟机）、`android-india.md`（V3 免安装证书，免 Root）。
+  - `pc-v2.md`（V2 PC 命令行版，含 V2 更新记录）、`android-v2.md`（V2 Android）。V2 已完全废弃，这两篇不再维护，新内容不要把 V2 当作推荐方案；Haruki 工具箱不接受 V2 上传，但保留“V2 仍可保存到本地或上传到仍支持 V2 的第三方服务”的说明。
 - `docs/toolbox-tutorial/`：工具箱相关教程（iOS 模块、QQ 官方 Bot 绑定、账号验证）。
 - `docs/licence/`、`docs/privacy/`：使用条款与隐私条款。
 - `docs/examples/`：VitePress 脚手架/组件示例页，不在任何导航里，但仍会被构建发布。
@@ -42,6 +42,7 @@ bun run docs:preview            # 预览构建产物
 ## 约定
 
 - 默认分支是 `master`。
+- 页面文件名里不要带点（用 `pc-v3.md`，不用 `pc.v3.md`）：线上站点对这类页面的直接访问返回 404，正文是空白，只有站内跳转能打开。改名时把旧路径加进 `docs/.vitepress/theme/index.js` 的 `RENAMED_PAGES`，旧链接会跳到新地址。
 - 提交标题使用 `[Docs] ...`、`[CI] ...`、`[Chore] ...` 这类前缀（历史上也有 `docs: ...` 形式）。
 - 文档语言为中文，语气面向普通用户；VitePress 提示块用 `::: info` / `::: warning` 或 `> [!warning]` 两种写法均可，跟随所在页面已有写法。
 - 部分 Markdown 文件是 CRLF 或混合换行（如 `docs/bot-help/` 下的 `account.md`、`misc.md`、`music.md`、`sk.md`），编辑时保留原有换行，不要整文件改换行符。

@@ -14,10 +14,10 @@ HarukiProxy有多种使用方式，请根据你的设备在下面选择对应的
 
 | 你的设备 | 方式 | 前提条件 | 教程 |
 | --- | --- | --- | --- |
-| Android手机（无Root） | V3 + 免安装证书 | 系统仍信任eMudhra相关证书，较新的安全更新可能已移除 | [免Root抓包方式](./android.india.md) |
+| Android手机（无Root） | V3 + 免安装证书 | 系统仍信任eMudhra相关证书，较新的安全更新可能已移除 | [免Root抓包方式](./android-india.md) |
 | Android手机（无Root） | V3 + 光速虚拟机 | 手机能运行光速虚拟机 | [HarukiProxyV3-Android](./android.md) |
 | 已Root的Android设备 | V3 | 能自行把证书安装为系统证书 | 参考[HarukiProxyV3-Android](./android.md)，跳过虚拟机部分 |
-| Windows或Mac电脑 + MuMu模拟器或Android设备 | V3桌面版 | Windows x64，或Apple芯片的Mac | [HarukiProxyV3-PC](./pc.v3.md) |
+| Windows或Mac电脑 + MuMu模拟器或Android设备 | V3桌面版 | Windows x64，或Apple芯片的Mac | [HarukiProxyV3-PC](./pc-v3.md) |
 | iOS设备 | 不使用HarukiProxy | — | [iOS模块上传数据教程](/toolbox-tutorial/ios-module) |
 
 > [!tip] 提醒
@@ -26,10 +26,10 @@ HarukiProxy有多种使用方式，请根据你的设备在下面选择对应的
 
 ## V3桌面版 {#v3-desktop}
 
-V3桌面版支持Windows和macOS，详细教程请查看[HarukiProxyV3-PC](./pc.v3.md)。
+V3桌面版支持Windows和macOS，详细教程请查看[HarukiProxyV3-PC](./pc-v3.md)。
 
 - [HarukiProxyV3-Windows-x64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.1/HarukiProxy-v3.0.1-windows-x64.zip)：已包含控制模拟器和设备所需的adb
-- [HarukiProxyV3-macOS-arm64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.1/HarukiProxy-v3.0.1-macos-arm64.zip)：仅支持Apple芯片的Mac，需要另外安装adb，见[macOS版说明](./pc.v3.md#macos)
+- [HarukiProxyV3-macOS-arm64](https://haruki-dl-esa-cn.seiunx.com/HarukiProxy/v3.0.1/HarukiProxy-v3.0.1-macos-arm64.zip)：仅支持Apple芯片的Mac，需要另外安装adb，见[macOS版说明](./pc-v3.md#macos)
 
 解压后运行`HarukiProxy.exe`（macOS为`HarukiProxy.app`），在设置中连接Haruki工具箱，然后选择MuMu模拟器实例或已连接的Android设备开始抓包。
 
@@ -37,5 +37,5 @@ V3桌面版支持Windows和macOS，详细教程请查看[HarukiProxyV3-PC](./pc.
 
 HarukiProxy V2已完全废弃，不再维护。以下教程仅供仍需保存到本地，或上传到仍支持V2的第三方服务的用户参考。
 
-- [HarukiProxy V2 PC教程](./pc.v2.md)：Windows / Linux / macOS命令行版，可自动配置MuMu模拟器，包含V2更新记录
-- [HarukiProxy V2 Android教程](./android.v2.md)：光速虚拟机 + MT管理器
+- [HarukiProxy V2 PC教程](./pc-v2.md)：Windows / Linux / macOS命令行版，可自动配置MuMu模拟器，包含V2更新记录
+- [HarukiProxy V2 Android教程](./android-v2.md)：光速虚拟机 + MT管理器
